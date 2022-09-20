@@ -730,7 +730,7 @@ M.hl_groups = function(scheme)
 		GitSignsChange = {
 			fg = scheme.git_signs_change
 		},
-		-- nvim-tresitter-context
+		-- nvim-treesitter/nvim-treesitter-context
 		TreesitterContext = {
 			bg = scheme.telescope_bg,
 		},
@@ -738,7 +738,7 @@ M.hl_groups = function(scheme)
 			bg = scheme.telescope_bg,
 			fg = scheme.purple
 		},
-		-- lualine
+		-- nvim-lualine/lualine.nvim
 		LuaLineDiffAdd = {
 			fg = scheme.green,
 		},
