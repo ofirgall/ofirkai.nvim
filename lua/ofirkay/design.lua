@@ -1,17 +1,17 @@
 local M = {}
 
+-- TODO: lualine theme
+
 M.scheme = {
-	base0 = '#222426',
-	base1 = '#272a30',
-	base2 = '#26292C',
-	base3 = '#2E323C',
+	background = '#282923',
+	base3 = '#1d2026', -- TODO
 	base4 = '#333842',
 	base5 = '#4d5154',
 	base6 = '#9ca0a4',
 	base7 = '#b1b1b1',
 	base8 = '#e3e3e1',
 	border = '#a1b5b1',
-	brown = '#504945',
+	brown = '#d1ca86',
 	white = '#f8f8f0',
 	grey = '#8F908A',
 	black = '#000000',
@@ -26,250 +26,263 @@ M.scheme = {
 	diff_remove = '#4a0f23',
 	diff_change = '#27406b',
 	diff_text = '#23324d',
+
+	highlighted_word_bg = '#343942',
+	const_pink = '#e878d2',
+	tree_bg = '#1a1a18',
+	telescope_bg = '#181816', -- Slightly darker than tree_bg
+	tab_visible_fg = '#b3ab60',
+	cursor_line_bg = '#36352a',
+	mid_orange = '#de933c',
+	lightorange = '#dea255',
+	telescope_prompt = '#1d1d1a',
 }
 
-M.hl_groups = function(colorscheme)
+M.hl_groups = function(scheme)
 	return {
 		Normal = {
-			fg = colorscheme.white,
-			bg = colorscheme.base2,
+			fg = scheme.white,
+			bg = scheme.background,
 		},
 		NormalFloat = {
-			bg = colorscheme.base1,
+			bg = scheme.background,
 		},
 		Pmenu = {
-			fg = colorscheme.white,
-			bg = colorscheme.base3,
+			fg = scheme.white,
+			bg = '#2c2c26', -- TODO
 		},
 		PmenuSel = {
-			fg = colorscheme.base4,
-			bg = colorscheme.orange,
+			fg = scheme.white,
+			bg = '#40403a', -- TODO
 		},
 		PmenuSelBold = {
-			fg = colorscheme.base4,
-			bg = colorscheme.orange,
+			fg = scheme.white,
+			bg = '#40403a', -- TODO
 		},
 		PmenuThumb = {
-			fg = colorscheme.purple,
-			bg = colorscheme.green,
+			fg = scheme.purple,
+			bg = '#47473b', -- TODO
 		},
 		PmenuSbar = {
-			bg = colorscheme.base3,
+			bg = scheme.base3,
 		},
 		Cursor = {
 			style = 'reverse',
 		},
 		ColorColumn = {
-			bg = colorscheme.base3,
+			bg = scheme.base3,
 		},
 		CursorLine = {
-			bg = colorscheme.base3,
+			bg = scheme.cursor_line_bg
 		},
 		NonText = { -- used for "eol", "extends" and "precedes" in listchars
-			fg = colorscheme.base5,
+			fg = scheme.base5,
 		},
 		Visual = {
-			bg = colorscheme.base4,
+			bg = '#46453a', -- TODO
 		},
 		VisualNOS = {
-			bg = colorscheme.base3,
+			bg = scheme.base3,
 		},
 		Search = {
-			fg = colorscheme.base2,
-			bg = colorscheme.yellow,
+			bg = '#424137', -- TODO
 		},
 		IncSearch = {
-			fg = colorscheme.base2,
-			bg = colorscheme.orange,
+			fg = scheme.background,
+			bg = scheme.orange,
 		},
 		CursorLineNr = {
-			fg = colorscheme.orange,
-			bg = colorscheme.base2,
+			bg = scheme.cursor_line_bg,
+			fg = scheme.yellow,
 		},
 		MatchParen = {
-			fg = colorscheme.pink,
+			fg = scheme.pink,
 		},
 		Question = {
-			fg = colorscheme.yellow,
+			fg = scheme.yellow,
 		},
 		ModeMsg = {
-			fg = colorscheme.white,
+			fg = scheme.white,
 			style = 'bold',
 		},
 		MoreMsg = {
-			fg = colorscheme.white,
+			fg = scheme.white,
 			style = 'bold',
 		},
 		ErrorMsg = {
-			fg = colorscheme.red,
+			fg = scheme.red,
 			style = 'bold',
 		},
 		WarningMsg = {
-			fg = colorscheme.yellow,
+			fg = scheme.yellow,
 			style = 'bold',
 		},
 		VertSplit = {
-			fg = colorscheme.brown,
+			fg = '#948f5a' -- TODO
 		},
 		LineNr = {
-			fg = colorscheme.base5,
-			bg = colorscheme.base2,
+			bg = '#282923', -- TODO
+			fg = scheme.orange,
 		},
 		SignColumn = {
-			fg = colorscheme.white,
-			bg = colorscheme.base2,
+			fg = scheme.white,
+			bg = scheme.background,
 		},
 		StatusLine = {
-			fg = colorscheme.base7,
-			bg = colorscheme.base3,
+			fg = scheme.base7,
+			bg = scheme.base3,
 		},
 		StatusLineNC = {
-			fg = colorscheme.grey,
-			bg = colorscheme.base3,
+			fg = scheme.grey,
+			bg = scheme.base3,
 		},
-		Tabline = {},
+		Tabline = {
+			fg = '#f20aee', -- TODO
+			bg = scheme.highlighted_word_bg,
+		},
 		TabLineFill = {},
 		TabLineSel = {
-			bg = colorscheme.base4,
+			fg = '#78b6e8', -- TODO
+			bg = scheme.highlighted_word_bg,
 		},
 		SpellBad = {
-			fg = colorscheme.red,
-			style = 'undercurl',
+			ctermfg = scheme.red,
+			style = 'undercurl'
 		},
 		SpellCap = {
-			fg = colorscheme.purple,
+			ctermfg = scheme.purple,
 			style = 'undercurl',
 		},
 		SpellRare = {
-			fg = colorscheme.aqua,
+			ctermfg = scheme.aqua,
 			style = 'undercurl',
 		},
 		SpellLocal = {
-			fg = colorscheme.pink,
+			ctermfg = scheme.pink,
 			style = 'undercurl',
 		},
 		SpecialKey = {
-			fg = colorscheme.pink,
+			fg = scheme.pink,
 		},
 		Title = {
-			fg = colorscheme.yellow,
+			fg = scheme.yellow,
 			style = 'bold',
 		},
 		Directory = {
-			fg = colorscheme.aqua,
+			fg = scheme.aqua,
 		},
 		DiffAdd = {
-			bg = colorscheme.diff_add,
+			bg = scheme.diff_add,
 		},
 		DiffDelete = {
-			bg = colorscheme.diff_remove,
+			bg = scheme.diff_remove,
 		},
 		DiffChange = {
-			bg = colorscheme.diff_change,
+			bg = scheme.diff_change,
 		},
 		DiffText = {
-			bg = colorscheme.diff_text,
+			bg = scheme.diff_text,
 		},
 		diffAdded = {
-			fg = colorscheme.green,
+			fg = scheme.green,
 		},
 		diffRemoved = {
-			fg = colorscheme.pink,
+			fg = scheme.pink,
 		},
 		Folded = {
-			fg = colorscheme.grey,
-			bg = colorscheme.base3,
+			fg = scheme.grey,
+			bg = scheme.base3,
 		},
 		FoldColumn = {
-			fg = colorscheme.white,
-			bg = colorscheme.black,
+			fg = scheme.white,
+			bg = scheme.black,
 		},
 		Constant = {
-			fg = colorscheme.aqua,
+			fg = scheme.aqua,
 		},
 		Number = {
-			fg = colorscheme.purple,
+			fg = scheme.purple,
 		},
 		Float = {
-			fg = colorscheme.purple,
+			fg = scheme.purple,
 		},
 		Boolean = {
-			fg = colorscheme.purple,
+			fg = scheme.purple,
 		},
 		Character = {
-			fg = colorscheme.yellow,
+			fg = scheme.yellow,
 		},
 		String = {
-			fg = colorscheme.yellow,
+			fg = scheme.yellow,
 		},
 		Type = {
-			fg = colorscheme.aqua,
+			fg = scheme.aqua,
 		},
 		Structure = {
-			fg = colorscheme.aqua,
+			fg = scheme.aqua,
 		},
 		StorageClass = {
-			fg = colorscheme.aqua,
+			fg = scheme.aqua,
 		},
 		Typedef = {
-			fg = colorscheme.aqua,
+			fg = scheme.aqua,
 		},
 		Identifier = {
-			fg = colorscheme.white,
+			fg = scheme.white,
 		},
 		Function = {
-			fg = colorscheme.green,
+			fg = scheme.green,
 			style = 'italic',
 		},
 		Statement = {
-			fg = colorscheme.pink,
+			fg = scheme.pink,
 		},
 		Operator = {
-			fg = colorscheme.pink,
+			fg = scheme.pink,
 		},
 		Label = {
-			fg = colorscheme.pink,
+			fg = scheme.pink,
 		},
 		Keyword = {
-			fg = colorscheme.pink,
+			fg = scheme.pink,
 			style = 'italic',
 		},
 		PreProc = {
-			fg = colorscheme.green,
+			fg = scheme.green,
 		},
 		Include = {
-			fg = colorscheme.pink,
+			fg = scheme.pink,
 		},
 		Define = {
-			fg = colorscheme.pink,
+			fg = scheme.pink,
 		},
 		Macro = {
-			fg = colorscheme.pink,
+			fg = scheme.pink,
 		},
 		PreCondit = {
-			fg = colorscheme.pink,
+			fg = scheme.pink,
 		},
 		Special = {
-			fg = colorscheme.white,
+			fg = scheme.white,
 		},
 		SpecialChar = {
-			fg = colorscheme.pink,
+			fg = scheme.pink,
 		},
 		Delimiter = {
-			fg = colorscheme.white,
+			fg = scheme.white,
 		},
 		SpecialComment = {
-			fg = colorscheme.grey,
+			fg = scheme.grey,
 			style = 'italic',
 		},
 		Tag = {
-			fg = colorscheme.orange,
+			fg = scheme.orange,
 		},
 		Todo = {
-			fg = colorscheme.orange,
+			fg = scheme.orange,
 		},
 		Comment = {
-			fg = colorscheme.base6,
+			fg = scheme.base6,
 			style = 'italic',
 		},
 		Underlined = {
@@ -277,17 +290,17 @@ M.hl_groups = function(colorscheme)
 		},
 		Ignore = {},
 		Error = {
-			fg = colorscheme.red,
+			fg = scheme.red,
 		},
 		Terminal = {
-			fg = colorscheme.white,
-			bg = colorscheme.base2,
+			fg = scheme.white,
+			bg = scheme.background,
 		},
 		EndOfBuffer = {
-			fg = colorscheme.base2,
+			fg = scheme.background,
 		},
 		Conceal = {
-			fg = colorscheme.grey,
+			fg = scheme.grey,
 		},
 		vCursor = {
 			style = 'reverse',
@@ -302,282 +315,393 @@ M.hl_groups = function(colorscheme)
 			style = 'reverse',
 		},
 		CursorColumn = {
-			bg = colorscheme.base3,
+			bg = scheme.base3,
 		},
-		Whitespace = { -- used for "nbsp", "space", "tab" and "trail" in listchars
-			fg = colorscheme.base5,
+		Whitespace = { -- Indent lines
+			fg = scheme.base4,
+			style = 'none',
 		},
 		WildMenu = {
-			fg = colorscheme.white,
-			bg = colorscheme.orange,
+			fg = scheme.white,
+			bg = scheme.orange,
 		},
 		QuickFixLine = {
-			fg = colorscheme.purple,
+			fg = scheme.purple,
 			style = 'bold',
 		},
 		Debug = {
-			fg = colorscheme.orange,
+			fg = scheme.orange,
 		},
 		debugBreakpoint = {
-			fg = colorscheme.base2,
-			bg = colorscheme.red,
+			fg = scheme.background,
+			bg = scheme.red,
 		},
 		Conditional = {
-			fg = colorscheme.pink,
+			fg = scheme.pink,
 		},
 		Repeat = {
-			fg = colorscheme.pink,
+			fg = scheme.pink,
 		},
 		Exception = {
-			fg = colorscheme.pink,
+			fg = scheme.pink,
 		},
 		TSString = {
-			fg = colorscheme.yellow,
+			fg = scheme.yellow,
 		},
 		TSInclude = {
-			fg = colorscheme.pink,
+			fg = scheme.pink,
 		},
 		TSVariable = {
-			fg = colorscheme.white,
+			fg = scheme.white,
 		},
 		TSVariableBuiltin = {
-			fg = colorscheme.orange,
+			fg = scheme.orange,
 		},
 		TSAnnotation = {
-			fg = colorscheme.green,
+			fg = scheme.green,
 		},
 		TSComment = {
-			fg = colorscheme.base6,
-			style = 'italic',
+			fg = scheme.base6,
+			style = 'none',
 		},
 		TSConstant = {
-			fg = colorscheme.aqua,
+			fg = scheme.const_pink,
+			style = 'none',
 		},
 		TSConstBuiltin = {
-			fg = colorscheme.purple,
+			fg = scheme.purple,
 		},
 		TSConstMacro = {
-			fg = colorscheme.purple,
+			fg = scheme.pink,
+			style = 'none',
 		},
 		TSConstructor = {
-			fg = colorscheme.aqua,
+			fg = scheme.aqua,
+			style = 'none',
 		},
 		TSConditional = {
-			fg = colorscheme.pink,
+			fg = scheme.pink,
 		},
 		TSCharacter = {
-			fg = colorscheme.yellow,
+			fg = scheme.yellow,
 		},
 		TSFunction = {
-			fg = colorscheme.green,
-			style = 'italic',
+			fg = scheme.aqua,
+			style = 'none',
 		},
 		TSFuncBuiltin = {
-			fg = colorscheme.aqua,
+			fg = scheme.aqua,
 		},
 		TSFuncMacro = {
-			fg = colorscheme.green,
+			fg = scheme.const_pink,
 			style = 'italic',
 		},
+		TSAttribute = {
+			fg = scheme.pink,
+			style = 'none',
+		},
 		TSKeyword = {
-			fg = colorscheme.pink,
+			fg = scheme.pink,
 			style = 'italic',
 		},
 		TSKeywordFunction = {
-			fg = colorscheme.pink,
+			fg = scheme.green,
 			style = 'italic',
 		},
 		TSKeywordOperator = {
-			fg = colorscheme.pink,
+			fg = scheme.pink,
 		},
 		TSKeywordReturn = {
-			fg = colorscheme.pink,
+			fg = scheme.pink,
 		},
 		TSMethod = {
-			fg = colorscheme.green,
+			fg = scheme.aqua,
+			style = 'none',
 		},
 		TSNamespace = {
-			fg = colorscheme.purple,
+			fg = scheme.purple,
 		},
 		TSNumber = {
-			fg = colorscheme.purple,
+			fg = scheme.purple,
 		},
 		TSOperator = {
-			fg = colorscheme.pink,
+			fg = scheme.pink,
 		},
 		TSParameter = {
-			fg = colorscheme.white,
+			fg = scheme.orange,
+			style = 'italic',
 		},
 		TSParameterReference = {
-			fg = colorscheme.white,
+			fg = scheme.white,
 		},
 		TSProperty = {
-			fg = colorscheme.white,
+			fg = scheme.white,
 		},
 		TSPunctDelimiter = {
-			fg = colorscheme.white,
+			fg = scheme.white,
 		},
 		TSPunctBracket = {
-			fg = colorscheme.white,
+			fg = scheme.white,
 		},
 		TSPunctSpecial = {
-			fg = colorscheme.pink,
+			fg = scheme.pink,
 		},
 		TSRepeat = {
-			fg = colorscheme.pink,
+			fg = scheme.pink,
 		},
 		TSStringRegex = {
-			fg = colorscheme.purple,
+			fg = scheme.purple,
 		},
 		TSStringEscape = {
-			fg = colorscheme.purple,
+			fg = scheme.purple,
 		},
 		TSTag = {
-			fg = colorscheme.pink,
+			fg = scheme.pink,
 		},
 		TSTagDelimiter = {
-			fg = colorscheme.white,
+			fg = scheme.white,
 		},
 		TSTagAttribute = {
-			fg = colorscheme.green,
+			fg = scheme.green,
 		},
 		TSLabel = {
-			fg = colorscheme.pink,
+			fg = scheme.white,
+			style = 'italic',
 		},
 		TSType = {
-			fg = colorscheme.aqua,
+			fg = scheme.green,
+			style = 'italic',
 		},
 		TSException = {
-			fg = colorscheme.pink,
+			fg = scheme.pink,
 		},
 		TSField = {
-			fg = colorscheme.white,
+			fg = scheme.white,
 		},
 		TSFloat = {
-			fg = colorscheme.purple,
+			fg = scheme.purple,
+		},
+		TSCall = {
+			fg = scheme.pink,
+			style = 'none',
 		},
 		dbui_tables = {
-			fg = colorscheme.white,
+			fg = scheme.white,
 		},
 		DiagnosticSignError = {
-			fg = colorscheme.red,
+			fg = scheme.red,
 		},
 		DiagnosticSignWarn = {
-			fg = colorscheme.yellow,
+			fg = scheme.yellow,
 		},
 		DiagnosticSignInfo = {
-			fg = colorscheme.white,
+			fg = scheme.white,
 		},
 		DiagnosticSignHint = {
-			fg = colorscheme.aqua,
+			fg = scheme.aqua,
 		},
 		DiagnosticVirtualTextError = {
-			fg = colorscheme.red,
+			fg = scheme.red,
 		},
 		DiagnosticVirtualTextWarn = {
-			fg = colorscheme.yellow,
+			fg = scheme.yellow,
 		},
 		DiagnosticVirtualTextInfo = {
-			fg = colorscheme.white,
+			fg = scheme.white,
 		},
 		DiagnosticVirtualTextHint = {
-			fg = colorscheme.aqua,
+			fg = scheme.aqua,
 		},
 		DiagnosticUnderlineError = {
 			style = 'undercurl',
-			sp = colorscheme.red,
+			sp = scheme.red,
 		},
 		DiagnosticUnderlineWarn = {
 			style = 'undercurl',
-			sp = colorscheme.yellow,
+			sp = scheme.yellow,
 		},
 		DiagnosticUnderlineInfo = {
 			style = 'undercurl',
-			sp = colorscheme.white,
+			sp = scheme.white,
 		},
 		DiagnosticUnderlineHint = {
 			style = 'undercurl',
-			sp = colorscheme.aqua,
+			sp = scheme.aqua,
 		},
 		CursorWord0 = {
-			bg = colorscheme.white,
-			fg = colorscheme.black,
+			bg = scheme.white,
+			fg = scheme.black,
 		},
 		CursorWord1 = {
-			bg = colorscheme.white,
-			fg = colorscheme.black,
+			bg = scheme.white,
+			fg = scheme.black,
+		},
+
+		-- Nvim tree TODO
+		NvimTreeNormal = {
+			bg = scheme.tree_bg
+		},
+		NvimTreeWindowPicker = {
+			fg = scheme.pink,
+			bg = scheme.base3,
+			style = 'bold'
 		},
 		NvimTreeFolderName = {
-			fg = colorscheme.white,
+			fg = scheme.white,
 		},
 		NvimTreeRootFolder = {
-			fg = colorscheme.pink,
+			fg = scheme.pink,
 		},
 		NvimTreeSpecialFile = {
-			fg = colorscheme.white,
+			fg = scheme.white,
 			style = 'NONE',
 		},
 
-		-- Telescope
+		-- Telescope TODO
 		TelescopeBorder = {
-			fg = colorscheme.base7,
+			fg = scheme.telescope_bg,
+			bg = scheme.telescope_bg,
 		},
 		TelescopeNormal = {
-			fg = colorscheme.base8,
-			bg = colorscheme.base0,
+			bg = scheme.telescope_bg
+		},
+		TelescopePromptNormal = {
+			fg = scheme.white,
+			bg = scheme.telescope_prompt,
+		},
+		TelescopePromptBorder = {
+			fg = scheme.telescope_prompt,
+			bg = scheme.telescope_prompt,
+		},
+		TelescopePromptPrefix = {
+			fg = scheme.local_orange,
+			bg = scheme.telescope_prompt,
+		},
+		TelescopePromptTitle = {
+			fg = scheme.white,
+			bg = scheme.telescope_prompt,
+			style = 'bold'
+		},
+		TelescopeResultsTitle = {
+			fg = scheme.telescope_bg,
+			bg = scheme.telescope_bg,
 		},
 		TelescopeSelection = {
-			fg = colorscheme.white,
-			style = 'bold',
+			bg = scheme.cursor_line_bg,
+			fg = scheme.white,
+			style = 'none'
 		},
 		TelescopeSelectionCaret = {
-			fg = colorscheme.green,
+			fg = scheme.green,
 		},
 		TelescopeMultiSelection = {
-			fg = colorscheme.pink,
+			fg = scheme.pink,
 		},
 		TelescopeMatching = {
-			fg = colorscheme.aqua,
+			fg = scheme.aqua,
+		},
+		TelescopePreviewNormal = {
+			bg = scheme.background
+		},
+		TelescopePreviewTitle = {
+			fg = scheme.white,
 		},
 
+		-- TODO format
 		-- hrsh7th/nvim-cmp
-		CmpDocumentation = { fg = colorscheme.white, bg = colorscheme.base1 },
-		CmpDocumentationBorder = { fg = colorscheme.white, bg = colorscheme.base1 },
+		CmpDocumentation = { fg = scheme.white, bg = scheme.background },
+		CmpDocumentationBorder = { fg = scheme.white, bg = scheme.background },
 
-		CmpItemAbbr = { fg = colorscheme.white },
-		CmpItemAbbrMatch = { fg = colorscheme.aqua },
-		CmpItemAbbrMatchFuzzy = { fg = colorscheme.aqua },
+		CmpItemAbbr = { fg = scheme.white },
+		CmpItemAbbrMatch = {
+			fg = '#34d8f7', -- TODO
+		},
+		CmpItemAbbrMatchFuzzy = {
+			fg = '#34d8f7', -- TODO
+		},
 
-		CmpItemKindDefault = { fg = colorscheme.white },
-		CmpItemMenu = { fg = colorscheme.base6 },
+		CmpItemKindDefault = { fg = scheme.white },
+		CmpItemMenu = { fg = scheme.base6 },
 
-		CmpItemKindKeyword = { fg = colorscheme.pink },
-		CmpItemKindVariable = { fg = colorscheme.pink },
-		CmpItemKindConstant = { fg = colorscheme.pink },
-		CmpItemKindReference = { fg = colorscheme.pink },
-		CmpItemKindValue = { fg = colorscheme.pink },
+		CmpItemKindKeyword = { fg = scheme.pink },
+		CmpItemKindVariable = { fg = scheme.pink },
+		CmpItemKindConstant = { fg = scheme.pink },
+		CmpItemKindReference = { fg = scheme.pink },
+		CmpItemKindValue = { fg = scheme.pink },
 
-		CmpItemKindFunction = { fg = colorscheme.aqua },
-		CmpItemKindMethod = { fg = colorscheme.aqua },
-		CmpItemKindConstructor = { fg = colorscheme.aqua },
+		CmpItemKindFunction = { fg = scheme.aqua },
+		CmpItemKindMethod = { fg = scheme.aqua },
+		CmpItemKindConstructor = { fg = scheme.aqua },
 
-		CmpItemKindClass = { fg = colorscheme.orange },
-		CmpItemKindInterface = { fg = colorscheme.orange },
-		CmpItemKindStruct = { fg = colorscheme.orange },
-		CmpItemKindEvent = { fg = colorscheme.orange },
-		CmpItemKindEnum = { fg = colorscheme.orange },
-		CmpItemKindUnit = { fg = colorscheme.orange },
+		CmpItemKindClass = { fg = scheme.orange },
+		CmpItemKindInterface = { fg = scheme.orange },
+		CmpItemKindStruct = { fg = scheme.orange },
+		CmpItemKindEvent = { fg = scheme.orange },
+		CmpItemKindEnum = { fg = scheme.orange },
+		CmpItemKindUnit = { fg = scheme.orange },
 
-		CmpItemKindModule = { fg = colorscheme.yellow },
+		CmpItemKindModule = { fg = scheme.yellow },
 
-		CmpItemKindProperty = { fg = colorscheme.green },
-		CmpItemKindField = { fg = colorscheme.green },
-		CmpItemKindTypeParameter = { fg = colorscheme.green },
-		CmpItemKindEnumMember = { fg = colorscheme.green },
-		CmpItemKindOperator = { fg = colorscheme.green },
+		CmpItemKindProperty = { fg = scheme.green },
+		CmpItemKindField = { fg = scheme.green },
+		CmpItemKindTypeParameter = { fg = scheme.green },
+		CmpItemKindEnumMember = { fg = scheme.green },
+		CmpItemKindOperator = { fg = scheme.green },
 
 		-- ray-x/lsp_signature.nvim
-		LspSignatureActiveParameter = { fg = colorscheme.orange },
+		LspSignatureActiveParameter = { fg = scheme.orange },
+
+		-- TODO: FROM HERE OFIR PLUGINS
+
+		-- TODO: fill plugin name
+		LspReferenceText = {
+			bg = scheme.highlighted_word_bg,
+			style = 'underline',
+		},
+		LspReferenceRead = {
+			bg = scheme.highlighted_word_bg,
+			style = 'underline',
+		},
+		LspReferenceWrite = {
+			bg = scheme.highlighted_word_bg,
+			style = 'underline',
+		},
+		LspSignatureHintVirtualText = {
+			fg = scheme.lightorange,
+			style = 'bold'
+		},
+		-- diffview.nvim -- TODO
+		DiffviewNormal = {
+			bg = scheme.tree_bg
+		},
+		-- gitsigns.nvim -- TODO
+		GitSignsChange = {
+			fg = '#0e72cf' -- TODO
+		},
+		GitSignsAdd = {
+			fg = '#6a921a' -- TODO
+		},
+		-- nvim-tresitter-context
+		TreesitterContext = {
+			bg = scheme.tree_bg, -- TODO
+		},
+		TreesitterContextLineNumber = {
+			bg = scheme.tree_bg, -- TODO: make it a common var with TreesitterContext
+			fg = '#78b6e8', -- TODO
+		},
+		-- lualine
+		LuaLineDiffAdd = {
+			fg = scheme.green,
+			bg = scheme.lightbrown,
+		},
+		LuaLineDiffChange = {
+			fg = scheme.aqua,
+			bg = scheme.lightbrown,
+		},
+		LuaLineDiffDelete = {
+			fg = scheme.red,
+			bg = scheme.lightbrown,
+		},
 	}
 end
 
