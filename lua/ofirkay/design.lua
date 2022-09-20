@@ -741,15 +741,12 @@ M.hl_groups = function(scheme)
 		-- lualine
 		LuaLineDiffAdd = {
 			fg = scheme.green,
-			bg = scheme.lightbrown,
 		},
 		LuaLineDiffChange = {
-			fg = scheme.aqua,
-			bg = scheme.lightbrown,
+			fg = scheme.tabline_sel_fg,
 		},
 		LuaLineDiffDelete = {
 			fg = scheme.red,
-			bg = scheme.lightbrown,
 		},
 	}
 end
