@@ -1,10 +1,7 @@
 local M = {}
 
--- TODO: lualine theme
-
 M.scheme = {
-	background = '#282923',
-	base3 = '#1d2026', -- TODO
+	base3 = '#1d2026',
 	base4 = '#333842',
 	base5 = '#4d5154',
 	base6 = '#9ca0a4',
@@ -22,11 +19,8 @@ M.scheme = {
 	orange = '#fd971f',
 	purple = '#ae81ff',
 	red = '#e95678',
-	diff_add = '#3d5213',
-	diff_remove = '#4a0f23',
-	diff_change = '#27406b',
-	diff_text = '#23324d',
 
+	background = '#282923',
 	highlighted_word_bg = '#343942',
 	const_pink = '#e878d2',
 	tree_bg = '#1a1a18',
@@ -36,6 +30,24 @@ M.scheme = {
 	mid_orange = '#de933c',
 	lightorange = '#dea255',
 	telescope_prompt = '#1d1d1a',
+	diff_add = '#3d5213',
+	diff_remove = '#4a0f23',
+	diff_change = '#27406b',
+	diff_text = '#23324d',
+	visual_bg = '#46453a',
+	search_bg = '#424137',
+
+	pmenu_bg = '#2c2c26',
+	pmenu_sel_bg = '#40403a',
+	pmenu_thumb_bg = '#47473b',
+	vert_split_fg = '#948f5a',
+	tabline_fg = '#f20aee',
+	tabline_sel_fg = '#78b6e8',
+
+	-- plugins
+	nvim_cmp_fuzzy_fg = '#34d8f7',
+	git_signs_add = '#6a921a',
+	git_signs_change = '#0e72cf',
 }
 
 M.hl_groups = function(scheme)
@@ -49,19 +61,19 @@ M.hl_groups = function(scheme)
 		},
 		Pmenu = {
 			fg = scheme.white,
-			bg = '#2c2c26', -- TODO
+			bg = scheme.pmenu_bg,
 		},
 		PmenuSel = {
 			fg = scheme.white,
-			bg = '#40403a', -- TODO
+			bg = scheme.pmenu_sel_bg
 		},
 		PmenuSelBold = {
 			fg = scheme.white,
-			bg = '#40403a', -- TODO
+			bg = scheme.pmenu_sel_bg
 		},
 		PmenuThumb = {
 			fg = scheme.purple,
-			bg = '#47473b', -- TODO
+			bg = scheme.pmenu_thum_bg
 		},
 		PmenuSbar = {
 			bg = scheme.base3,
@@ -79,13 +91,13 @@ M.hl_groups = function(scheme)
 			fg = scheme.base5,
 		},
 		Visual = {
-			bg = '#46453a', -- TODO
+			bg = scheme.visual_bg,
 		},
 		VisualNOS = {
 			bg = scheme.base3,
 		},
 		Search = {
-			bg = '#424137', -- TODO
+			bg = scheme.search_bg,
 		},
 		IncSearch = {
 			fg = scheme.background,
@@ -118,10 +130,10 @@ M.hl_groups = function(scheme)
 			style = 'bold',
 		},
 		VertSplit = {
-			fg = '#948f5a' -- TODO
+			fg = scheme.vert_split_fg
 		},
 		LineNr = {
-			bg = '#282923', -- TODO
+			bg = scheme.background,
 			fg = scheme.orange,
 		},
 		SignColumn = {
@@ -137,12 +149,12 @@ M.hl_groups = function(scheme)
 			bg = scheme.base3,
 		},
 		Tabline = {
-			fg = '#f20aee', -- TODO
+			fg = scheme.tabline_fg,
 			bg = scheme.highlighted_word_bg,
 		},
 		TabLineFill = {},
 		TabLineSel = {
-			fg = '#78b6e8', -- TODO
+			fg = scheme.tabline_sel_fg,
 			bg = scheme.highlighted_word_bg,
 		},
 		SpellBad = {
@@ -536,8 +548,23 @@ M.hl_groups = function(scheme)
 			bg = scheme.white,
 			fg = scheme.black,
 		},
-
-		-- Nvim tree TODO
+		LspReferenceText = {
+			bg = scheme.highlighted_word_bg,
+			style = 'underline',
+		},
+		LspReferenceRead = {
+			bg = scheme.highlighted_word_bg,
+			style = 'underline',
+		},
+		LspReferenceWrite = {
+			bg = scheme.highlighted_word_bg,
+			style = 'underline',
+		},
+		LspSignatureHintVirtualText = {
+			fg = scheme.lightorange,
+			style = 'bold'
+		},
+		-- kyazdani42/nvim-tree.lua
 		NvimTreeNormal = {
 			bg = scheme.tree_bg
 		},
@@ -556,8 +583,7 @@ M.hl_groups = function(scheme)
 			fg = scheme.white,
 			style = 'NONE',
 		},
-
-		-- Telescope TODO
+		-- nvim-telescope/telescope.nvim
 		TelescopeBorder = {
 			fg = scheme.telescope_bg,
 			bg = scheme.telescope_bg,
@@ -606,88 +632,111 @@ M.hl_groups = function(scheme)
 		TelescopePreviewTitle = {
 			fg = scheme.white,
 		},
-
-		-- TODO format
 		-- hrsh7th/nvim-cmp
-		CmpDocumentation = { fg = scheme.white, bg = scheme.background },
-		CmpDocumentationBorder = { fg = scheme.white, bg = scheme.background },
-
-		CmpItemAbbr = { fg = scheme.white },
+		CmpDocumentation = {
+			fg = scheme.white,
+			bg = scheme.background
+		},
+		CmpDocumentationBorder = {
+			fg = scheme.white, bg = scheme.background
+		},
+		CmpItemAbbr = {
+			fg = scheme.white
+		},
 		CmpItemAbbrMatch = {
-			fg = '#34d8f7', -- TODO
+			fg = scheme.nvim_cmp_fuzzy_fg,
 		},
 		CmpItemAbbrMatchFuzzy = {
-			fg = '#34d8f7', -- TODO
+			fg = scheme.nvim_cmp_fuzzy_fg,
 		},
-
-		CmpItemKindDefault = { fg = scheme.white },
-		CmpItemMenu = { fg = scheme.base6 },
-
-		CmpItemKindKeyword = { fg = scheme.pink },
-		CmpItemKindVariable = { fg = scheme.pink },
-		CmpItemKindConstant = { fg = scheme.pink },
-		CmpItemKindReference = { fg = scheme.pink },
-		CmpItemKindValue = { fg = scheme.pink },
-
-		CmpItemKindFunction = { fg = scheme.aqua },
-		CmpItemKindMethod = { fg = scheme.aqua },
-		CmpItemKindConstructor = { fg = scheme.aqua },
-
-		CmpItemKindClass = { fg = scheme.orange },
-		CmpItemKindInterface = { fg = scheme.orange },
-		CmpItemKindStruct = { fg = scheme.orange },
-		CmpItemKindEvent = { fg = scheme.orange },
-		CmpItemKindEnum = { fg = scheme.orange },
-		CmpItemKindUnit = { fg = scheme.orange },
-
-		CmpItemKindModule = { fg = scheme.yellow },
-
-		CmpItemKindProperty = { fg = scheme.green },
-		CmpItemKindField = { fg = scheme.green },
-		CmpItemKindTypeParameter = { fg = scheme.green },
-		CmpItemKindEnumMember = { fg = scheme.green },
-		CmpItemKindOperator = { fg = scheme.green },
-
+		CmpItemKindDefault = {
+			fg = scheme.white
+		},
+		CmpItemMenu = {
+			fg = scheme.base6
+		},
+		CmpItemKindKeyword = {
+			fg = scheme.pink
+		},
+		CmpItemKindVariable = {
+			fg = scheme.pink
+		},
+		CmpItemKindConstant = {
+			fg = scheme.pink
+		},
+		CmpItemKindReference = {
+			fg = scheme.pink
+		},
+		CmpItemKindValue = {
+			fg = scheme.pink
+		},
+		CmpItemKindFunction = {
+			fg = scheme.aqua
+		},
+		CmpItemKindMethod = {
+			fg = scheme.aqua
+		},
+		CmpItemKindConstructor = {
+			fg = scheme.aqua
+		},
+		CmpItemKindClass = {
+			fg = scheme.orange
+		},
+		CmpItemKindInterface = {
+			fg = scheme.orange
+		},
+		CmpItemKindStruct = {
+			fg = scheme.orange
+		},
+		CmpItemKindEvent = {
+			fg = scheme.orange
+		},
+		CmpItemKindEnum = {
+			fg = scheme.orange
+		},
+		CmpItemKindUnit = {
+			fg = scheme.orange
+		},
+		CmpItemKindModule = {
+			fg = scheme.yellow
+		},
+		CmpItemKindProperty = {
+			fg = scheme.green
+		},
+		CmpItemKindField = {
+			fg = scheme.green
+		},
+		CmpItemKindTypeParameter = {
+			fg = scheme.green
+		},
+		CmpItemKindEnumMember = {
+			fg = scheme.green
+		},
+		CmpItemKindOperator = {
+			fg = scheme.green
+		},
 		-- ray-x/lsp_signature.nvim
-		LspSignatureActiveParameter = { fg = scheme.orange },
-
-		-- TODO: FROM HERE OFIR PLUGINS
-
-		-- TODO: fill plugin name
-		LspReferenceText = {
-			bg = scheme.highlighted_word_bg,
-			style = 'underline',
+		LspSignatureActiveParameter = {
+			fg = scheme.orange
 		},
-		LspReferenceRead = {
-			bg = scheme.highlighted_word_bg,
-			style = 'underline',
-		},
-		LspReferenceWrite = {
-			bg = scheme.highlighted_word_bg,
-			style = 'underline',
-		},
-		LspSignatureHintVirtualText = {
-			fg = scheme.lightorange,
-			style = 'bold'
-		},
-		-- diffview.nvim -- TODO
+		-- sindrets/diffview.nvim
 		DiffviewNormal = {
 			bg = scheme.tree_bg
 		},
-		-- gitsigns.nvim -- TODO
-		GitSignsChange = {
-			fg = '#0e72cf' -- TODO
-		},
+		-- lewis6991/gitsigns.nvim
 		GitSignsAdd = {
-			fg = '#6a921a' -- TODO
+			fg = scheme.git_signs_add,
+		},
+		GitSignsChange = {
+			fg = scheme.git_signs_change
 		},
 		-- nvim-tresitter-context
 		TreesitterContext = {
-			bg = scheme.tree_bg, -- TODO
+			bg = scheme.telescope_bg,
 		},
 		TreesitterContextLineNumber = {
-			bg = scheme.tree_bg, -- TODO: make it a common var with TreesitterContext
-			fg = '#78b6e8', -- TODO
+			bg = scheme.telescope_bg,
+			fg = scheme.purple
 		},
 		-- lualine
 		LuaLineDiffAdd = {
