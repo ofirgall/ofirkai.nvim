@@ -98,12 +98,19 @@ require('bufferline').setup {
 ---
 <p align='center'><a><img src='./media/nvim-cmp.png'></a></p>
 
-TODO: add icons config
 ```lua
--- I just removed the `FloatBorder:Normal` from the highlights to allow the FloatBorder to be colored
--- It's not a must
 require('cmp').setup({
-	window = require('ofirkai.plugins.nvim-cmp').window,
+	window = require('ofirkai.plugins.nvim-cmp').window, -- I just removed the `FloatBorder:Normal` from the highlights to allow the FloatBorder to be colored, its not a must.
+
+	-- Get lsp icons from ofirkai, requires https://github.com/onsails/lspkind.nvim
+	formatting = {
+		format = lspkind.cmp_format({
+			symbol_map = require('ofirkai.plugins.nvim-cmp').kind_icons,
+			maxwidth = 50,
+			mode = 'symbol'
+		})
+	},
+
 })
 ```
 ---
