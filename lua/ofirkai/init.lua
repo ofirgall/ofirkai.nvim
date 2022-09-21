@@ -14,8 +14,8 @@ local function highlight(group, color)
 end
 
 local default_config = {
+	scheme = design.scheme,
 	custom_hlgroups = {},
-	scheme = design.scheme
 }
 
 M.setup = function(config)

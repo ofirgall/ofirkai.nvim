@@ -714,10 +714,6 @@ M.hl_groups = function(scheme)
 		CmpItemKindOperator = {
 			fg = scheme.green
 		},
-		-- ray-x/lsp_signature.nvim
-		LspSignatureActiveParameter = {
-			fg = scheme.orange
-		},
 		-- sindrets/diffview.nvim
 		DiffviewNormal = {
 			bg = scheme.ui_bg
