@@ -1,6 +1,6 @@
 local M = {}
 
-local scheme = require('ofirkay').scheme
+local scheme = require('ofirkai').scheme
 
 M.highlights = {
 	buffer_visible = {

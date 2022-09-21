@@ -1,6 +1,6 @@
 local M = {}
 
-local design = require('ofirkay.design')
+local design = require('ofirkai.design')
 M.scheme = design.scheme
 
 local function highlight(group, color)
@@ -25,7 +25,7 @@ M.setup = function(config)
 	end
 	vim.o.background = 'dark'
 	vim.o.termguicolors = true
-	vim.g.colors_name = 'ofirkay'
+	vim.g.colors_name = 'ofirkai'
 
 	config = config or {}
 	config = vim.tbl_deep_extend('keep', config, default_config)
