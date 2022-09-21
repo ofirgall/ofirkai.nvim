@@ -1,30 +1,30 @@
 local M = {}
 
 M.scheme = {
-	base3 = '#1d2026',
-	base4 = '#333842',
-	base5 = '#4d5154',
-	base6 = '#9ca0a4',
-	base7 = '#b1b1b1',
-	base8 = '#e3e3e1',
-	border = '#a1b5b1',
-	brown = '#d1ca86',
+	-- Main backgrounds
+	background = '#282923',
+	secondary_background = '#1d2026',
+	ui_bg = '#1a1a18', -- background for ui, file tree and such.
+	telescope_bg = '#181816', -- Slightly darker than ui_bg
+
+	-- Base colors
 	white = '#f8f8f0',
 	grey = '#8F908A',
 	black = '#000000',
-	pink = '#f92672',
 	green = '#a6e22e',
 	aqua = '#66d9ef',
 	yellow = '#e6db74',
 	orange = '#fd971f',
 	purple = '#ae81ff',
 	red = '#e95678',
+	light_pink = '#f92672',
+	dark_pink = '#e878d2',
 
-	background = '#282923',
+	-- Specific colors
+	whitespace_fg = '#333842',
+	non_text_fg = '#4d5154',
+	comment_fg = '#9ca0a4',
 	highlighted_word_bg = '#343942',
-	const_pink = '#e878d2',
-	tree_bg = '#1a1a18',
-	telescope_bg = '#181816', -- Slightly darker than tree_bg
 	tab_visible_fg = '#b3ab60',
 	cursor_line_bg = '#36352a',
 	mid_orange = '#de933c',
@@ -36,7 +36,6 @@ M.scheme = {
 	diff_text = '#23324d',
 	visual_bg = '#46453a',
 	search_bg = '#424137',
-
 	pmenu_bg = '#2c2c26',
 	pmenu_sel_bg = '#40403a',
 	pmenu_thumb_bg = '#47473b',
@@ -44,7 +43,7 @@ M.scheme = {
 	tabline_fg = '#f20aee',
 	tabline_sel_fg = '#78b6e8',
 
-	-- plugins
+	-- Plugins colors
 	nvim_cmp_fuzzy_fg = '#34d8f7',
 	git_signs_add = '#6a921a',
 	git_signs_change = '#0e72cf',
@@ -76,25 +75,25 @@ M.hl_groups = function(scheme)
 			bg = scheme.pmenu_thum_bg
 		},
 		PmenuSbar = {
-			bg = scheme.base3,
+			bg = scheme.secondary_background,
 		},
 		Cursor = {
 			style = 'reverse',
 		},
 		ColorColumn = {
-			bg = scheme.base3,
+			bg = scheme.secondary_background,
 		},
 		CursorLine = {
 			bg = scheme.cursor_line_bg
 		},
 		NonText = { -- used for "eol", "extends" and "precedes" in listchars
-			fg = scheme.base5,
+			fg = scheme.non_text_fg,
 		},
 		Visual = {
 			bg = scheme.visual_bg,
 		},
 		VisualNOS = {
-			bg = scheme.base3,
+			bg = scheme.secondary_background,
 		},
 		Search = {
 			bg = scheme.search_bg,
@@ -108,7 +107,7 @@ M.hl_groups = function(scheme)
 			fg = scheme.yellow,
 		},
 		MatchParen = {
-			fg = scheme.pink,
+			fg = scheme.light_pink,
 		},
 		Question = {
 			fg = scheme.yellow,
@@ -141,12 +140,12 @@ M.hl_groups = function(scheme)
 			bg = scheme.background,
 		},
 		StatusLine = {
-			fg = scheme.base7,
-			bg = scheme.base3,
+			fg = scheme.comment_fg,
+			bg = scheme.secondary_background,
 		},
 		StatusLineNC = {
 			fg = scheme.grey,
-			bg = scheme.base3,
+			bg = scheme.secondary_background,
 		},
 		Tabline = {
 			fg = scheme.tabline_fg,
@@ -170,11 +169,11 @@ M.hl_groups = function(scheme)
 			style = 'undercurl',
 		},
 		SpellLocal = {
-			ctermfg = scheme.pink,
+			ctermfg = scheme.light_pink,
 			style = 'undercurl',
 		},
 		SpecialKey = {
-			fg = scheme.pink,
+			fg = scheme.light_pink,
 		},
 		Title = {
 			fg = scheme.yellow,
@@ -199,11 +198,11 @@ M.hl_groups = function(scheme)
 			fg = scheme.green,
 		},
 		diffRemoved = {
-			fg = scheme.pink,
+			fg = scheme.light_pink,
 		},
 		Folded = {
 			fg = scheme.grey,
-			bg = scheme.base3,
+			bg = scheme.secondary_background,
 		},
 		FoldColumn = {
 			fg = scheme.white,
@@ -247,38 +246,38 @@ M.hl_groups = function(scheme)
 			style = 'italic',
 		},
 		Statement = {
-			fg = scheme.pink,
+			fg = scheme.light_pink,
 		},
 		Operator = {
-			fg = scheme.pink,
+			fg = scheme.light_pink,
 		},
 		Label = {
-			fg = scheme.pink,
+			fg = scheme.light_pink,
 		},
 		Keyword = {
-			fg = scheme.pink,
+			fg = scheme.light_pink,
 			style = 'italic',
 		},
 		PreProc = {
 			fg = scheme.green,
 		},
 		Include = {
-			fg = scheme.pink,
+			fg = scheme.light_pink,
 		},
 		Define = {
-			fg = scheme.pink,
+			fg = scheme.light_pink,
 		},
 		Macro = {
-			fg = scheme.pink,
+			fg = scheme.light_pink,
 		},
 		PreCondit = {
-			fg = scheme.pink,
+			fg = scheme.light_pink,
 		},
 		Special = {
 			fg = scheme.white,
 		},
 		SpecialChar = {
-			fg = scheme.pink,
+			fg = scheme.light_pink,
 		},
 		Delimiter = {
 			fg = scheme.white,
@@ -294,7 +293,7 @@ M.hl_groups = function(scheme)
 			fg = scheme.orange,
 		},
 		Comment = {
-			fg = scheme.base6,
+			fg = scheme.comment_fg,
 			style = 'italic',
 		},
 		Underlined = {
@@ -327,10 +326,10 @@ M.hl_groups = function(scheme)
 			style = 'reverse',
 		},
 		CursorColumn = {
-			bg = scheme.base3,
+			bg = scheme.secondary_background,
 		},
-		Whitespace = { -- Indent lines
-			fg = scheme.base4,
+		whitespace_fg = { -- Indent lines
+			fg = scheme.whitespace_fg,
 			style = 'none',
 		},
 		WildMenu = {
@@ -349,19 +348,19 @@ M.hl_groups = function(scheme)
 			bg = scheme.red,
 		},
 		Conditional = {
-			fg = scheme.pink,
+			fg = scheme.light_pink,
 		},
 		Repeat = {
-			fg = scheme.pink,
+			fg = scheme.light_pink,
 		},
 		Exception = {
-			fg = scheme.pink,
+			fg = scheme.light_pink,
 		},
 		TSString = {
 			fg = scheme.yellow,
 		},
 		TSInclude = {
-			fg = scheme.pink,
+			fg = scheme.light_pink,
 		},
 		TSVariable = {
 			fg = scheme.white,
@@ -373,18 +372,18 @@ M.hl_groups = function(scheme)
 			fg = scheme.green,
 		},
 		TSComment = {
-			fg = scheme.base6,
+			fg = scheme.comment_fg,
 			style = 'none',
 		},
 		TSConstant = {
-			fg = scheme.const_pink,
+			fg = scheme.dark_pink,
 			style = 'none',
 		},
 		TSConstBuiltin = {
 			fg = scheme.purple,
 		},
 		TSConstMacro = {
-			fg = scheme.pink,
+			fg = scheme.light_pink,
 			style = 'none',
 		},
 		TSConstructor = {
@@ -392,7 +391,7 @@ M.hl_groups = function(scheme)
 			style = 'none',
 		},
 		TSConditional = {
-			fg = scheme.pink,
+			fg = scheme.light_pink,
 		},
 		TSCharacter = {
 			fg = scheme.yellow,
@@ -405,15 +404,15 @@ M.hl_groups = function(scheme)
 			fg = scheme.aqua,
 		},
 		TSFuncMacro = {
-			fg = scheme.const_pink,
+			fg = scheme.dark_pink,
 			style = 'italic',
 		},
 		TSAttribute = {
-			fg = scheme.pink,
+			fg = scheme.light_pink,
 			style = 'none',
 		},
 		TSKeyword = {
-			fg = scheme.pink,
+			fg = scheme.light_pink,
 			style = 'italic',
 		},
 		TSKeywordFunction = {
@@ -421,10 +420,10 @@ M.hl_groups = function(scheme)
 			style = 'italic',
 		},
 		TSKeywordOperator = {
-			fg = scheme.pink,
+			fg = scheme.light_pink,
 		},
 		TSKeywordReturn = {
-			fg = scheme.pink,
+			fg = scheme.light_pink,
 		},
 		TSMethod = {
 			fg = scheme.aqua,
@@ -437,7 +436,7 @@ M.hl_groups = function(scheme)
 			fg = scheme.purple,
 		},
 		TSOperator = {
-			fg = scheme.pink,
+			fg = scheme.light_pink,
 		},
 		TSParameter = {
 			fg = scheme.orange,
@@ -456,10 +455,10 @@ M.hl_groups = function(scheme)
 			fg = scheme.white,
 		},
 		TSPunctSpecial = {
-			fg = scheme.pink,
+			fg = scheme.light_pink,
 		},
 		TSRepeat = {
-			fg = scheme.pink,
+			fg = scheme.light_pink,
 		},
 		TSStringRegex = {
 			fg = scheme.purple,
@@ -468,7 +467,7 @@ M.hl_groups = function(scheme)
 			fg = scheme.purple,
 		},
 		TSTag = {
-			fg = scheme.pink,
+			fg = scheme.light_pink,
 		},
 		TSTagDelimiter = {
 			fg = scheme.white,
@@ -485,7 +484,7 @@ M.hl_groups = function(scheme)
 			style = 'italic',
 		},
 		TSException = {
-			fg = scheme.pink,
+			fg = scheme.light_pink,
 		},
 		TSField = {
 			fg = scheme.white,
@@ -494,7 +493,7 @@ M.hl_groups = function(scheme)
 			fg = scheme.purple,
 		},
 		TSCall = {
-			fg = scheme.pink,
+			fg = scheme.light_pink,
 			style = 'none',
 		},
 		dbui_tables = {
@@ -566,18 +565,18 @@ M.hl_groups = function(scheme)
 		},
 		-- kyazdani42/nvim-tree.lua
 		NvimTreeNormal = {
-			bg = scheme.tree_bg
+			bg = scheme.ui_bg
 		},
 		NvimTreeWindowPicker = {
-			fg = scheme.pink,
-			bg = scheme.base3,
+			fg = scheme.light_pink,
+			bg = scheme.secondary_background,
 			style = 'bold'
 		},
 		NvimTreeFolderName = {
 			fg = scheme.white,
 		},
 		NvimTreeRootFolder = {
-			fg = scheme.pink,
+			fg = scheme.light_pink,
 		},
 		NvimTreeSpecialFile = {
 			fg = scheme.white,
@@ -621,7 +620,7 @@ M.hl_groups = function(scheme)
 			fg = scheme.green,
 		},
 		TelescopeMultiSelection = {
-			fg = scheme.pink,
+			fg = scheme.light_pink,
 		},
 		TelescopeMatching = {
 			fg = scheme.aqua,
@@ -653,22 +652,22 @@ M.hl_groups = function(scheme)
 			fg = scheme.white
 		},
 		CmpItemMenu = {
-			fg = scheme.base6
+			fg = scheme.comment_fg
 		},
 		CmpItemKindKeyword = {
-			fg = scheme.pink
+			fg = scheme.light_pink
 		},
 		CmpItemKindVariable = {
-			fg = scheme.pink
+			fg = scheme.light_pink
 		},
 		CmpItemKindConstant = {
-			fg = scheme.pink
+			fg = scheme.light_pink
 		},
 		CmpItemKindReference = {
-			fg = scheme.pink
+			fg = scheme.light_pink
 		},
 		CmpItemKindValue = {
-			fg = scheme.pink
+			fg = scheme.light_pink
 		},
 		CmpItemKindFunction = {
 			fg = scheme.aqua
@@ -721,7 +720,7 @@ M.hl_groups = function(scheme)
 		},
 		-- sindrets/diffview.nvim
 		DiffviewNormal = {
-			bg = scheme.tree_bg
+			bg = scheme.ui_bg
 		},
 		-- lewis6991/gitsigns.nvim
 		GitSignsAdd = {
