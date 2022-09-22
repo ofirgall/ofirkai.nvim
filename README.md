@@ -16,7 +16,7 @@ Monokai theme for [Neovim](https://github.com/neovim/neovim) with [treesitter](h
 ## Why not [monokai.nvim](https://github.com/tanvirtin/monokai.nvim)?
 Before I used Neovim I used Sublime Text for 6 years with the builtin Monokai scheme.
 
-The first thing I did when I transferred to Neovim was searching a Monokai colorscheme, my eyes got used to the colorscheme and I didn't want to change what I used to.
+My eyes got used to the monokai colorscheme and I didn't want to change what I used to, so the first thing I did when I transferred to Neovim was searching for a Monokai colorscheme.
 
 I found [monokai.nvim](https://github.com/tanvirtin/monokai.nvim) and installed it immediately, unfortunately it wasn't 1:1 to Sublime Text, I tinkered some values through the config and achieved a colorscheme I was happy with.
 
@@ -25,7 +25,7 @@ I kept adding support for other plugins and changing the default values of [mono
 
 ## Installation
 ```lua
-use 'ofirgall/monokai.nvim'
+use 'ofirgall/ofirkai.nvim'
 ```
 
 ### Usage
@@ -160,7 +160,7 @@ require('cmp').setup({
 <details><summary><a href='https://github.com/ray-x/lsp_signature.nvim'>lsp_signature.nvim</a></summary>
 
 ---
-I don't change the highlight group because I use a minmilistastic desing for the lsp signature you can adapt it.
+I don't change the highlight group because I use a minimalistic design for the lsp signature you can adapt it.
 
 <p align='center'><a><img src='./media/lsp_signature.png'></a></p>
 
