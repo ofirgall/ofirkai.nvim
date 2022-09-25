@@ -49,7 +49,7 @@ _**Note**_: Each plugin that need a setup has an example in the collapsible sect
 There is a screenshot example for each plugin.
 
 ### Status Lines
-<details><summary><a href='https://github.com/nvim-lualine/lualine.nvim'>lualine.nvim</a> - <b>Custom Setup Required</b></summary>
+<details><summary><a href='https://github.com/nvim-lualine/lualine.nvim'>lualine.nvim</a> - <b>Custom setup required (Click to Expand)</b></summary>
 
 ---
 <p align='center'><a><img src='./media/lualine/lualine_normal.png'></a></p>
@@ -69,7 +69,7 @@ require('lualine').setup {
 </details>
 
 ### Tab Lines
-<details><summary><a href='https://github.com/akinsho/bufferline.nvim'>bufferline.nvim</a> - <b>Custom Setup Required</b></summary>
+<details><summary><a href='https://github.com/akinsho/bufferline.nvim'>bufferline.nvim</a> - <b>Custom setup required (Click to expand)</b></summary>
 
 ---
 <p align='center'><a><img src='./media/bufferline.png'></a></p>
@@ -93,7 +93,7 @@ require('bufferline').setup {
 </details>
 
 ### Others
-<details><summary><a href='https://github.com/hrsh7th/nvim-cmp'>nvim-cmp</a> - <b>Custom Setup is Optional</b></summary>
+<details><summary><a href='https://github.com/hrsh7th/nvim-cmp'>nvim-cmp</a> - <b>Custom setup is Optional (Click to expand)</b></summary>
 
 ---
 <p align='center'><a><img src='./media/nvim-cmp.png'></a></p>
@@ -116,7 +116,7 @@ require('cmp').setup({
 ---
 </details>
 
-<details><summary><a href='https://github.com/kyazdani42/nvim-tree.lua'>nvim-tree.lua</a></summary>
+<details><summary><a href='https://github.com/kyazdani42/nvim-tree.lua'>nvim-tree.lua</a> - Click to expand</summary>
 
 ---
 <p align='center'><a><img src='./media/nvim-tree.png'></a></p>
@@ -124,7 +124,7 @@ require('cmp').setup({
 ---
 </details>
 
-<details><summary><a href='https://github.com/nvim-telescope/telescope.nvim'>telescope.nvim</a></summary>
+<details><summary><a href='https://github.com/nvim-telescope/telescope.nvim'>telescope.nvim</a> - Click to expand</summary>
 
 ---
 <p align='center'><a><img src='./media/telescope.png'></a></p>
@@ -132,7 +132,7 @@ require('cmp').setup({
 ---
 </details>
 
-<details><summary><a href='https://github.com/sindrets/diffview.nvim'>diffview.nvim</a></summary>
+<details><summary><a href='https://github.com/sindrets/diffview.nvim'>diffview.nvim</a> - Click to expand</summary>
 
 ---
 <p align='center'><a><img src='./media/diffview.png'></a></p>
@@ -140,7 +140,7 @@ require('cmp').setup({
 ---
 </details>
 
-<details><summary><a href='https://github.com/lewis6991/gitsigns.nvim'>gitsigns.nvim</a></summary>
+<details><summary><a href='https://github.com/lewis6991/gitsigns.nvim'>gitsigns.nvim</a> - Click to expand</summary>
 
 ---
 <p align='center'><a><img src='./media/gitsigns.png'></a></p>
@@ -148,7 +148,7 @@ require('cmp').setup({
 ---
 </details>
 
-<details><summary><a href='https://github.com/nvim-treesitter/nvim-treesitter-context'>nvim-treesitter-context</a></summary>
+<details><summary><a href='https://github.com/nvim-treesitter/nvim-treesitter-context'>nvim-treesitter-context</a> - Click to expand</summary>
 
 ---
 <p align='center'><a><img src='./media/treesitter-context.png'></a></p>
@@ -157,7 +157,7 @@ require('cmp').setup({
 </details>
 
 
-<details><summary><a href='https://github.com/ray-x/lsp_signature.nvim'>lsp_signature.nvim</a></summary>
+<details><summary><a href='https://github.com/ray-x/lsp_signature.nvim'>lsp_signature.nvim</a> - Click to expand</summary>
 
 ---
 I don't change the highlight group because I use a minimalistic design for the lsp signature you can adapt it.
@@ -177,7 +177,7 @@ local lsp_signature_cfg = {
 ---
 </details>
 
-<details><summary><a href='https://github.com/o0th/tmux-nova/blob/master/Gallery.md#gruvbox'>tmux status bar</a></summary>
+<details><summary><a href='https://github.com/o0th/tmux-nova/blob/master/Gallery.md#gruvbox'>tmux status bar</a> - Click to expand</summary>
 
 ---
 <p align='center'><a><img src='./media/tmux.png'></a></p>
