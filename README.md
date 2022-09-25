@@ -38,6 +38,7 @@ require('ofirkai').setup {
 require('ofirkai').setup {
 	scheme = require('ofirkai').scheme -- Option to override scheme
 	custom_hlgroups = {},              -- Option to add/override highlight groups
+	remove_italics = false,            -- Option to change all the italics style to none
 }
 ```
 

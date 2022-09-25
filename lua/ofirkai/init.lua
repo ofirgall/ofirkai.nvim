@@ -13,10 +13,23 @@ local function highlight(group, color)
 	)
 end
 
+local function filter_hl_groups(config, hl_groups)
+	for _, colors in pairs(hl_groups) do
+		if config.remove_italics then
+			if colors.style == 'italic' then
+				colors.style = nil
+			end
+		end
+	end
+
+	return hl_groups
+end
+
 local default_config = {
 	scheme = design.scheme,
 	custom_hlgroups = {},
-	called_from_vim_colorscheme = false
+	remove_italics = false,
+	called_from_vim_colorscheme = false -- Internal
 }
 
 M.setup = function(config)
@@ -38,6 +51,8 @@ M.setup = function(config)
 
 	local hl_groups = design.hl_groups(config.scheme)
 	hl_groups = vim.tbl_deep_extend('keep', config.custom_hlgroups, hl_groups)
+
+	hl_groups = filter_hl_groups(config, hl_groups)
 
 	for group, colors in pairs(hl_groups) do
 		highlight(group, colors)
