@@ -6,6 +6,7 @@ Monokai theme for [Neovim](https://github.com/neovim/neovim) with [treesitter](h
 	* [Usage](#usage)
 * [Supported Plugins](#supported-plugins)
 	* [Status Lines](#status-lines)
+	* [Winbars](#winbars)
 	* [Tab Lines](#tab-lines)
 	* [Others](#others)
 * [Contributing](#contributing)
@@ -88,6 +89,60 @@ require('bufferline').setup {
 		numbers = 'ordinal',
 		max_name_length = 40,
 	},
+}
+```
+---
+</details>
+
+### Winbars
+<details><summary><a href='https://github.com/nvim-lualine/lualine.nvim'>lualine.nvim</a> - <b>Custom setup required (Click to Expand)</b></summary>
+
+---
+<p align='center'><a><img src='./media/winbar.png'></a></p>
+
+Setup Example:
+```lua
+-- Unfortunately you can't set them for winbar separately in lualine so I use `color` in my winbar sections
+
+-- SmiteshP/nvim-navic (displays function context)
+local navic = require('nvim-navic')
+navic.setup {
+	separator = "  "
+}
+
+local ofirkai_lualine = require('ofirkai.statuslines.lualine')
+local winbar = {
+	lualine_a = {},
+	lualine_b = {
+		{
+			'filename',
+			icon = '',
+			color = ofirkai_lualine.winbar_color,
+			padding = { left = 4 }
+		},
+	},
+	lualine_c = {
+		{
+			navic.get_location,
+			icon = "",
+			cond = navic.is_available,
+			color = ofirkai_lualine.winbar_color,
+		},
+	},
+	lualine_x = {},
+	lualine_y = {},
+	lualine_z = {}
+}
+
+require('lualine').setup {
+	options = {
+		icons_enabled = true,
+		disabled_filetypes = { -- Recommended filetypes to disable winbar
+			winbar = { 'gitcommit', 'NvimTree', 'toggleterm', 'fugitive' },
+		},
+	},
+	winbar = winbar,
+	inactive_winbar = winbar,
 }
 ```
 ---
@@ -185,6 +240,9 @@ local lsp_signature_cfg = {
 
 ---
 </details>
+
+## Full setup example
+[ui.lua](https://github.com/ofirgall/dotfiles/blob/master/editors/nvim/lua/plugins/ui.lua) from my dotfiles.
 
 ## Contributing
 Pull requests are welcome, you must provide a screenshot of before/after the change.

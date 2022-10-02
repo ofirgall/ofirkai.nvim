@@ -57,4 +57,10 @@ M.theme = {
 	},
 }
 
+M.winbar_color = {
+	fg = scheme.lightorange,
+	bg = scheme.winbar_bg,
+	gui = 'bold',
+}
+
 return M

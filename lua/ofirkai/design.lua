@@ -6,6 +6,7 @@ M.scheme = {
 	secondary_background = '#1d2026',
 	ui_bg = '#1a1a18', -- background for ui, file tree and such.
 	telescope_bg = '#181816', -- Slightly darker than ui_bg
+	winbar_bg = '#222219',
 
 	-- Base colors
 	white = '#f8f8f0',
@@ -727,10 +728,10 @@ M.hl_groups = function(scheme)
 		},
 		-- nvim-treesitter/nvim-treesitter-context
 		TreesitterContext = {
-			bg = scheme.telescope_bg,
+			bg = scheme.winbar_bg,
 		},
 		TreesitterContextLineNumber = {
-			bg = scheme.telescope_bg,
+			bg = scheme.winbar_bg,
 			fg = scheme.purple
 		},
 		-- nvim-lualine/lualine.nvim
