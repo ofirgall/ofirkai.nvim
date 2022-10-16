@@ -1,3 +1,4 @@
+---@mod ofirkai.statuslines.lualine
 local M = {}
 
 local scheme = require('ofirkai').scheme
@@ -18,6 +19,14 @@ local colors = {
 	orange     = '#de933c'
 }
 
+---Lualine theme
+---@usage [[
+---require('lualine').setup {
+---	options = {
+---		theme = require('ofirkai.statuslines.lualine').theme,
+---	}
+---}
+---@usage ]]
 M.theme = {
 	normal = {
 		a = { bg = colors.orange, fg = colors.lightgray, gui = 'bold' },
@@ -57,6 +66,7 @@ M.theme = {
 	},
 }
 
+---Winbar color (for each section), see README for usage
 M.winbar_color = {
 	fg = scheme.lightorange,
 	bg = scheme.winbar_bg,

@@ -1,0 +1,93 @@
+================================================================================
+Introduction                                                           *ofirkai*
+
+Monokai theme
+
+================================================================================
+Ofirkai                                                                *ofirkai*
+
+M.setup({config})                                                *ofirkai.setup*
+
+    Parameters: ~
+        {config}  (table)  user config
+
+    Usage: ~
+        >
+            --Leave empty for default values
+            require('ofirkai').setup {
+            }
+
+            -- Or setup with custom parameters
+            require('ofirkai').setup {
+            	scheme = require('ofirkai').scheme -- Option to override scheme
+            	custom_hlgroups = {},              -- Option to add/override highlight groups
+            	remove_italics = false,            -- Option to change all the italics style to none
+            }
+        <
+
+
+M.scheme()                                                      *ofirkai.scheme*
+    Alias for require('ofirkai.design').scheme
+
+
+================================================================================
+                                                                *ofirkai.design*
+
+M.scheme()                                               *ofirkai.design.scheme*
+    The default scheme table
+
+
+M.hl_groups()                                         *ofirkai.design.hl_groups*
+    The highlight groups
+
+
+================================================================================
+                                                   *ofirkai.statuslines.lualine*
+
+M.theme()                                    *ofirkai.statuslines.lualine.theme*
+    Lualine theme
+
+    Usage: ~
+        >
+            require('lualine').setup {
+            	options = {
+            		theme = require('ofirkai.statuslines.lualine').theme,
+            	}
+            }
+        <
+
+
+M.winbar_color()                      *ofirkai.statuslines.lualine.winbar_color*
+    Winbar color (for each section), see README for usage
+
+
+================================================================================
+                                                   *ofirkai.tablines.bufferline*
+
+M.highlights()                          *ofirkai.tablines.bufferline.highlights*
+    Custom highlights for bufferline.nvim
+
+    Usage: ~
+        >
+            require('bufferline').setup {
+            	highlights = require('ofirkai.tablines.bufferline').highlights, -- Must
+            }
+        <
+
+
+================================================================================
+                                                      *ofirkai.plugins.nvim-cmp*
+
+M.design()                                     *ofirkai.plugins.nvim-cmp.design*
+    The design I use for `window.completion` and `window.documentation`
+
+
+M.window()                                     *ofirkai.plugins.nvim-cmp.window*
+    nvim-cmp `window` configuration
+
+
+M.kind_icons()                             *ofirkai.plugins.nvim-cmp.kind_icons*
+    lsp-kind.nvim icons
+
+
+vim:tw=78:ts=8:noet:ft=help:norl:

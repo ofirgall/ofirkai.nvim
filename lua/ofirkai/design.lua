@@ -1,5 +1,7 @@
+---@mod ofirkai.design
 local M = {}
 
+---The default scheme table
 M.scheme = {
 	-- Main backgrounds
 	background = '#282923',
@@ -50,6 +52,7 @@ M.scheme = {
 	git_signs_change = '#0e72cf',
 }
 
+---The highlight groups
 M.hl_groups = function(scheme)
 	return {
 		Normal = {

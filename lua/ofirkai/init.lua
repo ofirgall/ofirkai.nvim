@@ -1,7 +1,12 @@
+---@mod ofirkai Introduction
+---@brief [[
+---Monokai theme
+---@brief ]]
+
+---@mod ofirkai Ofirkai
 local M = {}
 
 local design = require('ofirkai.design')
-M.scheme = design.scheme
 
 local function highlight(group, color)
 	local style = color.style and 'gui=' .. color.style or 'gui=NONE'
@@ -32,6 +37,19 @@ local default_config = {
 	called_from_vim_colorscheme = false -- Internal
 }
 
+---@param config table user config
+---@usage [[
+-----Leave empty for default values
+---require('ofirkai').setup {
+---}
+---
+----- Or setup with custom parameters
+---require('ofirkai').setup {
+---	scheme = require('ofirkai').scheme -- Option to override scheme
+---	custom_hlgroups = {},              -- Option to add/override highlight groups
+---	remove_italics = false,            -- Option to change all the italics style to none
+---}
+---@usage ]]
 M.setup = function(config)
 	-- Colorscheme is already loaded, no need to reload
 	if vim.g.colors_name == 'ofirkai' and config.called_from_vim_colorscheme then
@@ -58,5 +76,8 @@ M.setup = function(config)
 		highlight(group, colors)
 	end
 end
+
+---Alias for require('ofirkai.design').scheme
+M.scheme = design.scheme
 
 return M

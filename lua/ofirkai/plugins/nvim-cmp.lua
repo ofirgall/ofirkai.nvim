@@ -1,16 +1,20 @@
+---@mod ofirkai.plugins.nvim-cmp
 local M = {}
 
+---The design I use for `window.completion` and `window.documentation`
 M.design = {
 	border = 'rounded',
 	winhighlight = 'Normal:Normal,CursorLine:Visual,Search:None',
 	zindex = 1001,
 }
 
+---nvim-cmp `window` configuration
 M.window = {
 	completion = M.design,
 	documentation = M.design,
 }
 
+---lsp-kind.nvim icons
 M.kind_icons = {
 	Text = "",
 	Method = "",

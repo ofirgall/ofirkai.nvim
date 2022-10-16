@@ -1,0 +1,1 @@
+lemmy-help --prefix-func --prefix-alias --prefix-class --prefix-type lua/ofirkai/init.lua lua/ofirkai/design.lua ./lua/ofirkai/statuslines/* ./lua/ofirkai/tablines/* ./lua/ofirkai/plugins/*  > doc/ofirkai.txt
