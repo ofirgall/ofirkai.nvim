@@ -61,7 +61,7 @@ M.hl_groups = function(scheme)
 			bg = scheme.background,
 		},
 		NormalFloat = {
-			bg = scheme.background,
+			bg = scheme.ui_bg,
 		},
 		Pmenu = {
 			fg = scheme.white,
@@ -613,7 +613,7 @@ M.hl_groups = function(scheme)
 			fg = scheme.yellow,
 		},
 		DiagnosticVirtualTextInfo = {
-			fg = scheme.white,
+			fg = scheme.orange,
 		},
 		DiagnosticVirtualTextHint = {
 			fg = scheme.aqua,

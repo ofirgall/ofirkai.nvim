@@ -190,6 +190,55 @@ require('cmp').setup({
 ---
 </details>
 
+<details><summary><a href='https://github.com/folke/noice.nvim'>noice.nvim</a> - <b>Custom setup is Optional (Click to Expand)</b></summary>
+
+---
+<p align='center'><a><img src='./media/noice.png'></a></p>
+
+```lua
+require('noice').setup {
+    cmdline = {
+        icons = {
+            ["/"] = { hl_group = "DiagnosticWarn" },
+            ["?"] = { hl_group = "DiagnosticWarn" },
+            [":"] = { icon = "", hl_group = "DiagnosticSignHint", firstc = false },
+        }
+    },
+    popupmenu = {
+        enabled = false,
+    },
+    views = {
+        cmdline_popup = {
+            border = {
+                style = "none",
+                padding = { 2, 1 },
+            },
+            filter_options = {},
+            win_options = {
+                winhighlight = "NormalFloat:NormalFloat,FloatBorder:NormalFloat",
+            },
+        },
+    },
+}
+```
+
+---
+</details>
+
+<details><summary><a href='https://github.com/rcarriga/nvim-notify'>nvim-notify</a> - <b>Custom setup is Optional (Click to Expand)</b></summary>
+
+---
+<p align='center'><a><img src='./media/notify.png'></a></p>
+
+```lua
+require('notify').setup {
+    background_colour = require('ofirkai').scheme.ui_bg,
+}
+```
+
+---
+</details>
+
 <details><summary><a href='https://github.com/sindrets/diffview.nvim'>diffview.nvim</a> - Click to expand</summary>
 
 ---
