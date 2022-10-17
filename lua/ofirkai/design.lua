@@ -545,7 +545,7 @@ M.hl_groups = function(scheme)
 		},
 		['@preproc'] = {
 			fg = scheme.comment_fg,
-			style = 'italic',
+			style = 'none',
 		},
 		['@storageclass'] = {
 			fg = scheme.aqua,
