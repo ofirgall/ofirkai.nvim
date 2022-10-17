@@ -78,6 +78,7 @@ M.setup = function(config)
 end
 
 ---Alias for require('ofirkai.design').scheme
+---@type table
 M.scheme = design.scheme
 
 return M

@@ -77,10 +77,7 @@ M.hl_groups = function(scheme)
 		},
 		PmenuThumb = {
 			fg = scheme.purple,
-			bg = scheme.pmenu_thum_bg
-		},
-		PmenuSbar = {
-			bg = scheme.vert_split_fg,
+			bg = scheme.pmenu_thumb_bg
 		},
 		Cursor = {
 			style = 'reverse',
