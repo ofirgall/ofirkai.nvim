@@ -26,6 +26,13 @@ M.setup({config})                                                *ofirkai.setup*
         <
 
 
+M.scheme                                                        *ofirkai.scheme*
+    Alias for require('ofirkai.design').scheme
+
+    Type: ~
+        (table)
+
+
 ================================================================================
                                                                 *ofirkai.design*
 
