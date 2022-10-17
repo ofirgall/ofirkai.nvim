@@ -4,6 +4,7 @@ local M = {}
 local scheme = require('ofirkai').scheme
 
 ---Custom highlights for bufferline.nvim
+---@type table
 ---@usage [[
 ---require('bufferline').setup {
 ---	highlights = require('ofirkai.tablines.bufferline').highlights, -- Must

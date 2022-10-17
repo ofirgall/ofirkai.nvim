@@ -2,6 +2,7 @@
 local M = {}
 
 ---The default scheme table
+---@type table
 M.scheme = {
 	-- Main backgrounds
 	background = '#282923',

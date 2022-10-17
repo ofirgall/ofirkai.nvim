@@ -20,6 +20,7 @@ local colors = {
 }
 
 ---Lualine theme
+---@type table
 ---@usage [[
 ---require('lualine').setup {
 ---	options = {
@@ -67,6 +68,7 @@ M.theme = {
 }
 
 ---Winbar color (for each section), see README for usage
+---@type table
 M.winbar_color = {
 	fg = scheme.lightorange,
 	bg = scheme.winbar_bg,
