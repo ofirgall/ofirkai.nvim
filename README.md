@@ -1,6 +1,8 @@
 # ofirkai.nvim
 Monokai theme for [Neovim](https://github.com/neovim/neovim) with [treesitter](https://github.com/nvim-treesitter/nvim-treesitter) support, aimed to feel like SublimeText 4.
 
+Requires Neovim 0.8+
+
 ---
 * [Installation](#installation)
 	* [Usage](#usage)

@@ -360,145 +360,234 @@ M.hl_groups = function(scheme)
 		Exception = {
 			fg = scheme.light_pink,
 		},
-		TSString = {
+		['@string'] = {
 			fg = scheme.yellow,
 		},
-		TSInclude = {
+		['@string.regex'] = {
+			fg = scheme.purple,
+		},
+		['@string.escape'] = {
+			fg = scheme.purple,
+		},
+		['@include'] = {
 			fg = scheme.light_pink,
 		},
-		TSVariable = {
+		['@variable'] = {
 			fg = scheme.white,
 		},
-		TSVariableBuiltin = {
+		['@variable.builtin'] = {
 			fg = scheme.orange,
 		},
-		TSAnnotation = {
+		['@annotation'] = {
 			fg = scheme.green,
 		},
-		TSComment = {
+		['@comment'] = {
 			fg = scheme.comment_fg,
 			style = 'none',
 		},
-		TSConstant = {
+		['@constant'] = {
 			fg = scheme.dark_pink,
 			style = 'none',
 		},
-		TSConstBuiltin = {
+		['@constant.builtin'] = {
 			fg = scheme.purple,
 		},
-		TSConstMacro = {
+		['@constant.macro'] = {
 			fg = scheme.light_pink,
 			style = 'none',
 		},
-		TSConstructor = {
+		['@text.reference'] = {
 			fg = scheme.aqua,
 			style = 'none',
 		},
-		TSConditional = {
+		['@text.environment'] = {
 			fg = scheme.light_pink,
 		},
-		TSCharacter = {
+		['@text.environment.name'] = {
+			fg = scheme.aqua,
+		},
+		['@constructor'] = {
+			fg = scheme.aqua,
+			style = 'none',
+		},
+		['@conditional'] = {
+			fg = scheme.light_pink,
+		},
+		['@character'] = {
 			fg = scheme.yellow,
 		},
-		TSFunction = {
+		['@character.special'] = {
+			fg = scheme.light_pink,
+		},
+		['@function'] = {
 			fg = scheme.aqua,
 			style = 'none',
 		},
-		TSFuncBuiltin = {
+		['@function.call'] = {
+			fg = scheme.aqua,
+			style = 'none',
+		},
+		['@function.builtin'] = {
 			fg = scheme.aqua,
 		},
-		TSFuncMacro = {
+		['@function.macro'] = {
 			fg = scheme.dark_pink,
 			style = 'italic',
 		},
-		TSAttribute = {
+		['@attribute'] = {
 			fg = scheme.light_pink,
 			style = 'none',
 		},
-		TSKeyword = {
+		['@keyword'] = {
 			fg = scheme.light_pink,
 			style = 'italic',
 		},
-		TSKeywordFunction = {
+		['@keyword.function'] = {
 			fg = scheme.green,
 			style = 'italic',
 		},
-		TSKeywordOperator = {
+		['@keyword.operator'] = {
 			fg = scheme.light_pink,
 		},
-		TSKeywordReturn = {
+		['@keyword.return'] = {
 			fg = scheme.light_pink,
 		},
-		TSMethod = {
+		['@method'] = {
 			fg = scheme.aqua,
 			style = 'none',
 		},
-		TSNamespace = {
+		['@method.call'] = { -- TODO: Was 'TSCall' not sure if its the correct one
+			fg = scheme.light_pink,
+			style = 'none',
+		},
+		['@namespace'] = {
 			fg = scheme.purple,
 		},
-		TSNumber = {
+		['@number'] = {
 			fg = scheme.purple,
 		},
-		TSOperator = {
+		['@operator'] = {
 			fg = scheme.light_pink,
 		},
-		TSParameter = {
+		['@parameter'] = {
 			fg = scheme.orange,
 			style = 'italic',
 		},
-		TSParameterReference = {
+		['@parameter.reference'] = {
 			fg = scheme.white,
 		},
-		TSProperty = {
+		['@property'] = {
 			fg = scheme.white,
 		},
-		TSPunctDelimiter = {
+		['@punctuation.delimiter'] = {
 			fg = scheme.white,
 		},
-		TSPunctBracket = {
+		['@punctuation.bracket'] = {
 			fg = scheme.white,
 		},
-		TSPunctSpecial = {
+		['@punctuation.special'] = {
 			fg = scheme.light_pink,
 		},
-		TSRepeat = {
+		['@repeat'] = {
 			fg = scheme.light_pink,
 		},
-		TSStringRegex = {
-			fg = scheme.purple,
-		},
-		TSStringEscape = {
-			fg = scheme.purple,
-		},
-		TSTag = {
+		['@tag'] = {
 			fg = scheme.light_pink,
 		},
-		TSTagDelimiter = {
+		['@tag.delimiter'] = {
 			fg = scheme.white,
 		},
-		TSTagAttribute = {
+		['@tag.attribute'] = {
 			fg = scheme.green,
 		},
-		TSLabel = {
+		['@label'] = {
 			fg = scheme.white,
 			style = 'italic',
 		},
-		TSType = {
+		['@type'] = {
 			fg = scheme.green,
 			style = 'italic',
 		},
-		TSException = {
+		['@type.builtin'] = {
+			fg = scheme.green,
+			style = 'italic',
+		},
+		['@type.qualifier'] = {
+			fg = scheme.green,
+			style = 'italic',
+		},
+		['@type.definition'] = {
+			fg = scheme.aqua,
+		},
+		['@exception'] = {
 			fg = scheme.light_pink,
 		},
-		TSField = {
+		['@field'] = {
 			fg = scheme.white,
 		},
-		TSFloat = {
+		['@float'] = {
 			fg = scheme.purple,
 		},
-		TSCall = {
+		['@boolean'] = {
+			fg = scheme.purple,
+		},
+		['@symbol'] = {
+			fg = scheme.purple,
+		},
+		['@debug'] = {
+			fg = scheme.orange,
+		},
+		['@define'] = {
 			fg = scheme.light_pink,
-			style = 'none',
+		},
+		['@preproc'] = {
+			fg = scheme.green,
+		},
+		['@storageclass'] = {
+			fg = scheme.aqua,
+		},
+		['@todo'] = {
+			fg = scheme.orange,
+		},
+		['@none'] = {
+		},
+		['@text'] = {
+		},
+		['@text.strong'] = {
+			style = 'bold'
+		},
+		['@text.emphasis'] = {
+			style = 'italic'
+		},
+		['@text.underline'] = {
+			style = 'underline'
+		},
+		['@text.strike'] = {
+			style = 'strikethrough'
+		},
+		['@text.math'] = {
+			fg = scheme.white,
+		},
+		['@text.title'] = {
+			fg = scheme.yellow,
+			style = 'bold',
+		},
+		['@text.literal'] = {
+			fg = scheme.yellow,
+		},
+		['@text.uri'] = {
+			style = 'underline',
+		},
+		['@text.note'] = {
+			fg = scheme.grey,
+			style = 'italic',
+		},
+		['@text.warning'] = {
+			fg = scheme.orange,
+		},
+		['@text.danger'] = {
+			fg = scheme.yellow,
+			style = 'bold',
 		},
 		dbui_tables = {
 			fg = scheme.white,
