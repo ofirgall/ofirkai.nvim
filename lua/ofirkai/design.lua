@@ -582,7 +582,7 @@ M.hl_groups = function(scheme)
 			fg = scheme.white,
 		},
 		['@text.note'] = {
-			fg = scheme.grey,
+			fg = scheme.purple,
 			style = 'italic',
 		},
 		['@text.warning'] = {
