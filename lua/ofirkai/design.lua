@@ -369,6 +369,9 @@ M.hl_groups = function(scheme)
 		['@string.escape'] = {
 			fg = scheme.purple,
 		},
+		['@string.special'] = {
+			fg = scheme.light_pink,
+		},
 		['@include'] = {
 			fg = scheme.light_pink,
 		},
@@ -396,14 +399,14 @@ M.hl_groups = function(scheme)
 			fg = scheme.light_pink,
 			style = 'none',
 		},
-		['@text.reference'] = {
+		['@text.reference'] = { -- Linked to `Constant` by default
 			fg = scheme.aqua,
 			style = 'none',
 		},
-		['@text.environment'] = {
+		['@text.environment'] = { -- Linked to `Macro` by default
 			fg = scheme.light_pink,
 		},
-		['@text.environment.name'] = {
+		['@text.environment.name'] = { -- Linked to `Type` by default
 			fg = scheme.aqua,
 		},
 		['@constructor'] = {
@@ -565,9 +568,6 @@ M.hl_groups = function(scheme)
 		['@text.strike'] = {
 			style = 'strikethrough'
 		},
-		['@text.math'] = {
-			fg = scheme.white,
-		},
 		['@text.title'] = {
 			fg = scheme.yellow,
 			style = 'bold',
@@ -577,6 +577,9 @@ M.hl_groups = function(scheme)
 		},
 		['@text.uri'] = {
 			style = 'underline',
+		},
+		['@text.math'] = {
+			fg = scheme.white,
 		},
 		['@text.note'] = {
 			fg = scheme.grey,
