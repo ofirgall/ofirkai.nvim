@@ -79,7 +79,7 @@ M.hl_groups = function(scheme)
 			bg = scheme.pmenu_thum_bg
 		},
 		PmenuSbar = {
-			bg = scheme.secondary_background,
+			bg = scheme.vert_split_fg,
 		},
 		Cursor = {
 			style = 'reverse',
@@ -544,7 +544,8 @@ M.hl_groups = function(scheme)
 			fg = scheme.light_pink,
 		},
 		['@preproc'] = {
-			fg = scheme.green,
+			fg = scheme.comment_fg,
+			style = 'italic',
 		},
 		['@storageclass'] = {
 			fg = scheme.aqua,
