@@ -457,8 +457,8 @@ M.hl_groups = function(scheme)
 			fg = scheme.aqua,
 			style = 'none',
 		},
-		['@method.call'] = { -- TODO: Was 'TSCall' not sure if its the correct one
-			fg = scheme.light_pink,
+		['@method.call'] = {
+			fg = scheme.aqua,
 			style = 'none',
 		},
 		['@namespace'] = {
