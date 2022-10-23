@@ -613,7 +613,7 @@ M.hl_groups = function(scheme)
 			fg = scheme.yellow,
 		},
 		DiagnosticVirtualTextInfo = {
-			fg = scheme.orange,
+			fg = scheme.white,
 		},
 		DiagnosticVirtualTextHint = {
 			fg = scheme.aqua,
@@ -838,6 +838,70 @@ M.hl_groups = function(scheme)
 		LuaLineDiffDelete = {
 			fg = scheme.red,
 		},
+		-- folke/noice.nvim
+		NoiceVirtualText = {
+			fg = scheme.comment_fg,
+			style = 'italic'
+		},
+		NoiceCmdlineIconCmdline = {
+			fg = scheme.aqua
+		},
+		NoiceCmdlineIconFilter = {
+			fg = scheme.yellow
+		},
+		NoiceCmdlineIconLua = {
+			fg = scheme.red
+		},
+		NoiceCmdlineIconSearch = {
+			fg = scheme.orange
+		},
+		NoiceCmdlinePopup = { -- Actual search line, TODO: link to FloatNormal
+			bg = scheme.ui_bg
+		},
+		-- TODO: link to FloatBorder and FloatNormal
+		NoiceCmdlinePopupBorder = {
+			fg = scheme.ui_bg,
+			bg = scheme.ui_bg
+		},
+		NoiceCmdlinePopupBorderCmdline = {
+			fg = scheme.ui_bg,
+			bg = scheme.ui_bg
+		},
+		NoiceCmdlinePopupBorderFilter = {
+			fg = scheme.ui_bg,
+			bg = scheme.ui_bg
+		},
+		NoiceCmdlinePopupBorderLua = {
+			fg = scheme.ui_bg,
+			bg = scheme.ui_bg
+		},
+		NoiceCmdlinePopupBorderSearch = {
+			fg = scheme.ui_bg,
+			bg = scheme.ui_bg
+		},
+		-- Progress Bar
+		NoiceFormatProgressDone = {
+			bg = scheme.secondary_background
+		},
+		NoiceFormatProgressTodo = {
+			bg = scheme.telescope_bg
+		},
+		NoiceFormatTitle = {
+			bg = scheme.background
+		},
+		NoiceLspProgressClient = {
+			fg = scheme.yellow,
+			bg = scheme.background,
+			style = 'bold',
+		},
+		NoiceLspProgressSpinner = {
+			fg = scheme.aqua,
+			bg = scheme.background
+		},
+		NoiceLspProgressTitle = {
+			fg = scheme.white,
+			bg = scheme.background,
+		}
 	}
 end
 
