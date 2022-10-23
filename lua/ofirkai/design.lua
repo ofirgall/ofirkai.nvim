@@ -510,7 +510,7 @@ M.hl_groups = function(scheme)
 			style = 'italic',
 		},
 		['@type.builtin'] = {
-			fg = scheme.green,
+			fg = scheme.aqua,
 			style = 'italic',
 		},
 		['@type.qualifier'] = {
