@@ -677,6 +677,14 @@ M.hl_groups = function(scheme)
 			fg = scheme.white,
 			style = 'NONE',
 		},
+		NvimTreeCursorLineNr = {
+			bg = scheme.cursor_line_bg,
+			fg = scheme.yellow,
+		},
+		NvimTreeLineNr = {
+			bg = scheme.ui_bg,
+			fg = scheme.orange,
+		},
 		-- nvim-telescope/telescope.nvim
 		TelescopeBorder = {
 			fg = scheme.telescope_bg,
