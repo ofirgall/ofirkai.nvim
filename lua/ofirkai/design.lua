@@ -513,6 +513,10 @@ M.hl_groups = function(scheme)
 			fg = scheme.red,
 			style = 'italic',
 		},
+		['@field.yaml'] = { -- yaml fields
+			fg = scheme.red,
+			style = 'italic',
+		},
 		['@type'] = {
 			fg = scheme.green,
 			style = 'italic',
