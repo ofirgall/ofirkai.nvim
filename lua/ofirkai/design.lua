@@ -922,7 +922,16 @@ M.hl_groups = function(scheme)
 		NoiceLspProgressTitle = {
 			fg = scheme.white,
 			bg = scheme.background,
-		}
+		},
+		-- ThePrimeagen/harpoon
+		HarpoonWindow = { -- TODO link to `WhiteBorder`
+			fg = scheme.white,
+			bg = scheme.ui_bg,
+		},
+		HarpoonBorder = { -- TODO link to `WhiteBorder`
+			fg = scheme.white,
+			bg = scheme.ui_bg,
+		},
 	}
 end
 
