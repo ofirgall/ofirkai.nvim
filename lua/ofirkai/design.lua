@@ -863,6 +863,9 @@ M.hl_groups = function(scheme)
 		NoiceCmdlineIconSearch = {
 			fg = scheme.orange
 		},
+		NoiceCmdlineIconHelp = {
+			fg = scheme.dark_pink
+		},
 		NoiceCmdlinePopup = { -- Actual search line, TODO: link to FloatNormal
 			bg = scheme.ui_bg
 		},

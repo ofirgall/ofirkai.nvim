@@ -199,10 +199,29 @@ require('cmp').setup({
 ---
 </details>
 
-<details><summary><a href='https://github.com/folke/noice.nvim'>noice.nvim</a> - Click to expand</summary>
+<details><summary><a href='https://github.com/folke/noice.nvim'>noice.nvim</a> - <b>Custom setup is Optional (Click to Expand)</b></summary>
 
 ---
 <p align='center'><a><img src='./media/noice.png'></a></p>
+
+```lua
+require('noice').setup {
+    popupmenu = {
+        enabled = false, -- I prefer nvim-cmp
+    },
+    lsp = {
+        signature = {
+            enabled = false -- I prefer to use ray-x/lsp_signature.nvim with minimal design
+        },
+        override = {
+            -- Override `vim.lsp.buf.hover` and `nvim-cmp` doc formatter with `noice` doc formatter.
+            ['vim.lsp.util.convert_input_to_markdown_lines'] = true,
+            ['vim.lsp.util.stylize_markdown'] = true,
+            ['cmp.entry.get_documentation'] = true,
+        },
+    },
+}
+```
 
 ---
 </details>
