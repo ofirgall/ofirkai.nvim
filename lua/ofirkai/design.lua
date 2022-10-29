@@ -510,7 +510,7 @@ M.hl_groups = function(scheme)
 			fg = scheme.green,
 		},
 		['@label'] = {
-			fg = scheme.white,
+			fg = scheme.red,
 			style = 'italic',
 		},
 		['@type'] = {
