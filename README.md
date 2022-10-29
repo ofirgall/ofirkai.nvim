@@ -5,6 +5,7 @@ Requires Neovim 0.8+
 
 ---
 * [Installation](#installation)
+	* [Updates](#updates)
 	* [Usage](#usage)
 * [Supported Plugins](#supported-plugins)
 	* [Status Lines](#status-lines)
@@ -29,6 +30,14 @@ I kept adding support for other plugins and changing the default values of [mono
 ## Installation
 ```lua
 use 'ofirgall/ofirkai.nvim'
+```
+
+### Updates
+ofirkai is my daily driver, I update it for my needs. New plugins I use will be added, and some changes might be added, I recommend watching the repo to keep notified (click on `Watch`).
+
+In addition, you can follow the experimental branch `exp` to get experimental updates (if they don't break anything and I liked the change the changes will be merged to `master` within a week or so).
+```lua
+use { 'ofirgall/ofirkai.nvim', branch = 'exp' }
 ```
 
 ### Usage
