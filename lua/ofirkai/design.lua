@@ -63,6 +63,14 @@ M.hl_groups = function(scheme)
 		NormalFloat = {
 			bg = scheme.ui_bg,
 		},
+		FloatBorder = {
+			fg = scheme.ui_bg,
+			bg = scheme.ui_bg,
+		},
+		WhiteBorder = { -- Not a real highlight group, use for floats that needs border
+			fg = scheme.white,
+			bg = scheme.ui_bg,
+		},
 		Pmenu = {
 			fg = scheme.white,
 			bg = scheme.pmenu_bg,
