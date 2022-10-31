@@ -21,7 +21,7 @@ M.scheme = {
 	orange = '#fd971f',
 	purple = '#ae81ff',
 	red = '#e95678',
-	light_pink = '#f92672',
+	light_pink = '#f92672', -- TODO: confusing, should be 'light_red'
 	dark_pink = '#e878d2',
 
 	-- Specific colors
@@ -510,10 +510,10 @@ M.hl_groups = function(scheme)
 			fg = scheme.green,
 		},
 		['@label'] = {
-			fg = scheme.red,
+			fg = scheme.light_pink,
 		},
 		['@field.yaml'] = { -- yaml fields
-			fg = scheme.red,
+			fg = scheme.light_pink,
 		},
 		['@type'] = {
 			fg = scheme.green,
