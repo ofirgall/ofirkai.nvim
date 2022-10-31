@@ -17,6 +17,7 @@ M.scheme = {
 	black = '#000000',
 	green = '#a6e22e',
 	aqua = '#66d9ef',
+	dimmed_aqua = '#58aebf',
 	yellow = '#e6db74',
 	orange = '#fd971f',
 	purple = '#ae81ff',
@@ -931,6 +932,11 @@ M.hl_groups = function(scheme)
 		HarpoonBorder = { -- TODO link to `WhiteBorder`
 			fg = scheme.white,
 			bg = scheme.ui_bg,
+		},
+
+		----- Not Real Higlight Groups -----
+		InlayHints = {
+			fg = scheme.dimmed_aqua,
 		},
 	}
 end
