@@ -44,7 +44,8 @@ M.scheme = {
 	pmenu_bg = '#2c2c26',
 	pmenu_sel_bg = '#40403a',
 	pmenu_thumb_bg = '#47473b',
-	vert_split_fg = '#948f5a',
+	vert_split_fg = '#75724b',
+	vert_split_fg_active = '#948f5a', -- TODO: add nvim-zh/colorful-winsep.nvim support
 	tabline_fg = '#f20aee',
 	tabline_sel_fg = '#78b6e8',
 
