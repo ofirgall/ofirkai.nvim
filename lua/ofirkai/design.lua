@@ -22,7 +22,7 @@ M.scheme = {
 	orange = '#fd971f',
 	purple = '#ae81ff',
 	red = '#e95678',
-	light_pink = '#f92672', -- TODO: confusing, should be 'light_red'
+	light_red = '#f92672',
 	dark_pink = '#e878d2',
 
 	-- Specific colors
@@ -118,7 +118,7 @@ M.hl_groups = function(scheme)
 			fg = scheme.yellow,
 		},
 		MatchParen = {
-			fg = scheme.light_pink,
+			fg = scheme.light_red,
 		},
 		Question = {
 			fg = scheme.yellow,
@@ -180,11 +180,11 @@ M.hl_groups = function(scheme)
 			style = 'undercurl',
 		},
 		SpellLocal = {
-			ctermfg = scheme.light_pink,
+			ctermfg = scheme.light_red,
 			style = 'undercurl',
 		},
 		SpecialKey = {
-			fg = scheme.light_pink,
+			fg = scheme.light_red,
 		},
 		Title = {
 			fg = scheme.yellow,
@@ -209,7 +209,7 @@ M.hl_groups = function(scheme)
 			fg = scheme.green,
 		},
 		diffRemoved = {
-			fg = scheme.light_pink,
+			fg = scheme.light_red,
 		},
 		Folded = {
 			fg = scheme.grey,
@@ -257,38 +257,38 @@ M.hl_groups = function(scheme)
 			style = 'italic',
 		},
 		Statement = {
-			fg = scheme.light_pink,
+			fg = scheme.light_red,
 		},
 		Operator = {
-			fg = scheme.light_pink,
+			fg = scheme.light_red,
 		},
 		Label = {
-			fg = scheme.light_pink,
+			fg = scheme.light_red,
 		},
 		Keyword = {
-			fg = scheme.light_pink,
+			fg = scheme.light_red,
 			style = 'italic',
 		},
 		PreProc = {
 			fg = scheme.green,
 		},
 		Include = {
-			fg = scheme.light_pink,
+			fg = scheme.light_red,
 		},
 		Define = {
-			fg = scheme.light_pink,
+			fg = scheme.light_red,
 		},
 		Macro = {
-			fg = scheme.light_pink,
+			fg = scheme.light_red,
 		},
 		PreCondit = {
-			fg = scheme.light_pink,
+			fg = scheme.light_red,
 		},
 		Special = {
 			fg = scheme.white,
 		},
 		SpecialChar = {
-			fg = scheme.light_pink,
+			fg = scheme.light_red,
 		},
 		Delimiter = {
 			fg = scheme.white,
@@ -359,13 +359,13 @@ M.hl_groups = function(scheme)
 			bg = scheme.red,
 		},
 		Conditional = {
-			fg = scheme.light_pink,
+			fg = scheme.light_red,
 		},
 		Repeat = {
-			fg = scheme.light_pink,
+			fg = scheme.light_red,
 		},
 		Exception = {
-			fg = scheme.light_pink,
+			fg = scheme.light_red,
 		},
 		['@string'] = {
 			fg = scheme.yellow,
@@ -377,10 +377,10 @@ M.hl_groups = function(scheme)
 			fg = scheme.purple,
 		},
 		['@string.special'] = {
-			fg = scheme.light_pink,
+			fg = scheme.light_red,
 		},
 		['@include'] = {
-			fg = scheme.light_pink,
+			fg = scheme.light_red,
 		},
 		['@variable'] = {
 			fg = scheme.white,
@@ -403,7 +403,7 @@ M.hl_groups = function(scheme)
 			fg = scheme.purple,
 		},
 		['@constant.macro'] = {
-			fg = scheme.light_pink,
+			fg = scheme.light_red,
 			style = 'none',
 		},
 		['@text.reference'] = { -- Linked to `Constant` by default
@@ -411,7 +411,7 @@ M.hl_groups = function(scheme)
 			style = 'none',
 		},
 		['@text.environment'] = { -- Linked to `Macro` by default
-			fg = scheme.light_pink,
+			fg = scheme.light_red,
 		},
 		['@text.environment.name'] = { -- Linked to `Type` by default
 			fg = scheme.aqua,
@@ -421,13 +421,13 @@ M.hl_groups = function(scheme)
 			style = 'none',
 		},
 		['@conditional'] = {
-			fg = scheme.light_pink,
+			fg = scheme.light_red,
 		},
 		['@character'] = {
 			fg = scheme.yellow,
 		},
 		['@character.special'] = {
-			fg = scheme.light_pink,
+			fg = scheme.light_red,
 		},
 		['@function'] = {
 			fg = scheme.aqua,
@@ -445,11 +445,11 @@ M.hl_groups = function(scheme)
 			style = 'italic',
 		},
 		['@attribute'] = {
-			fg = scheme.light_pink,
+			fg = scheme.light_red,
 			style = 'none',
 		},
 		['@keyword'] = {
-			fg = scheme.light_pink,
+			fg = scheme.light_red,
 			style = 'italic',
 		},
 		['@keyword.function'] = {
@@ -457,10 +457,10 @@ M.hl_groups = function(scheme)
 			style = 'italic',
 		},
 		['@keyword.operator'] = {
-			fg = scheme.light_pink,
+			fg = scheme.light_red,
 		},
 		['@keyword.return'] = {
-			fg = scheme.light_pink,
+			fg = scheme.light_red,
 		},
 		['@method'] = {
 			fg = scheme.aqua,
@@ -477,7 +477,7 @@ M.hl_groups = function(scheme)
 			fg = scheme.purple,
 		},
 		['@operator'] = {
-			fg = scheme.light_pink,
+			fg = scheme.light_red,
 		},
 		['@parameter'] = {
 			fg = scheme.orange,
@@ -496,13 +496,13 @@ M.hl_groups = function(scheme)
 			fg = scheme.white,
 		},
 		['@punctuation.special'] = {
-			fg = scheme.light_pink,
+			fg = scheme.light_red,
 		},
 		['@repeat'] = {
-			fg = scheme.light_pink,
+			fg = scheme.light_red,
 		},
 		['@tag'] = {
-			fg = scheme.light_pink,
+			fg = scheme.light_red,
 		},
 		['@tag.delimiter'] = {
 			fg = scheme.white,
@@ -511,10 +511,10 @@ M.hl_groups = function(scheme)
 			fg = scheme.green,
 		},
 		['@label'] = {
-			fg = scheme.light_pink,
+			fg = scheme.light_red,
 		},
 		['@field.yaml'] = { -- yaml fields
-			fg = scheme.light_pink,
+			fg = scheme.light_red,
 		},
 		['@type'] = {
 			fg = scheme.green,
@@ -532,7 +532,7 @@ M.hl_groups = function(scheme)
 			fg = scheme.aqua,
 		},
 		['@exception'] = {
-			fg = scheme.light_pink,
+			fg = scheme.light_red,
 		},
 		['@field'] = {
 			fg = scheme.white,
@@ -550,7 +550,7 @@ M.hl_groups = function(scheme)
 			fg = scheme.orange,
 		},
 		['@define'] = {
-			fg = scheme.light_pink,
+			fg = scheme.light_red,
 		},
 		['@preproc'] = {
 			fg = scheme.comment_fg,
@@ -674,7 +674,7 @@ M.hl_groups = function(scheme)
 			bg = scheme.ui_bg
 		},
 		NvimTreeWindowPicker = {
-			fg = scheme.light_pink,
+			fg = scheme.light_red,
 			bg = scheme.secondary_background,
 			style = 'bold'
 		},
@@ -682,7 +682,7 @@ M.hl_groups = function(scheme)
 			fg = scheme.white,
 		},
 		NvimTreeRootFolder = {
-			fg = scheme.light_pink,
+			fg = scheme.light_red,
 		},
 		NvimTreeSpecialFile = {
 			fg = scheme.white,
@@ -734,7 +734,7 @@ M.hl_groups = function(scheme)
 			fg = scheme.green,
 		},
 		TelescopeMultiSelection = {
-			fg = scheme.light_pink,
+			fg = scheme.light_red,
 		},
 		TelescopeMatching = {
 			fg = scheme.aqua,
@@ -769,19 +769,19 @@ M.hl_groups = function(scheme)
 			fg = scheme.comment_fg
 		},
 		CmpItemKindKeyword = {
-			fg = scheme.light_pink
+			fg = scheme.light_red
 		},
 		CmpItemKindVariable = {
-			fg = scheme.light_pink
+			fg = scheme.light_red
 		},
 		CmpItemKindConstant = {
-			fg = scheme.light_pink
+			fg = scheme.light_red
 		},
 		CmpItemKindReference = {
-			fg = scheme.light_pink
+			fg = scheme.light_red
 		},
 		CmpItemKindValue = {
-			fg = scheme.light_pink
+			fg = scheme.light_red
 		},
 		CmpItemKindFunction = {
 			fg = scheme.aqua
