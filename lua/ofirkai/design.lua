@@ -69,10 +69,6 @@ M.hl_groups = function(scheme)
 			fg = scheme.ui_bg,
 			bg = scheme.ui_bg,
 		},
-		WhiteBorder = { -- Not a real highlight group, use for floats that needs border
-			fg = scheme.white,
-			bg = scheme.ui_bg,
-		},
 		Pmenu = {
 			fg = scheme.white,
 			bg = scheme.pmenu_bg,
@@ -935,9 +931,13 @@ M.hl_groups = function(scheme)
 			bg = scheme.ui_bg,
 		},
 
-		----- Not Real Higlight Groups -----
-		InlayHints = {
+		----- Additional hl groups -----
+		InlayHints = { -- For InlayHints
 			fg = scheme.dimmed_aqua,
+		},
+		WhiteBorder = { -- For floats that needs border
+			fg = scheme.white,
+			bg = scheme.ui_bg,
 		},
 	}
 end

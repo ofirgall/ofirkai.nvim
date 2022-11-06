@@ -58,6 +58,11 @@ You can find the default values for the scheme and highlights in [design.lua](ht
 
 _**Note**_: Each plugin that need a setup has an example in the collapsible section.
 
+#### Additional highlight groups
+ofirkai adds additional highlight groups to help configure other plugins.
+* `InlayHints` - For InlayHints.
+* `WhiteBorder` - For floating windows that utilize the border for text, [dressing.nvim](https://github.com/stevearc/dressing.nvim).
+
 ## Supported Plugins
 There is a screenshot example for each plugin.
 
@@ -179,6 +184,23 @@ require('cmp').setup({
 	},
 
 })
+```
+---
+</details>
+
+<details><summary><a href='https://github.com/stevearc/dressing.nvim'>dressing.nvim</a> - <b>Custom setup required (Click to expand)</b></summary>
+
+---
+<p align='center'><a><img src='./media/dressing.png'></a></p>
+
+Setup Example:
+```lua
+-- Requires `WhiteBorder` to show the title.
+require('dressing').setup {
+    input = {
+        winhighlight = require('ofirkai.plugins.dressing').winhighlight
+    }
+}
 ```
 ---
 </details>
