@@ -91,6 +91,25 @@ M.highlights                            *ofirkai.tablines.bufferline.highlights*
 
 
 ================================================================================
+                                                      *ofirkai.plugins.dressing*
+
+M.winhighlight                           *ofirkai.plugins.dressing.winhighlight*
+    Winhighlight for `stevearc/dressing.nvim`
+
+    Type: ~
+        (string)
+
+    Usage: ~
+        >
+            require('dressing').setup {
+                input = {
+                    winhighlight = require('ofirkai.plugins.dressing').winhighlight
+                }
+            }
+        <
+
+
+================================================================================
                                                       *ofirkai.plugins.nvim-cmp*
 
 M.design                                       *ofirkai.plugins.nvim-cmp.design*
