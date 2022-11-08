@@ -2,8 +2,7 @@
 ---@brief [[
 ---Monokai theme
 ---@brief ]]
-
----@mod ofirkai Ofirkai
+---@divider -
 local M = {}
 
 local design = require('ofirkai.design')
