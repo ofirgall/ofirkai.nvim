@@ -1,1 +1,1 @@
-lua require('ofirkai').setup({called_from_vim_colorscheme = true})
+lua require('ofirkai').setup({})

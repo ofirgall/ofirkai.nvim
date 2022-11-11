@@ -33,7 +33,6 @@ local default_config = {
 	scheme = design.scheme,
 	custom_hlgroups = {},
 	remove_italics = false,
-	called_from_vim_colorscheme = false -- Internal
 }
 
 ---@param config table user config
@@ -50,11 +49,6 @@ local default_config = {
 ---}
 ---@usage ]]
 M.setup = function(config)
-	-- Colorscheme is already loaded, no need to reload
-	if vim.g.colors_name == 'ofirkai' and config.called_from_vim_colorscheme then
-		return
-	end
-
 	vim.cmd('hi clear')
 	if vim.fn.exists('syntax_on') then
 		vim.cmd('syntax reset')
