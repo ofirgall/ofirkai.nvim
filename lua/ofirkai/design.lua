@@ -553,8 +553,9 @@ M.hl_groups = function(scheme)
 			fg = scheme.comment_fg,
 			style = 'none',
 		},
-		['@storageclass'] = {
-			fg = scheme.aqua,
+		['@storageclass'] = { -- rust life times, TODO: make it different from `keyword`
+			fg = scheme.light_red,
+			style = 'italic',
 		},
 		['@todo'] = {
 			fg = scheme.orange,
