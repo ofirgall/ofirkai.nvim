@@ -521,8 +521,8 @@ M.hl_groups = function(scheme)
 			fg = scheme.aqua,
 			style = 'italic',
 		},
-		['@type.qualifier'] = {
-			fg = scheme.green,
+		['@type.qualifier'] = { -- rust `mut`, TODO: make it different from `keyword`, maybe like @storageclass
+			fg = scheme.light_red,
 			style = 'italic',
 		},
 		['@type.definition'] = {
