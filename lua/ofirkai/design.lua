@@ -400,6 +400,9 @@ M.hl_groups = function(scheme)
 		['@constant.builtin'] = {
 			fg = scheme.purple,
 		},
+		['@constant.builtin.rust'] = { -- Some, Ok, Err, TODO: `None` should be purple
+			fg = scheme.teal,
+		},
 		['@constant.macro'] = {
 			fg = scheme.light_red,
 			style = 'none',
@@ -525,7 +528,7 @@ M.hl_groups = function(scheme)
 			fg = scheme.aqua,
 			style = 'italic',
 		},
-		['@type.qualifier'] = { -- rust `mut`, TODO: make it different from `keyword`, maybe like @storageclass
+		['@type.qualifier'] = { -- rust `mut`
 			fg = scheme.light_red,
 			style = 'italic',
 		},
@@ -557,7 +560,7 @@ M.hl_groups = function(scheme)
 			fg = scheme.comment_fg,
 			style = 'none',
 		},
-		['@storageclass'] = { -- rust life times, TODO: make it different from `keyword`
+		['@storageclass'] = { -- rust life times
 			fg = scheme.light_red,
 			style = 'italic',
 		},
