@@ -24,6 +24,7 @@ M.scheme = {
 	red = '#e95678',
 	light_red = '#f92672',
 	dark_pink = '#e878d2',
+	teal = '#3ae0b4',
 
 	-- Specific colors
 	whitespace_fg = '#333842',
@@ -507,8 +508,11 @@ M.hl_groups = function(scheme)
 		['@tag.attribute'] = {
 			fg = scheme.green,
 		},
-		['@label'] = {
+		['@label.json'] = {
 			fg = scheme.light_red,
+		},
+		['@label'] = {
+			fg = scheme.white,
 		},
 		['@field.yaml'] = { -- yaml fields
 			fg = scheme.light_red,
