@@ -533,8 +533,9 @@ M.hl_groups = function(scheme)
 			fg = scheme.light_red,
 			style = 'italic',
 		},
-		['@type.definition'] = {
-			fg = scheme.aqua,
+		['@type.definition'] = { -- TODO: link to `@type`
+			fg = scheme.green,
+			style = 'italic',
 		},
 		['@exception'] = {
 			fg = scheme.light_red,
