@@ -864,6 +864,17 @@ M.hl_groups = function(scheme)
 		LuaLineDiffDelete = {
 			fg = scheme.red,
 		},
+		-- dapui.nvim -- TODO: complete shorthand
+		DapUIVariable = { -- TODO: link to `@parameter`
+			fg = scheme.orange,
+		},
+		DapUIType = { -- TODO: link to `@type`
+			fg = scheme.green,
+			style = 'italic',
+		},
+		DapUIValue = {
+			fg = scheme.yellow,
+		},
 		-- folke/noice.nvim
 		NoiceVirtualText = {
 			fg = scheme.comment_fg,
