@@ -32,37 +32,37 @@ M.theme = {
 	normal = {
 		a = { bg = colors.orange, fg = colors.lightgray, gui = 'bold' },
 		b = { bg = colors.lightbrown, fg = colors.orange },
-		c = { bg = colors.brown, fg = colors.white },
+		c = { bg = colors.brown, fg = colors.orange },
 		x = { bg = colors.brown, fg = colors.orange },
 	},
 	insert = {
 		a = { bg = colors.cyan, fg = colors.lightgray, gui = 'bold' },
 		b = { bg = colors.lightbrown, fg = colors.cyan },
-		c = { bg = colors.brown, fg = colors.white },
+		c = { bg = colors.brown, fg = colors.cyan },
 		x = { bg = colors.brown, fg = colors.cyan },
 	},
 	visual = {
 		a = { bg = colors.magenta, fg = colors.lightgray, gui = 'bold' },
 		b = { bg = colors.lightbrown, fg = colors.magenta },
-		c = { bg = colors.brown, fg = colors.white },
+		c = { bg = colors.brown, fg = colors.magenta },
 		x = { bg = colors.lightbrown, fg = colors.magenta },
 	},
 	replace = {
 		a = { bg = colors.red, fg = colors.lightgray, gui = 'bold' },
 		b = { bg = colors.lightbrown, fg = colors.red },
-		c = { bg = colors.brown, fg = colors.white },
+		c = { bg = colors.brown, fg = colors.red },
 		x = { bg = colors.lightbrown, fg = colors.red },
 	},
 	command = {
 		a = { bg = colors.green, fg = colors.lightgray, gui = 'bold' },
 		b = { bg = colors.lightbrown, fg = colors.green },
-		c = { bg = colors.brown, fg = colors.white },
+		c = { bg = colors.brown, fg = colors.green },
 		x = { bg = colors.lightbrown, fg = colors.green },
 	},
 	inactive = {
 		a = { bg = colors.darkgray, fg = colors.lightgray, gui = 'bold' },
 		b = { bg = colors.darkgray, fg = colors.lightgray },
-		c = { bg = colors.darkgray, fg = colors.lightgray },
+		c = { bg = colors.darkgray, fg = colors.lightgray, gui = 'bold' },
 		x = { bg = colors.darkgray, fg = colors.lightgray },
 	},
 }
