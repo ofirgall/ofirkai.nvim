@@ -529,6 +529,10 @@ M.hl_groups = function(scheme)
 			fg = scheme.aqua,
 			style = 'italic',
 		},
+		['@type.builtin.c'] = { -- TODO: link to @type
+			fg = scheme.green,
+			style = 'italic',
+		},
 		['@type.qualifier'] = { -- rust `mut`
 			fg = scheme.light_red,
 			style = 'italic',
