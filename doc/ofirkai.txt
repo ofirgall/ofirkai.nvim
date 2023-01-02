@@ -1,9 +1,9 @@
-================================================================================
+==============================================================================
 Introduction                                                           *ofirkai*
 
 Monokai theme
 
---------------------------------------------------------------------------------
+------------------------------------------------------------------------------
 
 M.setup({config})                                                *ofirkai.setup*
 
@@ -11,18 +11,18 @@ M.setup({config})                                                *ofirkai.setup*
         {config}  (table)  user config
 
     Usage: ~
-        >
-            --Leave empty for default values
-            require('ofirkai').setup {
-            }
+>lua
+        --Leave empty for default values
+        require('ofirkai').setup {
+        }
 
-            -- Or setup with custom parameters
-            require('ofirkai').setup {
-            	scheme = require('ofirkai').scheme -- Option to override scheme
-            	custom_hlgroups = {},              -- Option to add/override highlight groups
-            	remove_italics = false,            -- Option to change all the italics style to none
-            }
-        <
+        -- Or setup with custom parameters
+        require('ofirkai').setup {
+        	scheme = require('ofirkai').scheme -- Option to override scheme
+        	custom_hlgroups = {},              -- Option to add/override highlight groups
+        	remove_italics = false,            -- Option to change all the italics style to none
+        }
+<
 
 
 M.scheme                                                        *ofirkai.scheme*
@@ -32,7 +32,7 @@ M.scheme                                                        *ofirkai.scheme*
         (table)
 
 
-================================================================================
+==============================================================================
                                                                 *ofirkai.design*
 
 M.scheme                                                 *ofirkai.design.scheme*
@@ -46,7 +46,7 @@ M.hl_groups()                                         *ofirkai.design.hl_groups*
     The highlight groups
 
 
-================================================================================
+==============================================================================
                                                    *ofirkai.statuslines.lualine*
 
 M.theme                                      *ofirkai.statuslines.lualine.theme*
@@ -56,13 +56,13 @@ M.theme                                      *ofirkai.statuslines.lualine.theme*
         (table)
 
     Usage: ~
-        >
-            require('lualine').setup {
-            	options = {
-            		theme = require('ofirkai.statuslines.lualine').theme,
-            	}
-            }
-        <
+>lua
+        require('lualine').setup {
+        	options = {
+        		theme = require('ofirkai.statuslines.lualine').theme,
+        	}
+        }
+<
 
 
 M.winbar_color                        *ofirkai.statuslines.lualine.winbar_color*
@@ -72,7 +72,7 @@ M.winbar_color                        *ofirkai.statuslines.lualine.winbar_color*
         (table)
 
 
-================================================================================
+==============================================================================
                                                    *ofirkai.tablines.bufferline*
 
 M.highlights                            *ofirkai.tablines.bufferline.highlights*
@@ -82,14 +82,14 @@ M.highlights                            *ofirkai.tablines.bufferline.highlights*
         (table)
 
     Usage: ~
-        >
-            require('bufferline').setup {
-            	highlights = require('ofirkai.tablines.bufferline').highlights, -- Must
-            }
-        <
+>lua
+        require('bufferline').setup {
+        	highlights = require('ofirkai.tablines.bufferline').highlights, -- Must
+        }
+<
 
 
-================================================================================
+==============================================================================
                                                       *ofirkai.plugins.dressing*
 
 M.winhighlight                           *ofirkai.plugins.dressing.winhighlight*
@@ -99,16 +99,16 @@ M.winhighlight                           *ofirkai.plugins.dressing.winhighlight*
         (string)
 
     Usage: ~
-        >
-            require('dressing').setup {
-                input = {
-                    winhighlight = require('ofirkai.plugins.dressing').winhighlight
-                }
+>lua
+        require('dressing').setup {
+            input = {
+                winhighlight = require('ofirkai.plugins.dressing').winhighlight
             }
-        <
+        }
+<
 
 
-================================================================================
+==============================================================================
                                                       *ofirkai.plugins.nvim-cmp*
 
 M.design                                       *ofirkai.plugins.nvim-cmp.design*
