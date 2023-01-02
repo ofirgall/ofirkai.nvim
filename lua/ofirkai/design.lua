@@ -449,6 +449,10 @@ M.hl_groups = function(scheme)
 			fg = scheme.light_red,
 			style = 'none',
 		},
+		['@attribute.python'] = {
+			fg = scheme.aqua,
+			style = 'italic',
+		},
 		['@keyword'] = {
 			fg = scheme.light_red,
 			style = 'italic',
