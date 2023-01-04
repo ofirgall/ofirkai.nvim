@@ -548,6 +548,10 @@ M.hl_groups = function(scheme)
 		['@exception'] = {
 			fg = scheme.light_red,
 		},
+		['@exception.rust'] = { -- `panic` TOOD: link to @function.macro
+			fg = scheme.dark_pink,
+			style = 'italic',
+		},
 		['@field'] = {
 			fg = scheme.white,
 		},
