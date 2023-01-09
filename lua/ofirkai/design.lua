@@ -518,6 +518,9 @@ M.hl_groups = function(scheme)
 		['@label.json'] = {
 			fg = scheme.light_red,
 		},
+		['@label.jsonc'] = { -- TODO: link to @label.json
+			fg = scheme.light_red,
+		},
 		['@label'] = {
 			fg = scheme.white,
 			style = 'italic'
