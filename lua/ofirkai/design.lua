@@ -581,6 +581,12 @@ M.hl_groups = function(scheme)
 			fg = scheme.comment_fg,
 			style = 'none',
 		},
+		['@preproc.c'] = { -- `#ifdef`
+			fg = scheme.light_red,
+		},
+		['@preproc.cpp'] = { -- `#ifdef` TODO: link to @preproc.c
+			fg = scheme.light_red,
+		},
 		['@storageclass'] = { -- rust life times
 			fg = scheme.light_red,
 			style = 'italic',
