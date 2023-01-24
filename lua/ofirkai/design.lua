@@ -87,7 +87,7 @@ M.hl_groups = function(scheme)
 			bg = scheme.pmenu_thumb_bg
 		},
 		Cursor = {
-			style = 'reverse',
+			reverse = true
 		},
 		ColorColumn = {
 			bg = scheme.secondary_background,
@@ -123,19 +123,19 @@ M.hl_groups = function(scheme)
 		},
 		ModeMsg = {
 			fg = scheme.white,
-			style = 'bold',
+			bold = true,
 		},
 		MoreMsg = {
 			fg = scheme.white,
-			style = 'bold',
+			bold = true,
 		},
 		ErrorMsg = {
 			fg = scheme.red,
-			style = 'bold',
+			bold = true,
 		},
 		WarningMsg = {
 			fg = scheme.yellow,
-			style = 'bold',
+			bold = true,
 		},
 		VertSplit = {
 			fg = scheme.vert_split_fg
@@ -186,7 +186,7 @@ M.hl_groups = function(scheme)
 		},
 		Title = {
 			fg = scheme.yellow,
-			style = 'bold',
+			bold = true,
 		},
 		Directory = {
 			fg = scheme.aqua,
@@ -252,7 +252,7 @@ M.hl_groups = function(scheme)
 		},
 		Function = {
 			fg = scheme.green,
-			style = 'italic',
+			italic = true,
 		},
 		Statement = {
 			fg = scheme.light_red,
@@ -265,7 +265,7 @@ M.hl_groups = function(scheme)
 		},
 		Keyword = {
 			fg = scheme.light_red,
-			style = 'italic',
+			italic = true,
 		},
 		PreProc = {
 			fg = scheme.green,
@@ -293,7 +293,7 @@ M.hl_groups = function(scheme)
 		},
 		SpecialComment = {
 			fg = scheme.grey,
-			style = 'italic',
+			italic = true,
 		},
 		Tag = {
 			fg = scheme.orange,
@@ -303,10 +303,10 @@ M.hl_groups = function(scheme)
 		},
 		Comment = {
 			fg = scheme.comment_fg,
-			style = 'italic',
+			italic = true,
 		},
 		Underlined = {
-			style = 'underline',
+			underline = true,
 		},
 		Ignore = {},
 		Error = {
@@ -323,23 +323,22 @@ M.hl_groups = function(scheme)
 			fg = scheme.grey,
 		},
 		vCursor = {
-			style = 'reverse',
+			reverse = true
 		},
 		iCursor = {
-			style = 'reverse',
+			reverse = true
 		},
 		lCursor = {
-			style = 'reverse',
+			reverse = true
 		},
 		CursorIM = {
-			style = 'reverse',
+			reverse = true
 		},
 		CursorColumn = {
 			bg = scheme.secondary_background,
 		},
 		whitespace_fg = { -- Indent lines
 			fg = scheme.whitespace_fg,
-			style = 'none',
 		},
 		WildMenu = {
 			fg = scheme.white,
@@ -347,7 +346,7 @@ M.hl_groups = function(scheme)
 		},
 		QuickFixLine = {
 			fg = scheme.purple,
-			style = 'bold',
+			bold = true,
 		},
 		Debug = {
 			fg = scheme.orange,
@@ -391,11 +390,9 @@ M.hl_groups = function(scheme)
 		},
 		['@comment'] = {
 			fg = scheme.comment_fg,
-			style = 'none',
 		},
 		['@constant'] = {
 			fg = scheme.dark_pink,
-			style = 'none',
 		},
 		['@constant.builtin'] = {
 			fg = scheme.purple,
@@ -405,11 +402,9 @@ M.hl_groups = function(scheme)
 		},
 		['@constant.macro'] = {
 			fg = scheme.light_red,
-			style = 'none',
 		},
 		['@text.reference'] = { -- Linked to `Constant` by default
 			fg = scheme.aqua,
-			style = 'none',
 		},
 		['@text.environment'] = { -- Linked to `Macro` by default
 			fg = scheme.light_red,
@@ -419,7 +414,6 @@ M.hl_groups = function(scheme)
 		},
 		['@constructor'] = {
 			fg = scheme.aqua,
-			style = 'none',
 		},
 		['@conditional'] = {
 			fg = scheme.light_red,
@@ -432,34 +426,31 @@ M.hl_groups = function(scheme)
 		},
 		['@function'] = {
 			fg = scheme.aqua,
-			style = 'none',
 		},
 		['@function.call'] = {
 			fg = scheme.aqua,
-			style = 'none',
 		},
 		['@function.builtin'] = {
 			fg = scheme.aqua,
 		},
 		['@function.macro'] = {
 			fg = scheme.dark_pink,
-			style = 'italic',
+			italic = true,
 		},
 		['@attribute'] = {
 			fg = scheme.light_red,
-			style = 'none',
 		},
 		['@attribute.python'] = {
 			fg = scheme.aqua,
-			style = 'italic',
+			italic = true,
 		},
 		['@keyword'] = {
 			fg = scheme.light_red,
-			style = 'italic',
+			italic = true,
 		},
 		['@keyword.function'] = {
 			fg = scheme.green,
-			style = 'italic',
+			italic = true,
 		},
 		['@keyword.operator'] = {
 			fg = scheme.light_red,
@@ -469,11 +460,9 @@ M.hl_groups = function(scheme)
 		},
 		['@method'] = {
 			fg = scheme.aqua,
-			style = 'none',
 		},
 		['@method.call'] = {
 			fg = scheme.aqua,
-			style = 'none',
 		},
 		['@namespace'] = {
 			fg = scheme.purple,
@@ -486,7 +475,7 @@ M.hl_groups = function(scheme)
 		},
 		['@parameter'] = {
 			fg = scheme.orange,
-			style = 'italic',
+			italic = true,
 		},
 		['@parameter.reference'] = {
 			fg = scheme.white,
@@ -523,41 +512,41 @@ M.hl_groups = function(scheme)
 		},
 		['@label'] = {
 			fg = scheme.white,
-			style = 'italic'
+			italic = true,
 		},
 		['@field.yaml'] = { -- yaml fields
 			fg = scheme.light_red,
 		},
 		['@type'] = {
 			fg = scheme.green,
-			style = 'italic',
+			italic = true,
 		},
 		['@type.builtin'] = {
 			fg = scheme.aqua,
-			style = 'italic',
+			italic = true,
 		},
 		['@type.builtin.c'] = { -- TODO: link to @type
 			fg = scheme.green,
-			style = 'italic',
+			italic = true,
 		},
 		['@type.builtin.cpp'] = { -- TODO: link to @type
 			fg = scheme.green,
-			style = 'italic',
+			italic = true,
 		},
 		['@type.qualifier'] = { -- rust `mut`
 			fg = scheme.light_red,
-			style = 'italic',
+			italic = true,
 		},
 		['@type.definition'] = { -- TODO: link to `@type`
 			fg = scheme.green,
-			style = 'italic',
+			italic = true,
 		},
 		['@exception'] = {
 			fg = scheme.light_red,
 		},
 		['@exception.rust'] = { -- `panic` TOOD: link to @function.macro
 			fg = scheme.dark_pink,
-			style = 'italic',
+			italic = true,
 		},
 		['@field'] = {
 			fg = scheme.white,
@@ -579,7 +568,6 @@ M.hl_groups = function(scheme)
 		},
 		['@preproc'] = {
 			fg = scheme.comment_fg,
-			style = 'none',
 		},
 		['@preproc.c'] = { -- `#ifdef`
 			fg = scheme.light_red,
@@ -589,7 +577,7 @@ M.hl_groups = function(scheme)
 		},
 		['@storageclass'] = { -- rust life times
 			fg = scheme.light_red,
-			style = 'italic',
+			italic = true,
 		},
 		['@todo'] = {
 			fg = scheme.orange,
@@ -599,40 +587,40 @@ M.hl_groups = function(scheme)
 		['@text'] = {
 		},
 		['@text.strong'] = {
-			style = 'bold'
+			bold = true,
 		},
 		['@text.emphasis'] = {
-			style = 'italic'
+			italic = true,
 		},
 		['@text.underline'] = {
-			style = 'underline'
+			underline = true
 		},
 		['@text.strike'] = {
-			style = 'strikethrough'
+			strikethrough = true
 		},
 		['@text.title'] = {
 			fg = scheme.yellow,
-			style = 'bold',
+			bold = true,
 		},
 		['@text.literal'] = {
 			fg = scheme.yellow,
 		},
 		['@text.uri'] = {
-			style = 'underline',
+			underline = true,
 		},
 		['@text.math'] = {
 			fg = scheme.white,
 		},
 		['@text.note'] = {
 			fg = scheme.purple,
-			style = 'italic',
+			italic = true,
 		},
 		['@text.warning'] = {
 			fg = scheme.orange,
 		},
 		['@text.danger'] = {
 			fg = scheme.yellow,
-			style = 'bold',
+			bold = true,
 		},
 		dbui_tables = {
 			fg = scheme.white,
@@ -662,19 +650,19 @@ M.hl_groups = function(scheme)
 			fg = scheme.aqua,
 		},
 		DiagnosticUnderlineError = {
-			style = 'undercurl',
+			undercurl = true,
 			sp = scheme.red,
 		},
 		DiagnosticUnderlineWarn = {
-			style = 'undercurl',
+			undercurl = true,
 			sp = scheme.yellow,
 		},
 		DiagnosticUnderlineInfo = {
-			style = 'undercurl',
+			undercurl = true,
 			sp = scheme.white,
 		},
 		DiagnosticUnderlineHint = {
-			style = 'undercurl',
+			undercurl = true,
 			sp = scheme.aqua,
 		},
 		CursorWord0 = {
@@ -687,19 +675,19 @@ M.hl_groups = function(scheme)
 		},
 		LspReferenceText = {
 			bg = scheme.highlighted_word_bg,
-			style = 'underline',
+			underline = true,
 		},
 		LspReferenceRead = {
 			bg = scheme.highlighted_word_bg,
-			style = 'underline',
+			underline = true,
 		},
 		LspReferenceWrite = {
 			bg = scheme.highlighted_word_bg,
-			style = 'underline',
+			underline = true,
 		},
 		LspSignatureHintVirtualText = {
 			fg = scheme.lightorange,
-			style = 'bold'
+			bold = true,
 		},
 		-- kyazdani42/nvim-tree.lua
 		NvimTreeNormal = {
@@ -708,7 +696,7 @@ M.hl_groups = function(scheme)
 		NvimTreeWindowPicker = {
 			fg = scheme.light_red,
 			bg = scheme.secondary_background,
-			style = 'bold'
+			bold = true,
 		},
 		NvimTreeFolderName = {
 			fg = scheme.white,
@@ -718,7 +706,6 @@ M.hl_groups = function(scheme)
 		},
 		NvimTreeSpecialFile = {
 			fg = scheme.white,
-			style = 'NONE',
 		},
 		NvimTreeCursorLineNr = {
 			bg = scheme.cursor_line_bg,
@@ -751,7 +738,7 @@ M.hl_groups = function(scheme)
 		TelescopePromptTitle = {
 			fg = scheme.white,
 			bg = scheme.telescope_prompt,
-			style = 'bold'
+			bold = true,
 		},
 		TelescopeResultsTitle = {
 			fg = scheme.telescope_bg,
@@ -760,7 +747,6 @@ M.hl_groups = function(scheme)
 		TelescopeSelection = {
 			bg = scheme.cursor_line_bg,
 			fg = scheme.white,
-			style = 'none'
 		},
 		TelescopeSelectionCaret = {
 			fg = scheme.green,
@@ -895,7 +881,7 @@ M.hl_groups = function(scheme)
 		},
 		DapUIType = { -- TODO: link to `@type`
 			fg = scheme.green,
-			style = 'italic',
+			italic = true,
 		},
 		DapUIValue = {
 			fg = scheme.yellow,
@@ -903,7 +889,7 @@ M.hl_groups = function(scheme)
 		-- folke/noice.nvim
 		NoiceVirtualText = {
 			fg = scheme.comment_fg,
-			style = 'italic'
+			italic = true,
 		},
 		NoiceCmdlineIconCmdline = {
 			fg = scheme.aqua
@@ -957,7 +943,7 @@ M.hl_groups = function(scheme)
 		NoiceLspProgressClient = {
 			fg = scheme.yellow,
 			bg = scheme.background,
-			style = 'bold',
+			bold = true,
 		},
 		NoiceLspProgressSpinner = {
 			fg = scheme.aqua,

@@ -66,7 +66,11 @@ M.setup = function(config)
 	hl_groups = filter_hl_groups(config, hl_groups)
 
 	for group, colors in pairs(hl_groups) do
-		highlight(group, colors)
+		if colors.ctermfg then
+			highlight(group, colors)
+		else
+			vim.api.nvim_set_hl(0, group, colors)
+		end
 	end
 end
 
