@@ -518,6 +518,9 @@ M.hl_groups = function(scheme)
 		['@label.json'] = {
 			fg = scheme.light_red,
 		},
+		['@label.jsonc'] = { -- TODO: link to @label.json
+			fg = scheme.light_red,
+		},
 		['@label'] = {
 			fg = scheme.white,
 			style = 'italic'
@@ -537,6 +540,10 @@ M.hl_groups = function(scheme)
 			fg = scheme.green,
 			style = 'italic',
 		},
+		['@type.builtin.cpp'] = { -- TODO: link to @type
+			fg = scheme.green,
+			style = 'italic',
+		},
 		['@type.qualifier'] = { -- rust `mut`
 			fg = scheme.light_red,
 			style = 'italic',
@@ -547,6 +554,10 @@ M.hl_groups = function(scheme)
 		},
 		['@exception'] = {
 			fg = scheme.light_red,
+		},
+		['@exception.rust'] = { -- `panic` TOOD: link to @function.macro
+			fg = scheme.dark_pink,
+			style = 'italic',
 		},
 		['@field'] = {
 			fg = scheme.white,
@@ -569,6 +580,12 @@ M.hl_groups = function(scheme)
 		['@preproc'] = {
 			fg = scheme.comment_fg,
 			style = 'none',
+		},
+		['@preproc.c'] = { -- `#ifdef`
+			fg = scheme.light_red,
+		},
+		['@preproc.cpp'] = { -- `#ifdef` TODO: link to @preproc.c
+			fg = scheme.light_red,
 		},
 		['@storageclass'] = { -- rust life times
 			fg = scheme.light_red,
