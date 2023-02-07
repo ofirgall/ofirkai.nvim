@@ -397,7 +397,7 @@ M.hl_groups = function(scheme)
 		['@constant.builtin'] = {
 			fg = scheme.purple,
 		},
-		['@constant.builtin.rust'] = { -- Some, Ok, Err, TODO: `None` should be purple
+		['@constant.builtin.rust'] = { -- Some, Ok, Err
 			fg = scheme.teal,
 		},
 		['@constant.macro'] = {
@@ -507,8 +507,8 @@ M.hl_groups = function(scheme)
 		['@label.json'] = {
 			fg = scheme.light_red,
 		},
-		['@label.jsonc'] = { -- TODO: link to @label.json
-			fg = scheme.light_red,
+		['@label.jsonc'] = {
+			link = '@label.json'
 		},
 		['@label'] = {
 			fg = scheme.white,
@@ -525,21 +525,18 @@ M.hl_groups = function(scheme)
 			fg = scheme.aqua,
 			italic = true,
 		},
-		['@type.builtin.c'] = { -- TODO: link to @type
-			fg = scheme.green,
-			italic = true,
+		['@type.builtin.c'] = {
+			link = '@type'
 		},
-		['@type.builtin.cpp'] = { -- TODO: link to @type
-			fg = scheme.green,
-			italic = true,
+		['@type.builtin.cpp'] = {
+			link = '@type'
 		},
 		['@type.qualifier'] = { -- rust `mut`
 			fg = scheme.light_red,
 			italic = true,
 		},
-		['@type.definition'] = { -- TODO: link to `@type`
-			fg = scheme.green,
-			italic = true,
+		['@type.definition'] = {
+			link = '@type'
 		},
 		['@exception'] = {
 			fg = scheme.light_red,
@@ -572,8 +569,8 @@ M.hl_groups = function(scheme)
 		['@preproc.c'] = { -- `#ifdef`
 			fg = scheme.light_red,
 		},
-		['@preproc.cpp'] = { -- `#ifdef` TODO: link to @preproc.c
-			fg = scheme.light_red,
+		['@preproc.cpp'] = {
+			link = '@preproc.c'
 		},
 		['@storageclass'] = { -- rust life times
 			fg = scheme.light_red,
@@ -876,12 +873,11 @@ M.hl_groups = function(scheme)
 			fg = scheme.red,
 		},
 		-- dapui.nvim -- TODO: complete shorthand
-		DapUIVariable = { -- TODO: link to `@parameter`
-			fg = scheme.orange,
+		DapUIVariable = {
+			link = '@parameter'
 		},
-		DapUIType = { -- TODO: link to `@type`
-			fg = scheme.green,
-			italic = true,
+		DapUIType = {
+			link = '@type'
 		},
 		DapUIValue = {
 			fg = scheme.yellow,
@@ -906,29 +902,23 @@ M.hl_groups = function(scheme)
 		NoiceCmdlineIconHelp = {
 			fg = scheme.dark_pink
 		},
-		NoiceCmdlinePopup = { -- Actual search line, TODO: link to FloatNormal
-			bg = scheme.ui_bg
+		NoiceCmdlinePopup = { -- Actual search line
+			link = 'FloatNormal'
 		},
-		-- TODO: link to FloatBorder and FloatNormal
 		NoiceCmdlinePopupBorder = {
-			fg = scheme.ui_bg,
-			bg = scheme.ui_bg
+			link = 'FloatBorder'
 		},
 		NoiceCmdlinePopupBorderCmdline = {
-			fg = scheme.ui_bg,
-			bg = scheme.ui_bg
+			link = 'FloatBorder'
 		},
 		NoiceCmdlinePopupBorderFilter = {
-			fg = scheme.ui_bg,
-			bg = scheme.ui_bg
+			link = 'FloatBorder'
 		},
 		NoiceCmdlinePopupBorderLua = {
-			fg = scheme.ui_bg,
-			bg = scheme.ui_bg
+			link = 'FloatBorder'
 		},
 		NoiceCmdlinePopupBorderSearch = {
-			fg = scheme.ui_bg,
-			bg = scheme.ui_bg
+			link = 'FloatBorder'
 		},
 		-- Progress Bar
 		NoiceFormatProgressDone = {
@@ -954,13 +944,11 @@ M.hl_groups = function(scheme)
 			bg = scheme.background,
 		},
 		-- ThePrimeagen/harpoon
-		HarpoonWindow = { -- TODO link to `WhiteBorder`
-			fg = scheme.white,
-			bg = scheme.ui_bg,
+		HarpoonWindow = {
+			link = 'WhiteBorder'
 		},
-		HarpoonBorder = { -- TODO link to `WhiteBorder`
-			fg = scheme.white,
-			bg = scheme.ui_bg,
+		HarpoonBorder = {
+			link = 'WhiteBorder'
 		},
 
 		----- Additional hl groups -----
