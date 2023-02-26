@@ -514,6 +514,10 @@ M.hl_groups = function(scheme)
 			fg = scheme.white,
 			italic = true,
 		},
+		['@label.c'] = {
+			fg = scheme.teal,
+			italic = true,
+		},
 		['@field.yaml'] = { -- yaml fields
 			fg = scheme.light_red,
 		},
