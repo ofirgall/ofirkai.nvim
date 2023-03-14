@@ -10,7 +10,6 @@ M.scheme = {
 	ui_bg = '#1a1a18', -- background for ui, file tree and such.
 	telescope_bg = '#181816', -- Slightly darker than ui_bg
 	winbar_bg = '#222219',
-
 	-- Base colors
 	white = '#f8f8f0',
 	grey = '#8F908A',
@@ -25,7 +24,8 @@ M.scheme = {
 	light_red = '#f92672',
 	dark_pink = '#e878d2',
 	teal = '#3ae0b4',
-
+	dark_yellow = '#ffd121',
+	dark_teal = '#26cca0',
 	-- Specific colors
 	whitespace_fg = '#333842',
 	non_text_fg = '#4d5154',
@@ -49,7 +49,6 @@ M.scheme = {
 	vert_split_fg_active = '#948f5a', -- TODO: add nvim-zh/colorful-winsep.nvim support
 	tabline_fg = '#f20aee',
 	tabline_sel_fg = '#78b6e8',
-
 	-- Plugins colors
 	nvim_cmp_fuzzy_fg = '#34d8f7',
 	git_signs_add = '#6a921a',
@@ -76,24 +75,24 @@ M.hl_groups = function(scheme)
 		},
 		PmenuSel = {
 			fg = scheme.white,
-			bg = scheme.pmenu_sel_bg
+			bg = scheme.pmenu_sel_bg,
 		},
 		PmenuSelBold = {
 			fg = scheme.white,
-			bg = scheme.pmenu_sel_bg
+			bg = scheme.pmenu_sel_bg,
 		},
 		PmenuThumb = {
 			fg = scheme.purple,
-			bg = scheme.pmenu_thumb_bg
+			bg = scheme.pmenu_thumb_bg,
 		},
 		Cursor = {
-			reverse = true
+			reverse = true,
 		},
 		ColorColumn = {
 			bg = scheme.secondary_background,
 		},
 		CursorLine = {
-			bg = scheme.cursor_line_bg
+			bg = scheme.cursor_line_bg,
 		},
 		NonText = { -- used for "eol", "extends" and "precedes" in listchars
 			fg = scheme.non_text_fg,
@@ -138,7 +137,7 @@ M.hl_groups = function(scheme)
 			bold = true,
 		},
 		VertSplit = {
-			fg = scheme.vert_split_fg
+			fg = scheme.vert_split_fg,
 		},
 		LineNr = {
 			bg = scheme.background,
@@ -323,16 +322,16 @@ M.hl_groups = function(scheme)
 			fg = scheme.grey,
 		},
 		vCursor = {
-			reverse = true
+			reverse = true,
 		},
 		iCursor = {
-			reverse = true
+			reverse = true,
 		},
 		lCursor = {
-			reverse = true
+			reverse = true,
 		},
 		CursorIM = {
-			reverse = true
+			reverse = true,
 		},
 		CursorColumn = {
 			bg = scheme.secondary_background,
@@ -487,7 +486,7 @@ M.hl_groups = function(scheme)
 			fg = scheme.white,
 		},
 		['@punctuation.bracket'] = {
-			fg = scheme.white,
+			fg = scheme.dark_yellow,
 		},
 		['@punctuation.special'] = {
 			fg = scheme.light_red,
@@ -594,10 +593,10 @@ M.hl_groups = function(scheme)
 			italic = true,
 		},
 		['@text.underline'] = {
-			underline = true
+			underline = true,
 		},
 		['@text.strike'] = {
-			strikethrough = true
+			strikethrough = true,
 		},
 		['@text.title'] = {
 			fg = scheme.yellow,
@@ -692,7 +691,7 @@ M.hl_groups = function(scheme)
 		},
 		-- kyazdani42/nvim-tree.lua
 		NvimTreeNormal = {
-			bg = scheme.ui_bg
+			bg = scheme.ui_bg,
 		},
 		NvimTreeWindowPicker = {
 			fg = scheme.light_red,
@@ -722,7 +721,7 @@ M.hl_groups = function(scheme)
 			bg = scheme.telescope_bg,
 		},
 		TelescopeNormal = {
-			bg = scheme.telescope_bg
+			bg = scheme.telescope_bg,
 		},
 		TelescopePromptNormal = {
 			fg = scheme.white,
@@ -759,7 +758,7 @@ M.hl_groups = function(scheme)
 			fg = scheme.aqua,
 		},
 		TelescopePreviewNormal = {
-			bg = scheme.background
+			bg = scheme.background,
 		},
 		TelescopePreviewTitle = {
 			fg = scheme.white,
@@ -767,13 +766,13 @@ M.hl_groups = function(scheme)
 		-- hrsh7th/nvim-cmp
 		CmpDocumentation = {
 			fg = scheme.white,
-			bg = scheme.background
+			bg = scheme.background,
 		},
 		CmpDocumentationBorder = {
-			fg = scheme.white, bg = scheme.background
+			fg = scheme.white, bg = scheme.background,
 		},
 		CmpItemAbbr = {
-			fg = scheme.white
+			fg = scheme.white,
 		},
 		CmpItemAbbrMatch = {
 			fg = scheme.nvim_cmp_fuzzy_fg,
@@ -782,81 +781,81 @@ M.hl_groups = function(scheme)
 			fg = scheme.nvim_cmp_fuzzy_fg,
 		},
 		CmpItemKindDefault = {
-			fg = scheme.white
+			fg = scheme.white,
 		},
 		CmpItemMenu = {
-			fg = scheme.comment_fg
+			fg = scheme.comment_fg,
 		},
 		CmpItemKindKeyword = {
-			fg = scheme.light_red
+			fg = scheme.light_red,
 		},
 		CmpItemKindVariable = {
-			fg = scheme.light_red
+			fg = scheme.light_red,
 		},
 		CmpItemKindConstant = {
-			fg = scheme.light_red
+			fg = scheme.light_red,
 		},
 		CmpItemKindReference = {
-			fg = scheme.light_red
+			fg = scheme.light_red,
 		},
 		CmpItemKindValue = {
-			fg = scheme.light_red
+			fg = scheme.light_red,
 		},
 		CmpItemKindFunction = {
-			fg = scheme.aqua
+			fg = scheme.aqua,
 		},
 		CmpItemKindMethod = {
-			fg = scheme.aqua
+			fg = scheme.aqua,
 		},
 		CmpItemKindConstructor = {
-			fg = scheme.aqua
+			fg = scheme.aqua,
 		},
 		CmpItemKindClass = {
-			fg = scheme.orange
+			fg = scheme.orange,
 		},
 		CmpItemKindInterface = {
-			fg = scheme.orange
+			fg = scheme.orange,
 		},
 		CmpItemKindStruct = {
-			fg = scheme.orange
+			fg = scheme.orange,
 		},
 		CmpItemKindEvent = {
-			fg = scheme.orange
+			fg = scheme.orange,
 		},
 		CmpItemKindEnum = {
-			fg = scheme.orange
+			fg = scheme.orange,
 		},
 		CmpItemKindUnit = {
-			fg = scheme.orange
+			fg = scheme.orange,
 		},
 		CmpItemKindModule = {
-			fg = scheme.yellow
+			fg = scheme.yellow,
 		},
 		CmpItemKindProperty = {
-			fg = scheme.green
+			fg = scheme.green,
 		},
 		CmpItemKindField = {
-			fg = scheme.green
+			fg = scheme.green,
 		},
 		CmpItemKindTypeParameter = {
-			fg = scheme.green
+			fg = scheme.green,
 		},
 		CmpItemKindEnumMember = {
-			fg = scheme.green
+			fg = scheme.green,
 		},
 		CmpItemKindOperator = {
-			fg = scheme.green
+			fg = scheme.green,
 		},
 		-- sindrets/diffview.nvim
 		DiffviewNormal = {
-			bg = scheme.ui_bg
+			bg = scheme.ui_bg,
 		},
 		-- lewis6991/gitsigns.nvim
 		GitSignsAdd = {
 			fg = scheme.git_signs_add,
 		},
 		GitSignsChange = {
-			fg = scheme.git_signs_change
+			fg = scheme.git_signs_change,
 		},
 		-- nvim-treesitter/nvim-treesitter-context
 		TreesitterContext = {
@@ -864,7 +863,7 @@ M.hl_groups = function(scheme)
 		},
 		TreesitterContextLineNumber = {
 			bg = scheme.winbar_bg,
-			fg = scheme.purple
+			fg = scheme.purple,
 		},
 		-- nvim-lualine/lualine.nvim
 		LuaLineDiffAdd = {
@@ -892,19 +891,19 @@ M.hl_groups = function(scheme)
 			italic = true,
 		},
 		NoiceCmdlineIconCmdline = {
-			fg = scheme.aqua
+			fg = scheme.aqua,
 		},
 		NoiceCmdlineIconFilter = {
-			fg = scheme.yellow
+			fg = scheme.yellow,
 		},
 		NoiceCmdlineIconLua = {
-			fg = scheme.red
+			fg = scheme.red,
 		},
 		NoiceCmdlineIconSearch = {
-			fg = scheme.orange
+			fg = scheme.orange,
 		},
 		NoiceCmdlineIconHelp = {
-			fg = scheme.dark_pink
+			fg = scheme.dark_pink,
 		},
 		NoiceCmdlinePopup = { -- Actual search line
 			link = 'FloatNormal'
@@ -926,13 +925,13 @@ M.hl_groups = function(scheme)
 		},
 		-- Progress Bar
 		NoiceFormatProgressDone = {
-			bg = scheme.secondary_background
+			bg = scheme.secondary_background,
 		},
 		NoiceFormatProgressTodo = {
-			bg = scheme.telescope_bg
+			bg = scheme.telescope_bg,
 		},
 		NoiceFormatTitle = {
-			bg = scheme.background
+			bg = scheme.background,
 		},
 		NoiceLspProgressClient = {
 			fg = scheme.yellow,
@@ -941,7 +940,7 @@ M.hl_groups = function(scheme)
 		},
 		NoiceLspProgressSpinner = {
 			fg = scheme.aqua,
-			bg = scheme.background
+			bg = scheme.background,
 		},
 		NoiceLspProgressTitle = {
 			fg = scheme.white,
@@ -954,7 +953,6 @@ M.hl_groups = function(scheme)
 		HarpoonBorder = {
 			link = 'WhiteBorder'
 		},
-
 		----- Additional hl groups -----
 		InlayHints = { -- For InlayHints
 			fg = scheme.dimmed_aqua,
