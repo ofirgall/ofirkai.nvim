@@ -20,8 +20,8 @@ end
 local function filter_hl_groups(config, hl_groups)
 	for _, colors in pairs(hl_groups) do
 		if config.remove_italics then
-			if colors.style == 'italic' then
-				colors.style = nil
+			if colors.italic then
+				colors.italic = false
 			end
 		end
 	end
