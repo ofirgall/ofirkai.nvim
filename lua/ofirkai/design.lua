@@ -30,6 +30,7 @@ M.scheme = {
 	whitespace_fg = '#333842',
 	non_text_fg = '#4d5154',
 	comment_fg = '#9ca0a4',
+	unnecessary_fg = '#a0a0a0',
 	highlighted_word_bg = '#343942',
 	tab_visible_fg = '#b3ab60',
 	cursor_line_bg = '#36352a',
@@ -665,6 +666,11 @@ M.hl_groups = function(scheme)
 			undercurl = true,
 			sp = scheme.aqua,
 		},
+		DiagnosticUnnecessary = {
+			undercurl = true,
+			sp = scheme.unnecessary_fg,
+			italic = true,
+		},
 		CursorWord0 = {
 			bg = scheme.white,
 			fg = scheme.black,
@@ -957,7 +963,8 @@ M.hl_groups = function(scheme)
 		InlayHints = { -- For InlayHints
 			fg = scheme.dimmed_aqua,
 		},
-		WhiteBorder = { -- For floats that needs border
+		WhiteBorder = {
+			-- For floats that needs border
 			fg = scheme.white,
 			bg = scheme.ui_bg,
 		},
