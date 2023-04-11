@@ -448,6 +448,10 @@ M.hl_groups = function(scheme)
 			fg = scheme.light_red,
 			italic = true,
 		},
+		['@keyword.luadoc'] = {
+			fg = scheme.mid_orange,
+			italic = true,
+		},
 		['@keyword.function'] = {
 			fg = scheme.green,
 			italic = true,
