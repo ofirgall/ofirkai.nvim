@@ -188,6 +188,11 @@ M.hl_groups = function(scheme)
 			fg = scheme.yellow,
 			bold = true,
 		},
+		FloatTitle = {
+			fg = scheme.yellow,
+			bold = true,
+			bg = scheme.ui_bg,
+		},
 		Directory = {
 			fg = scheme.aqua,
 		},
