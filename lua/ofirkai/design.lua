@@ -449,7 +449,7 @@ M.hl_groups = function(scheme)
 			italic = true,
 		},
 		['@keyword.luadoc'] = {
-			fg = scheme.mid_orange,
+			fg = scheme.dark_pink,
 			italic = true,
 		},
 		['@keyword.function'] = {
