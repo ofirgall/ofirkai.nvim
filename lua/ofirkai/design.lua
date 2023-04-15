@@ -444,6 +444,9 @@ M.hl_groups = function(scheme)
 			fg = scheme.aqua,
 			italic = true,
 		},
+		['@attribute.builtin.python'] = {
+			link = '@attribute.python'
+		},
 		['@keyword'] = {
 			fg = scheme.light_red,
 			italic = true,
