@@ -966,6 +966,45 @@ M.hl_groups = function(scheme)
 		HarpoonBorder = {
 			link = 'WhiteBorder'
 		},
+		-- folke/lazy.nvim
+		--- General
+		LazyH1 = {
+			fg = scheme.yellow,
+			bg = scheme.ui_bg,
+			bold = true,
+		},
+		LazyH2 = {
+			fg = scheme.orange,
+			bold = true,
+		},
+		--- Reasons
+		LazyReasonCmd = {
+			fg = scheme.yellow,
+		},
+		LazyReasonEvent = {
+			fg = scheme.aqua,
+		},
+		LazyReasonFt = {
+			fg = scheme.teal,
+		},
+		LazyReasonImport = {
+			fg = scheme.dark_yellow,
+		},
+		LazyReasonKeys = {
+			fg = scheme.dark_pink,
+		},
+		LazyReasonPlugin = {
+			fg = scheme.red,
+		},
+		LazyReasonRuntime = {
+			fg = scheme.orange,
+		},
+		LazyReasonSource = {
+			fg = scheme.purple,
+		},
+		LazyReasonStart = {
+			fg = scheme.green,
+		},
 		----- Additional hl groups -----
 		InlayHints = { -- For InlayHints
 			fg = scheme.dimmed_aqua,
