@@ -683,6 +683,9 @@ M.hl_groups = function(scheme)
 			sp = scheme.unnecessary_fg,
 			italic = true,
 		},
+		DiagnosticError = {
+			link = 'DiagnosticVirtualTextError'
+		},
 		CursorWord0 = {
 			bg = scheme.white,
 			fg = scheme.black,
@@ -1018,6 +1021,19 @@ M.hl_groups = function(scheme)
 			-- For floats that needs border
 			fg = scheme.white,
 			bg = scheme.ui_bg,
+		},
+		-- nvimdev/lspsaga.nvim
+		SagaBorder = {
+			link = 'FloatBorder'
+		},
+		SagaNormal = {
+			link = 'NormalFloat'
+		},
+		DiagnosticShowBorder = {
+			link = 'FloatBorder'
+		},
+		TitleString = {
+			link = 'FloatTitle'
 		},
 	}
 end
