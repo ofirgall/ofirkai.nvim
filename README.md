@@ -205,7 +205,26 @@ require('dressing').setup {
 ---
 </details>
 
-<details><summary><a href='https://github.com/kyazdani42/nvim-tree.lua'>nvim-tree.lua</a> - Click to expand</summary>
+<details><summary><a href='https://github.com/kyazdani42/nvim-tree.lua'>nvim-tree.lua</a> - <b>Custom setup is Optional (Click to Expand)</b></summary>
+
+```lua
+require('nvim-tree').setup {
+	renderer = {
+		icons = {
+			git_placement = 'after',
+			modified_placement = 'after',
+			glyphs = {
+				git = {
+					unstaged = '',
+					staged = '',
+					untracked = '',
+					deleted = '',
+				},
+			},
+		},
+	},
+}
+```
 
 ---
 <p align='center'><a><img src='./media/nvim-tree.png'></a></p>

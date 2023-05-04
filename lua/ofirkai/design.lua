@@ -736,6 +736,18 @@ M.hl_groups = function(scheme)
 			bg = scheme.ui_bg,
 			fg = scheme.orange,
 		},
+		NvimTreeGitDirty = {
+			fg = scheme.orange,
+		},
+		NvimTreeGitStaged = {
+			fg = scheme.green,
+		},
+		NvimTreeGitNew = {
+			fg = scheme.yellow,
+		},
+		NvimTreeGitRenamed = {
+			fg = scheme.aqua,
+		},
 		-- nvim-telescope/telescope.nvim
 		TelescopeBorder = {
 			fg = scheme.telescope_bg,
