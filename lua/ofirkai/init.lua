@@ -30,7 +30,7 @@ local function filter_hl_groups(config, hl_groups)
 end
 
 local default_config = {
-	scheme = design.scheme,
+	scheme = require('ofirkai.schemes').default,
 	custom_hlgroups = {},
 	remove_italics = false,
 }
@@ -43,7 +43,9 @@ local default_config = {
 ---
 ----- Or setup with custom parameters
 ---require('ofirkai').setup {
----	scheme = require('ofirkai').scheme -- Option to override scheme
+--- -- Option to override scheme with a table
+-- TODO: doc
+---	scheme = require('ofirkai').scheme
 ---	custom_hlgroups = {},              -- Option to add/override highlight groups
 ---	remove_italics = false,            -- Option to change all the italics style to none
 ---}
@@ -59,6 +61,13 @@ M.setup = function(config)
 
 	config = config or {}
 	config = vim.tbl_deep_extend('keep', config, default_config)
+	for color, alias in pairs(config.scheme) do
+		if alias:sub(1, 1) ~= '#' then
+			print(alias)
+			config.scheme[color] = config.scheme[alias]
+			print(color, config.scheme[color], config.scheme[alias])
+		end
+	end
 
 	local hl_groups = design.hl_groups(config.scheme)
 	hl_groups = vim.tbl_deep_extend('keep', config.custom_hlgroups, hl_groups)
@@ -74,8 +83,8 @@ M.setup = function(config)
 	end
 end
 
----Alias for require('ofirkai.design').scheme
+---Alias for require('ofirkai.schemes').default
 ---@type table
-M.scheme = design.scheme
+M.scheme = require('ofirkai.schemes').default
 
 return M
