@@ -5,28 +5,11 @@ Monokai theme
 
 ------------------------------------------------------------------------------
 
-M.setup({config})                                                *ofirkai.setup*
-
-    Parameters: ~
-        {config}  (table)  user config
-
-    Usage: ~
->lua
-        --Leave empty for default values
-        require('ofirkai').setup {
-        }
-
-        -- Or setup with custom parameters
-        require('ofirkai').setup {
-        	scheme = require('ofirkai').scheme -- Option to override scheme
-        	custom_hlgroups = {},              -- Option to add/override highlight groups
-        	remove_italics = false,            -- Option to change all the italics style to none
-        }
-<
+M.setup()                                                        *ofirkai.setup*
 
 
 M.scheme                                                        *ofirkai.scheme*
-    Alias for require('ofirkai.design').scheme
+    Alias for require('ofirkai.schemes').default
 
     Type: ~
         (table)
@@ -36,7 +19,7 @@ M.scheme                                                        *ofirkai.scheme*
                                                                 *ofirkai.design*
 
 M.scheme                                                 *ofirkai.design.scheme*
-    The default scheme table
+    Alias for the default scheme table
 
     Type: ~
         (table)
