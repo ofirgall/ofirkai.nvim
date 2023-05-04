@@ -10,6 +10,7 @@ M.scheme = {
 	ui_bg = '#1a1a18', -- background for ui, file tree and such.
 	telescope_bg = '#181816', -- Slightly darker than ui_bg
 	winbar_bg = '#222219',
+	spaces_bg = '#414141',
 	-- Base colors
 	white = '#f8f8f0',
 	grey = '#8F908A',
@@ -341,9 +342,6 @@ M.hl_groups = function(scheme)
 		},
 		CursorColumn = {
 			bg = scheme.secondary_background,
-		},
-		whitespace_fg = { -- Indent lines
-			fg = scheme.whitespace_fg,
 		},
 		WildMenu = {
 			fg = scheme.white,
@@ -1046,6 +1044,20 @@ M.hl_groups = function(scheme)
 		},
 		TitleString = {
 			link = 'FloatTitle'
+		},
+		-- lukas-reineke/indent-blankline.nvim
+		whitespace_fg = {
+			fg = scheme.whitespace_fg,
+		},
+		IndentBlanklineSpaceCharBlankline = {
+			link = 'IndentBlanklineSpaceChar'
+		},
+		IndentBlanklineSpaceChar = {
+			fg = scheme.spaces_bg,
+			nocombine = true
+		},
+		IndentBlanklineContextSpaceChar = {
+			link = 'IndentBlanklineSpaceChar'
 		},
 	}
 end
