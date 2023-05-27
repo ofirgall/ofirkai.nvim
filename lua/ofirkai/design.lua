@@ -1054,6 +1054,10 @@ M.hl_groups = function(scheme)
 		TitleString = {
 			link = 'FloatTitle'
 		},
+		-- Diagnostic Lines
+		FinderLines = {
+			link = 'DiagnosticVirtualTextError'
+		},
 	}
 end
 
