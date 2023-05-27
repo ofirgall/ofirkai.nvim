@@ -59,6 +59,8 @@ M.setup = function(config)
 
 	config = config or {}
 	config = vim.tbl_deep_extend('keep', config, default_config)
+	M.scheme = config.scheme
+	design.scheme = config.scheme
 
 	local hl_groups = design.hl_groups(config.scheme)
 	hl_groups = vim.tbl_deep_extend('keep', config.custom_hlgroups, hl_groups)
