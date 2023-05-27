@@ -1032,6 +1032,9 @@ M.hl_groups = function(scheme)
 		fugitiveUnstagedModifier = {
 			link = 'Typedef'
 		},
+		fugitiveUntrackedModifier = {
+			link = 'Typedef'
+		},
 		----- Additional hl groups -----
 		InlayHints = { -- For InlayHints
 			fg = scheme.dimmed_aqua,
