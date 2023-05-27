@@ -1028,6 +1028,10 @@ M.hl_groups = function(scheme)
 		LazyReasonStart = {
 			fg = scheme.green,
 		},
+		-- tpope/vim-fugitive
+		fugitiveUnstagedModifier = {
+			link = 'Typedef'
+		},
 		----- Additional hl groups -----
 		InlayHints = { -- For InlayHints
 			fg = scheme.dimmed_aqua,
