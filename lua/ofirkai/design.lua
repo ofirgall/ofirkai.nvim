@@ -223,7 +223,7 @@ M.hl_groups = function(scheme)
 			bg = scheme.black,
 		},
 		Constant = {
-			fg = scheme.aqua,
+			fg = scheme.dark_pink,
 		},
 		Number = {
 			fg = scheme.purple,
@@ -241,13 +241,15 @@ M.hl_groups = function(scheme)
 			fg = scheme.yellow,
 		},
 		Type = {
-			fg = scheme.aqua,
+			fg = scheme.green,
+			italic = true,
 		},
 		Structure = {
-			fg = scheme.aqua,
+			link = 'StorageClass'
 		},
 		StorageClass = {
-			fg = scheme.aqua,
+			fg = scheme.light_red,
+			italic = true,
 		},
 		Typedef = {
 			fg = scheme.aqua,
@@ -370,7 +372,7 @@ M.hl_groups = function(scheme)
 			fg = scheme.light_red,
 		},
 		['@string'] = {
-			fg = scheme.yellow,
+			link = 'String'
 		},
 		['@string.regex'] = {
 			fg = scheme.purple,
@@ -397,7 +399,7 @@ M.hl_groups = function(scheme)
 			fg = scheme.comment_fg,
 		},
 		['@constant'] = {
-			fg = scheme.dark_pink,
+			link = 'Constant'
 		},
 		['@constant.builtin'] = {
 			fg = scheme.purple,
@@ -424,7 +426,7 @@ M.hl_groups = function(scheme)
 			fg = scheme.light_red,
 		},
 		['@character'] = {
-			fg = scheme.yellow,
+			link = 'Character'
 		},
 		['@character.special'] = {
 			fg = scheme.light_red,
@@ -479,8 +481,11 @@ M.hl_groups = function(scheme)
 		['@namespace'] = {
 			fg = scheme.purple,
 		},
+		['@namespace.builtin.lua'] = { -- 'table.'
+			link = '@variable.builtin'
+		},
 		['@number'] = {
-			fg = scheme.purple,
+			link = 'Number'
 		},
 		['@operator'] = {
 			fg = scheme.light_red,
@@ -534,8 +539,7 @@ M.hl_groups = function(scheme)
 			fg = scheme.light_red,
 		},
 		['@type'] = {
-			fg = scheme.green,
-			italic = true,
+			link = 'Type'
 		},
 		['@type.builtin'] = {
 			fg = scheme.aqua,
@@ -568,7 +572,7 @@ M.hl_groups = function(scheme)
 			fg = scheme.purple,
 		},
 		['@boolean'] = {
-			fg = scheme.purple,
+			link = 'Boolean'
 		},
 		['@symbol'] = {
 			fg = scheme.purple,
@@ -588,9 +592,8 @@ M.hl_groups = function(scheme)
 		['@preproc.cpp'] = {
 			link = '@preproc.c'
 		},
-		['@storageclass'] = { -- rust life times
-			fg = scheme.light_red,
-			italic = true,
+		['@storageclass'] = { -- rust life times/static in c/cpp
+			link = 'StorageClass'
 		},
 		['@todo'] = {
 			fg = scheme.orange,
