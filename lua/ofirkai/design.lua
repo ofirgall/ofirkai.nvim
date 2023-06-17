@@ -710,7 +710,7 @@ M.hl_groups = function(scheme)
 			underline = true,
 		},
 		LspSignatureHintVirtualText = {
-			fg = scheme.lightorange,
+			fg = scheme.dark_teal,
 			bold = true,
 		},
 		-- kyazdani42/nvim-tree.lua
