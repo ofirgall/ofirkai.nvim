@@ -925,6 +925,14 @@ M.hl_groups = function(scheme)
 		DapUIValue = {
 			fg = scheme.yellow,
 		},
+		-- theHamsta/nvim-dap-virtual-text
+		NvimDapVirtualText = {
+			fg = scheme.dark_teal,
+		},
+		NvimDapVirtualTextChanged = {
+			fg = scheme.lightorange,
+			bold = true,
+		},
 		-- folke/noice.nvim
 		NoiceVirtualText = {
 			fg = scheme.comment_fg,
