@@ -5,7 +5,7 @@ local M = {}
 ---@type table
 M.scheme = {
 	-- Main backgrounds
-	background = '#282923',
+	background = '#1f1f19',
 	secondary_background = '#1d2026',
 	ui_bg = '#1a1a18', -- background for ui, file tree and such.
 	telescope_bg = '#181816', -- Slightly darker than ui_bg
@@ -34,7 +34,7 @@ M.scheme = {
 	unnecessary_fg = '#a0a0a0',
 	highlighted_word_bg = '#343942',
 	tab_visible_fg = '#b3ab60',
-	cursor_line_bg = '#36352a',
+	cursor_line_bg = '#333227',
 	mid_orange = '#de933c',
 	lightorange = '#dea255',
 	telescope_prompt = '#1d1d1a',
