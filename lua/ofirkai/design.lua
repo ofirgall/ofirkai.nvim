@@ -1047,6 +1047,10 @@ M.hl_groups = function(scheme)
 		fugitiveUntrackedModifier = {
 			link = 'Typedef'
 		},
+		-- lukas-reineke/indent-blankline.nvim
+		IndentContext = {
+			fg = scheme.dimmed_aqua,
+		},
 		----- Additional hl groups -----
 		InlayHints = { -- For InlayHints
 			fg = scheme.dimmed_aqua,
