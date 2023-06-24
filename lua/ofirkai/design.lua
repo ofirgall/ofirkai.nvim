@@ -13,6 +13,7 @@ M.scheme = {
 	-- Base colors
 	white = '#f8f8f0',
 	grey = '#8F908A',
+	dark_grey = '#8a8b85',
 	black = '#000000',
 	green = '#a6e22e',
 	aqua = '#66d9ef',
@@ -716,6 +717,16 @@ M.hl_groups = function(scheme)
 		LspSignatureHintVirtualText = {
 			fg = scheme.dark_teal,
 			bold = true,
+		},
+		gitcommitSummary = {
+			fg = scheme.light_red,
+			italic = true,
+		},
+		gitcommitOverflow = {
+			fg = scheme.light_red,
+			italic = true,
+			sp = scheme.dark_grey,
+			undercurl = true,
 		},
 		-- kyazdani42/nvim-tree.lua
 		NvimTreeNormal = {
