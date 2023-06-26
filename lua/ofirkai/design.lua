@@ -815,6 +815,12 @@ M.hl_groups = function(scheme)
 			fg = scheme.white,
 		},
 		-- hrsh7th/nvim-cmp
+		CmpFloat = {
+			link = 'NormalFloat'
+		},
+		CmpFloatBorder = {
+			link = 'FloatBorder'
+		},
 		CmpDocumentation = {
 			fg = scheme.white,
 			bg = scheme.background,

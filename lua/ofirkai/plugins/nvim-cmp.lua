@@ -5,7 +5,7 @@ local M = {}
 ---@type table
 M.design = {
 	border = 'single',
-	winhighlight = 'Normal:NormalFloat,CursorLine:Visual,Search:None',
+	winhighlight = 'Normal:CmpFloat,FloatBorder:CmpFloatBorder,CursorLine:Visual,Search:None',
 	zindex = 1001,
 }
 
