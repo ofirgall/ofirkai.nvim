@@ -1094,6 +1094,15 @@ M.hl_groups = function(scheme)
 		FinderLines = {
 			link = 'DiagnosticVirtualTextError'
 		},
+		-- folke/flash.nvim
+		FlashLabel = {
+			bg = '#ccff88',
+			fg = 'black',
+		},
+		FlashCurrent = {
+			bg = 'magenta',
+			fg = 'black',
+		}
 	}
 end
 
