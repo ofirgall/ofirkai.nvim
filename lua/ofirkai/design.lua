@@ -9,7 +9,7 @@ M.scheme = {
 	secondary_background = '#1d2026',
 	ui_bg = '#1a1a18', -- background for ui, file tree and such.
 	telescope_bg = '#181816', -- Slightly darker than ui_bg
-	winbar_bg = '#222219',
+	winbar_bg = '#27271e',
 	-- Base colors
 	white = '#f8f8f0',
 	grey = '#8F908A',
