@@ -7,9 +7,11 @@ M.scheme = {
 	-- Main backgrounds
 	background = '#1f1f19',
 	secondary_background = '#1d2026',
-	ui_bg = '#1a1a18', -- background for ui, file tree and such.
+	ui_bg = '#1a1a18', -- background for ui (floating windows)
+	siderbar_bg = '#1a1a18', -- background for file tree and other sidebars. same as ui_bg
 	telescope_bg = '#181816', -- Slightly darker than ui_bg
 	winbar_bg = '#27271e',
+	ui_title_fg = '#e6db74', -- same as `yellow`
 	-- Base colors
 	white = '#f8f8f0',
 	grey = '#8F908A',
@@ -44,6 +46,8 @@ M.scheme = {
 	diff_text = '#23324d',
 	visual_bg = '#46453a',
 	search_bg = '#424137',
+	inc_search_fg = '#1f1f19', -- same as background
+	inc_search_bg = '#fd971f', -- same as orange
 	pmenu_bg = '#2c2c26',
 	pmenu_sel_bg = '#40403a',
 	pmenu_thumb_bg = '#47473b',
@@ -65,6 +69,7 @@ M.hl_groups = function(scheme)
 			bg = scheme.background,
 		},
 		NormalFloat = {
+			fg = scheme.white,
 			bg = scheme.ui_bg,
 		},
 		FloatBorder = {
@@ -109,8 +114,8 @@ M.hl_groups = function(scheme)
 			bg = scheme.search_bg,
 		},
 		IncSearch = {
-			fg = scheme.background,
-			bg = scheme.orange,
+			fg = scheme.inc_search_fg,
+			bg = scheme.inc_search_bg,
 		},
 		CursorLineNr = {
 			bg = scheme.cursor_line_bg,
@@ -190,7 +195,7 @@ M.hl_groups = function(scheme)
 			bold = true,
 		},
 		FloatTitle = {
-			fg = scheme.yellow,
+			fg = scheme.ui_title_fg,
 			bold = true,
 			bg = scheme.ui_bg,
 		},
@@ -730,7 +735,7 @@ M.hl_groups = function(scheme)
 		},
 		-- kyazdani42/nvim-tree.lua
 		NvimTreeNormal = {
-			bg = scheme.ui_bg,
+			bg = scheme.siderbar_bg,
 		},
 		NvimTreeWindowPicker = {
 			fg = scheme.light_red,
@@ -751,7 +756,7 @@ M.hl_groups = function(scheme)
 			fg = scheme.yellow,
 		},
 		NvimTreeLineNr = {
-			bg = scheme.ui_bg,
+			bg = scheme.siderbar_bg,
 			fg = scheme.orange,
 		},
 		NvimTreeGitDirty = {
@@ -787,7 +792,7 @@ M.hl_groups = function(scheme)
 			bg = scheme.telescope_prompt,
 		},
 		TelescopePromptTitle = {
-			fg = scheme.white,
+			fg = scheme.ui_title_fg,
 			bg = scheme.telescope_prompt,
 			bold = true,
 		},
@@ -905,7 +910,7 @@ M.hl_groups = function(scheme)
 		},
 		-- sindrets/diffview.nvim
 		DiffviewNormal = {
-			bg = scheme.ui_bg,
+			bg = scheme.siderbar_bg,
 		},
 		-- lewis6991/gitsigns.nvim
 		GitSignsAdd = {
