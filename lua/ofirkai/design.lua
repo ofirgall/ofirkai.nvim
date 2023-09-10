@@ -59,6 +59,20 @@ M.scheme = {
 	nvim_cmp_fuzzy_fg = '#34d8f7',
 	git_signs_add = '#6a921a',
 	git_signs_change = '#0e72cf',
+
+	status_line = {
+		a_fg = '#434343',
+		b_bg = '#45453b',
+		c_bg = '#33332a',
+
+		normal = '#de933c',
+		insert = '#a0bfdf',
+		visual = '#feacd0',
+		replace = '#ffa0a0',
+		command = '#88cf88',
+
+		inactive = '#202020',
+	},
 }
 
 ---The highlight groups

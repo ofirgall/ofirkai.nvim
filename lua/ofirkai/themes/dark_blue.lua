@@ -46,6 +46,20 @@ M.scheme = {
 	diff_remove = '#400519',
 	diff_change = '#182c57',
 	diff_text = '#14233e',
+
+	status_line = {
+		a_fg = '#434343',
+		b_bg = '#363640',
+		c_bg = '#2a2a30',
+
+		normal = '#7ea6eb',
+		insert = '#d48050',
+		visual = '#feacd0',
+		replace = '#ffa0a0',
+		command = '#88cf88',
+
+		inactive = '#202020',
+	},
 }
 
 M.hl_groups = function(scheme)

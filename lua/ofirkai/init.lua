@@ -62,19 +62,24 @@ M.setup = function(config)
 		theme = require('ofirkai.themes.' .. config.theme)
 	end
 
+	-- Merge scheme from theme to default scheme
+	if theme then
+		default_config.scheme = vim.tbl_deep_extend('keep', theme.scheme, default_config.scheme)
+	end
+
+	-- Merge use config (includes scheme)
 	config = config or {}
 	config = vim.tbl_deep_extend('keep', config, default_config)
+
+	-- Set vars of scheme
 	M.scheme = config.scheme
-	if theme then
-		M.scheme = vim.tbl_deep_extend('keep', theme.scheme, M.scheme)
-	end
 	design.scheme = M.scheme
 
 	local hl_groups = design.hl_groups(M.scheme)
-	hl_groups = vim.tbl_deep_extend('keep', config.custom_hlgroups, hl_groups)
 	if theme then
 		hl_groups = vim.tbl_deep_extend('keep', theme.hl_groups(M.scheme), hl_groups)
 	end
+	hl_groups = vim.tbl_deep_extend('keep', config.custom_hlgroups, hl_groups)
 
 	hl_groups = filter_hl_groups(config, hl_groups)
 
