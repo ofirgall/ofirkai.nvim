@@ -8,7 +8,7 @@ M.scheme = {
 	background = '#1f1f19',
 	secondary_background = '#1d2026',
 	ui_bg = '#1a1a18', -- background for ui (floating windows)
-	siderbar_bg = '#1a1a18', -- background for file tree and other sidebars. same as ui_bg
+	sidebar_bg = '#1a1a18', -- background for file tree and other sidebars. same as ui_bg
 	telescope_bg = '#181816', -- Slightly darker than ui_bg
 	winbar_bg = '#27271e',
 	ui_title_fg = '#e6db74', -- same as `yellow`
@@ -738,7 +738,7 @@ M.hl_groups = function(scheme)
 		},
 		-- kyazdani42/nvim-tree.lua
 		NvimTreeNormal = {
-			bg = scheme.siderbar_bg,
+			bg = scheme.sidebar_bg,
 		},
 		NvimTreeWindowPicker = {
 			fg = scheme.light_red,
@@ -759,7 +759,7 @@ M.hl_groups = function(scheme)
 			fg = scheme.yellow,
 		},
 		NvimTreeLineNr = {
-			bg = scheme.siderbar_bg,
+			bg = scheme.sidebar_bg,
 			fg = scheme.orange,
 		},
 		NvimTreeGitDirty = {
@@ -913,7 +913,7 @@ M.hl_groups = function(scheme)
 		},
 		-- sindrets/diffview.nvim
 		DiffviewNormal = {
-			bg = scheme.siderbar_bg,
+			bg = scheme.sidebar_bg,
 		},
 		-- lewis6991/gitsigns.nvim
 		GitSignsAdd = {
