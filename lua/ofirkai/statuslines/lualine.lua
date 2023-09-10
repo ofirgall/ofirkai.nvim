@@ -3,20 +3,18 @@ local M = {}
 
 local scheme = require('ofirkai').scheme
 
--- customized modus-vivendi
 local colors = {
-	black = '#000000',
-	white = scheme.white,
-	red = '#ffa0a0',
-	green = '#88cf88',
-	blue = '#92baff',
-	magenta = '#feacd0',
-	cyan = '#a0bfdf',
-	brown = '#33332a',
-	lightbrown = '#45453b',
-	darkgray = '#202020',
-	lightgray = '#434343',
-	orange = '#de933c',
+	a_fg = '#434343',
+	b_bg = '#45453b',
+	c_bg = '#33332a',
+
+	normal = '#de933c',
+	insert = '#a0bfdf',
+	visual = '#feacd0',
+	replace = '#ffa0a0',
+	command = '#88cf88',
+
+	inactive = '#202020',
 }
 
 ---Lualine theme
@@ -30,40 +28,40 @@ local colors = {
 ---@usage ]]
 M.theme = {
 	normal = {
-		a = { bg = colors.orange, fg = colors.lightgray, gui = 'bold' },
-		b = { bg = colors.lightbrown, fg = colors.orange },
-		c = { bg = colors.brown, fg = colors.orange },
-		x = { bg = colors.brown, fg = colors.orange },
+		a = { bg = colors.normal, fg = colors.a_fg, gui = 'bold' },
+		b = { bg = colors.lightbrown, fg = colors.normal },
+		c = { bg = colors.c_bg, fg = colors.normal },
+		x = { bg = colors.c_bg, fg = colors.normal },
 	},
 	insert = {
-		a = { bg = colors.cyan, fg = colors.lightgray, gui = 'bold' },
-		b = { bg = colors.lightbrown, fg = colors.cyan },
-		c = { bg = colors.brown, fg = colors.cyan },
-		x = { bg = colors.brown, fg = colors.cyan },
+		a = { bg = colors.insert, fg = colors.a_fg, gui = 'bold' },
+		b = { bg = colors.lightbrown, fg = colors.insert },
+		c = { bg = colors.c_bg, fg = colors.insert },
+		x = { bg = colors.c_bg, fg = colors.insert },
 	},
 	visual = {
-		a = { bg = colors.magenta, fg = colors.lightgray, gui = 'bold' },
-		b = { bg = colors.lightbrown, fg = colors.magenta },
-		c = { bg = colors.brown, fg = colors.magenta },
-		x = { bg = colors.brown, fg = colors.magenta },
+		a = { bg = colors.visual, fg = colors.a_fg, gui = 'bold' },
+		b = { bg = colors.lightbrown, fg = colors.visual },
+		c = { bg = colors.c_bg, fg = colors.visual },
+		x = { bg = colors.c_bg, fg = colors.visual },
 	},
 	replace = {
-		a = { bg = colors.red, fg = colors.lightgray, gui = 'bold' },
-		b = { bg = colors.lightbrown, fg = colors.red },
-		c = { bg = colors.brown, fg = colors.red },
-		x = { bg = colors.brown, fg = colors.red },
+		a = { bg = colors.replace, fg = colors.a_fg, gui = 'bold' },
+		b = { bg = colors.lightbrown, fg = colors.replace },
+		c = { bg = colors.c_bg, fg = colors.replace },
+		x = { bg = colors.c_bg, fg = colors.replace },
 	},
 	command = {
-		a = { bg = colors.green, fg = colors.lightgray, gui = 'bold' },
-		b = { bg = colors.lightbrown, fg = colors.green },
-		c = { bg = colors.brown, fg = colors.green },
-		x = { bg = colors.brown, fg = colors.green },
+		a = { bg = colors.command, fg = colors.a_fg, gui = 'bold' },
+		b = { bg = colors.lightbrown, fg = colors.command },
+		c = { bg = colors.c_bg, fg = colors.command },
+		x = { bg = colors.c_bg, fg = colors.command },
 	},
 	inactive = {
-		a = { bg = colors.darkgray, fg = colors.lightgray, gui = 'bold' },
-		b = { bg = colors.darkgray, fg = colors.lightgray },
-		c = { bg = colors.darkgray, fg = colors.lightgray, gui = 'bold' },
-		x = { bg = colors.darkgray, fg = colors.lightgray },
+		a = { bg = colors.inactive, fg = colors.a_fg, gui = 'bold' },
+		b = { bg = colors.inactive, fg = colors.a_fg },
+		c = { bg = colors.inactive, fg = colors.a_fg, gui = 'bold' },
+		x = { bg = colors.inactive, fg = colors.a_fg },
 	},
 }
 
