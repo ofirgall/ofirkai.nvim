@@ -10,8 +10,9 @@ M.scheme = {
 	telescope_prompt = float_color,
 	telescope_bg = '#0f1018',
 
-	-- cursor_line_bg = '#1f2325',
 	cursor_line_bg = '#1b1f21',
+	cursor_linenr_fg = '#e0e0e0',
+	line_fg = '#7a7a7a',
 	winbar_bg = '#171b1d',
 	white = '#edede5',
 	-- visual_bg = '#30303c',
@@ -64,18 +65,13 @@ M.scheme = {
 
 M.hl_groups = function(scheme)
 	return {
-		LineNr = {
-			fg = '#7a7a7a',
-		},
-		CursorLineNr = {
-			fg = '#e0e0e0',
-		},
-
 		-- TODO: ????
 		TelescopePreviewBorder = {
 			fg = telescope_preview_border,
 			bg = telescope_preview_border,
 		},
+
+		NvimTreeCursorLine = {},
 
 		-- Swapped noice
 		NoiceCmdLine = {

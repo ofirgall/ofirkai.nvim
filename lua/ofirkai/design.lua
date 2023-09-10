@@ -36,7 +36,9 @@ M.scheme = {
 	unnecessary_fg = '#a0a0a0',
 	highlighted_word_bg = '#343942',
 	tab_visible_fg = '#b3ab60',
+	line_fg = '#fd971f',
 	cursor_line_bg = '#333227',
+	cursor_linenr_fg = '#e6db74',
 	mid_orange = '#de933c',
 	lightorange = '#dea255',
 	telescope_prompt = '#1d1d1a',
@@ -133,7 +135,7 @@ M.hl_groups = function(scheme)
 		},
 		CursorLineNr = {
 			bg = scheme.cursor_line_bg,
-			fg = scheme.yellow,
+			fg = scheme.cursor_linenr_fg,
 		},
 		MatchParen = {
 			fg = scheme.light_red,
@@ -162,7 +164,7 @@ M.hl_groups = function(scheme)
 		},
 		LineNr = {
 			bg = scheme.background,
-			fg = scheme.orange,
+			fg = scheme.line_fg,
 		},
 		SignColumn = {
 			fg = scheme.white,
@@ -768,11 +770,11 @@ M.hl_groups = function(scheme)
 		},
 		NvimTreeCursorLineNr = {
 			bg = scheme.cursor_line_bg,
-			fg = scheme.yellow,
+			fg = scheme.cursor_linenr_fg,
 		},
 		NvimTreeLineNr = {
 			bg = scheme.sidebar_bg,
-			fg = scheme.orange,
+			fg = scheme.line_fg,
 		},
 		NvimTreeGitDirty = {
 			fg = scheme.orange,
