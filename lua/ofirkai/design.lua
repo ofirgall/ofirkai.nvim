@@ -173,7 +173,7 @@ M.hl_groups = function(scheme)
 		},
 		SpellBad = {
 			ctermfg = scheme.red,
-			style = 'undercurl'
+			style = 'undercurl',
 		},
 		SpellCap = {
 			ctermfg = scheme.purple,
@@ -251,7 +251,7 @@ M.hl_groups = function(scheme)
 			italic = true,
 		},
 		Structure = {
-			link = 'StorageClass'
+			link = 'StorageClass',
 		},
 		StorageClass = {
 			fg = scheme.light_red,
@@ -378,7 +378,7 @@ M.hl_groups = function(scheme)
 			fg = scheme.light_red,
 		},
 		['@string'] = {
-			link = 'String'
+			link = 'String',
 		},
 		['@string.regex'] = {
 			fg = scheme.purple,
@@ -405,7 +405,7 @@ M.hl_groups = function(scheme)
 			fg = scheme.comment_fg,
 		},
 		['@constant'] = {
-			link = 'Constant'
+			link = 'Constant',
 		},
 		['@constant.builtin'] = {
 			fg = scheme.purple,
@@ -432,7 +432,7 @@ M.hl_groups = function(scheme)
 			fg = scheme.light_red,
 		},
 		['@character'] = {
-			link = 'Character'
+			link = 'Character',
 		},
 		['@character.special'] = {
 			fg = scheme.light_red,
@@ -458,7 +458,7 @@ M.hl_groups = function(scheme)
 			italic = true,
 		},
 		['@attribute.builtin.python'] = {
-			link = '@attribute.python'
+			link = '@attribute.python',
 		},
 		['@keyword'] = {
 			fg = scheme.light_red,
@@ -488,10 +488,10 @@ M.hl_groups = function(scheme)
 			fg = scheme.purple,
 		},
 		['@namespace.builtin.lua'] = { -- 'table.'
-			link = '@variable.builtin'
+			link = '@variable.builtin',
 		},
 		['@number'] = {
-			link = 'Number'
+			link = 'Number',
 		},
 		['@operator'] = {
 			fg = scheme.light_red,
@@ -531,7 +531,7 @@ M.hl_groups = function(scheme)
 			fg = scheme.light_red,
 		},
 		['@label.jsonc'] = {
-			link = '@label.json'
+			link = '@label.json',
 		},
 		['@label'] = {
 			fg = scheme.white,
@@ -549,24 +549,24 @@ M.hl_groups = function(scheme)
 			fg = scheme.light_red,
 		},
 		['@type'] = {
-			link = 'Type'
+			link = 'Type',
 		},
 		['@type.builtin'] = {
 			fg = scheme.aqua,
 			italic = true,
 		},
 		['@type.builtin.c'] = {
-			link = '@type'
+			link = '@type',
 		},
 		['@type.builtin.cpp'] = {
-			link = '@type'
+			link = '@type',
 		},
 		['@type.qualifier'] = { -- rust `mut`
 			fg = scheme.light_red,
 			italic = true,
 		},
 		['@type.definition'] = {
-			link = '@type'
+			link = '@type',
 		},
 		['@exception'] = {
 			fg = scheme.light_red,
@@ -582,7 +582,7 @@ M.hl_groups = function(scheme)
 			fg = scheme.purple,
 		},
 		['@boolean'] = {
-			link = 'Boolean'
+			link = 'Boolean',
 		},
 		['@symbol'] = {
 			fg = scheme.purple,
@@ -600,18 +600,16 @@ M.hl_groups = function(scheme)
 			fg = scheme.light_red,
 		},
 		['@preproc.cpp'] = {
-			link = '@preproc.c'
+			link = '@preproc.c',
 		},
 		['@storageclass'] = { -- rust life times/static in c/cpp
-			link = 'StorageClass'
+			link = 'StorageClass',
 		},
 		['@todo'] = {
 			fg = scheme.orange,
 		},
-		['@none'] = {
-		},
-		['@text'] = {
-		},
+		['@none'] = {},
+		['@text'] = {},
 		['@text.strong'] = {
 			bold = true,
 		},
@@ -697,7 +695,7 @@ M.hl_groups = function(scheme)
 			italic = true,
 		},
 		DiagnosticError = {
-			link = 'DiagnosticVirtualTextError'
+			link = 'DiagnosticVirtualTextError',
 		},
 		CursorWord0 = {
 			bg = scheme.white,
@@ -824,17 +822,18 @@ M.hl_groups = function(scheme)
 		},
 		-- hrsh7th/nvim-cmp
 		CmpFloat = {
-			link = 'NormalFloat'
+			link = 'NormalFloat',
 		},
 		CmpFloatBorder = {
-			link = 'FloatBorder'
+			link = 'FloatBorder',
 		},
 		CmpDocumentation = {
 			fg = scheme.white,
 			bg = scheme.background,
 		},
 		CmpDocumentationBorder = {
-			fg = scheme.white, bg = scheme.background,
+			fg = scheme.white,
+			bg = scheme.background,
 		},
 		CmpItemAbbr = {
 			fg = scheme.white,
@@ -942,10 +941,10 @@ M.hl_groups = function(scheme)
 		},
 		-- dapui.nvim -- TODO: complete shorthand
 		DapUIVariable = {
-			link = '@parameter'
+			link = '@parameter',
 		},
 		DapUIType = {
-			link = '@type'
+			link = '@type',
 		},
 		DapUIValue = {
 			fg = scheme.yellow,
@@ -979,22 +978,22 @@ M.hl_groups = function(scheme)
 			fg = scheme.dark_pink,
 		},
 		NoiceCmdlinePopup = { -- Actual search line
-			link = 'FloatNormal'
+			link = 'FloatNormal',
 		},
 		NoiceCmdlinePopupBorder = {
-			link = 'FloatBorder'
+			link = 'FloatBorder',
 		},
 		NoiceCmdlinePopupBorderCmdline = {
-			link = 'FloatBorder'
+			link = 'FloatBorder',
 		},
 		NoiceCmdlinePopupBorderFilter = {
-			link = 'FloatBorder'
+			link = 'FloatBorder',
 		},
 		NoiceCmdlinePopupBorderLua = {
-			link = 'FloatBorder'
+			link = 'FloatBorder',
 		},
 		NoiceCmdlinePopupBorderSearch = {
-			link = 'FloatBorder'
+			link = 'FloatBorder',
 		},
 		-- Progress Bar
 		NoiceFormatProgressDone = {
@@ -1021,10 +1020,10 @@ M.hl_groups = function(scheme)
 		},
 		-- ThePrimeagen/harpoon
 		HarpoonWindow = {
-			link = 'WhiteBorder'
+			link = 'WhiteBorder',
 		},
 		HarpoonBorder = {
-			link = 'WhiteBorder'
+			link = 'WhiteBorder',
 		},
 		-- folke/lazy.nvim
 		--- General
@@ -1067,10 +1066,10 @@ M.hl_groups = function(scheme)
 		},
 		-- tpope/vim-fugitive
 		fugitiveUnstagedModifier = {
-			link = 'Typedef'
+			link = 'Typedef',
 		},
 		fugitiveUntrackedModifier = {
-			link = 'Typedef'
+			link = 'Typedef',
 		},
 		-- lukas-reineke/indent-blankline.nvim
 		IndentContext = {
@@ -1087,20 +1086,20 @@ M.hl_groups = function(scheme)
 		},
 		-- nvimdev/lspsaga.nvim
 		SagaBorder = {
-			link = 'FloatBorder'
+			link = 'FloatBorder',
 		},
 		SagaNormal = {
-			link = 'NormalFloat'
+			link = 'NormalFloat',
 		},
 		DiagnosticShowBorder = {
-			link = 'FloatBorder'
+			link = 'FloatBorder',
 		},
 		TitleString = {
-			link = 'FloatTitle'
+			link = 'FloatTitle',
 		},
 		-- Diagnostic Lines
 		FinderLines = {
-			link = 'DiagnosticVirtualTextError'
+			link = 'DiagnosticVirtualTextError',
 		},
 		-- folke/flash.nvim
 		FlashLabel = {
@@ -1110,7 +1109,7 @@ M.hl_groups = function(scheme)
 		FlashCurrent = {
 			bg = 'magenta',
 			fg = 'black',
-		}
+		},
 	}
 end
 

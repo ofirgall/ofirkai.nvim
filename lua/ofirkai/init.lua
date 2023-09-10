@@ -12,9 +12,7 @@ local function highlight(group, color)
 	local fg = color.fg and 'guifg = ' .. color.fg or 'guifg = NONE'
 	local bg = color.bg and 'guibg = ' .. color.bg or 'guibg = NONE'
 	local sp = color.sp and 'guisp = ' .. color.sp or ''
-	vim.cmd(
-		'highlight ' .. group .. ' ' .. style .. ' ' .. fg .. ' ' .. bg .. ' ' .. sp
-	)
+	vim.cmd('highlight ' .. group .. ' ' .. style .. ' ' .. fg .. ' ' .. bg .. ' ' .. sp)
 end
 
 local function filter_hl_groups(config, hl_groups)

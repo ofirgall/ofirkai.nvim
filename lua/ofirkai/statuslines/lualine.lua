@@ -5,18 +5,18 @@ local scheme = require('ofirkai').scheme
 
 -- customized modus-vivendi
 local colors = {
-	black      = '#000000',
-	white      = scheme.white,
-	red        = '#ffa0a0',
-	green      = '#88cf88',
-	blue       = '#92baff',
-	magenta    = '#feacd0',
-	cyan       = '#a0bfdf',
-	brown      = '#33332a',
+	black = '#000000',
+	white = scheme.white,
+	red = '#ffa0a0',
+	green = '#88cf88',
+	blue = '#92baff',
+	magenta = '#feacd0',
+	cyan = '#a0bfdf',
+	brown = '#33332a',
 	lightbrown = '#45453b',
-	darkgray   = '#202020',
-	lightgray  = '#434343',
-	orange     = '#de933c'
+	darkgray = '#202020',
+	lightgray = '#434343',
+	orange = '#de933c',
 }
 
 ---Lualine theme
