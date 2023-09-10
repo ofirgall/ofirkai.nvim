@@ -454,7 +454,7 @@ M.hl_groups = function(scheme)
 			fg = scheme.light_red,
 		},
 		['@attribute.python'] = {
-			fg = scheme.aqua,
+			fg = scheme.teal,
 			italic = true,
 		},
 		['@attribute.builtin.python'] = {
