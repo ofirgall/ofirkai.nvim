@@ -71,7 +71,9 @@ M.hl_groups = function(scheme)
 			bg = telescope_preview_border,
 		},
 
-		NvimTreeCursorLine = {},
+		NvimTreeCursorLine = {
+			bg = '#24292b',
+		},
 
 		-- Swapped noice
 		NoiceCmdLine = {
