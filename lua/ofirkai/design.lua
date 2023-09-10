@@ -723,6 +723,9 @@ M.hl_groups = function(scheme)
 			fg = scheme.dark_teal,
 			bold = true,
 		},
+		LspSignatureActiveParameter = {
+			bg = scheme.visual_bg,
+		},
 		gitcommitSummary = {
 			fg = scheme.light_red,
 			italic = true,
