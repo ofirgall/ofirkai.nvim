@@ -3,6 +3,7 @@ local M = {}
 -- brown
 local float_color = '#131426'
 local telescope_preview_border = '#12131b'
+local sidebar_cursorline_bg = '#24292b'
 
 M.scheme = {
 	-- midnight.nvim
@@ -72,7 +73,11 @@ M.hl_groups = function(scheme)
 		},
 
 		NvimTreeCursorLine = {
-			bg = '#24292b',
+			bg = sidebar_cursorline_bg,
+		},
+		NvimTreeCursorLineNr = {
+			bg = sidebar_cursorline_bg,
+			fg = scheme.cursor_linenr_fg,
 		},
 
 		-- Swapped noice
