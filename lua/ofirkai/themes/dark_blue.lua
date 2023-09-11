@@ -36,12 +36,12 @@ M.scheme = {
 	sidebar_bg = '#131A24',
 	ui_bg = '#131426',
 	ui_title_fg = '#e373cd',
+	tab_visible_fg = '#5c8014',
 
 	vert_split_fg = '#7b7b7b',
 	vert_split_fg_active = '#888888',
 	git_signs_add = '#567e06',
 	git_signs_change = '#0063c0',
-	tab_visible_fg = '#944770',
 
 	-- darker diff colors
 	diff_add = '#293e04',
