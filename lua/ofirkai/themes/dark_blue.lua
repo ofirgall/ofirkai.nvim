@@ -79,6 +79,9 @@ M.hl_groups = function(scheme)
 			bg = sidebar_cursorline_bg,
 			fg = scheme.cursor_linenr_fg,
 		},
+		DiffviewCursorLine = {
+			link = 'NvimTreeCursorLine'
+		},
 
 		-- Swapped noice
 		NoiceCmdLine = {
