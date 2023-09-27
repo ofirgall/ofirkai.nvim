@@ -75,6 +75,15 @@ M.scheme = {
 
 		inactive = '#202020',
 	},
+
+	buffer_line = {
+		bg = '#171712',
+		fg = '#9ca0a4',
+		selected_bg = '#1f1f19',
+		selected_fg = '#f8f8f0',
+		visible_fg = '#b3ab60',
+		visible_bg = '#171712', -- same as bg
+	},
 }
 
 ---The highlight groups

@@ -62,6 +62,15 @@ M.scheme = {
 
 		inactive = '#202020',
 	},
+
+	buffer_line = {
+		bg = '#15162a',
+		fg = '#9ca0a4',
+		selected_bg = '#1c1e38',
+		selected_fg = '#edede5',
+		visible_fg = '#5c8014',
+		visible_bg = '#15162a', -- same as bg
+	},
 }
 
 M.hl_groups = function(scheme)
@@ -80,7 +89,7 @@ M.hl_groups = function(scheme)
 			fg = scheme.cursor_linenr_fg,
 		},
 		DiffviewCursorLine = {
-			link = 'NvimTreeCursorLine'
+			link = 'NvimTreeCursorLine',
 		},
 
 		-- Swapped noice
