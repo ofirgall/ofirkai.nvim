@@ -15,7 +15,13 @@ Requires Neovim 0.8+
 * [Contributing](#contributing)
 ---
 
-<p align='center'><a><img src='https://github.com/ofirgall/ofirkai.nvim/assets/4954051/3edac6de-ee55-4e36-b783-7912fd4abae4'></a></p>
+<p align='center'>
+	<a><img src='https://github.com/ofirgall/ofirkai.nvim/assets/4954051/0aa07a38-eed6-4583-ab55-bc768b12e494'></a>
+	<br><br>
+	Dark Blue Theme
+	<a><img src='https://github.com/ofirgall/ofirkai.nvim/assets/4954051/42e720c0-43d5-47ca-b580-14f943790155'></a>
+</p>
+
 
 ## Why not [monokai.nvim](https://github.com/tanvirtin/monokai.nvim)?
 Before I used Neovim I used Sublime Text for 6 years with the builtin Monokai scheme.
