@@ -15,7 +15,13 @@ Requires Neovim 0.8+
 * [Contributing](#contributing)
 ---
 
-<p align='center'><a><img src='https://github.com/ofirgall/ofirkai.nvim/assets/4954051/3edac6de-ee55-4e36-b783-7912fd4abae4'></a></p>
+<p align='center'>
+	<a><img src='https://github.com/ofirgall/ofirkai.nvim/assets/4954051/0aa07a38-eed6-4583-ab55-bc768b12e494'></a>
+	<br><br>
+	Dark Blue Theme
+	<a><img src='https://github.com/ofirgall/ofirkai.nvim/assets/4954051/42e720c0-43d5-47ca-b580-14f943790155'></a>
+</p>
+
 
 ## Why not [monokai.nvim](https://github.com/tanvirtin/monokai.nvim)?
 Before I used Neovim I used Sublime Text for 6 years with the builtin Monokai scheme.
@@ -48,15 +54,22 @@ require('ofirkai').setup {
 
 -- Or setup with custom parameters
 require('ofirkai').setup {
+	theme = nil -- Choose theme to use, available themes: 'dark_blue'
+
 	scheme = require('ofirkai').scheme -- Option to override scheme
 	custom_hlgroups = {},              -- Option to add/override highlight groups
 	remove_italics = false,            -- Option to change all the italics style to none
 }
 ```
+Or
+```vim
+:colorscheme ofirkai
+:colorscheme ofirkai-darkblue
+```
 
 You can find the default values for the scheme and highlights in [design.lua](https://github.com/ofirgall/ofirkai.nvim/blob/master/lua/ofirkai/design.lua).
 
-_**Note**_: Each plugin that need a setup has an example in the collapsible section.
+_**Note**_: Each plugin that need a setup has an example in the collapsible section, if you use a theme you must `ofirkai` first.
 
 #### Additional highlight groups
 ofirkai adds additional highlight groups to help configure other plugins.

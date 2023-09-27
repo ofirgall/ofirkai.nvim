@@ -1,23 +1,49 @@
 ---@mod ofirkai.statuslines.lualine
 local M = {}
 
-local scheme = require('ofirkai').scheme
+local default_scheme = require('ofirkai').scheme
 
--- customized modus-vivendi
-local colors = {
-	black      = '#000000',
-	white      = scheme.white,
-	red        = '#ffa0a0',
-	green      = '#88cf88',
-	blue       = '#92baff',
-	magenta    = '#feacd0',
-	cyan       = '#a0bfdf',
-	brown      = '#33332a',
-	lightbrown = '#45453b',
-	darkgray   = '#202020',
-	lightgray  = '#434343',
-	orange     = '#de933c'
-}
+local function get_theme()
+	local colors = require('ofirkai').scheme.status_line
+	return {
+		normal = {
+			a = { bg = colors.normal, fg = colors.a_fg, gui = 'bold' },
+			b = { bg = colors.b_bg, fg = colors.normal },
+			c = { bg = colors.c_bg, fg = colors.normal },
+			x = { bg = colors.c_bg, fg = colors.normal },
+		},
+		insert = {
+			a = { bg = colors.insert, fg = colors.a_fg, gui = 'bold' },
+			b = { bg = colors.b_bg, fg = colors.insert },
+			c = { bg = colors.c_bg, fg = colors.insert },
+			x = { bg = colors.c_bg, fg = colors.insert },
+		},
+		visual = {
+			a = { bg = colors.visual, fg = colors.a_fg, gui = 'bold' },
+			b = { bg = colors.b_bg, fg = colors.visual },
+			c = { bg = colors.c_bg, fg = colors.visual },
+			x = { bg = colors.c_bg, fg = colors.visual },
+		},
+		replace = {
+			a = { bg = colors.replace, fg = colors.a_fg, gui = 'bold' },
+			b = { bg = colors.b_bg, fg = colors.replace },
+			c = { bg = colors.c_bg, fg = colors.replace },
+			x = { bg = colors.c_bg, fg = colors.replace },
+		},
+		command = {
+			a = { bg = colors.command, fg = colors.a_fg, gui = 'bold' },
+			b = { bg = colors.b_bg, fg = colors.command },
+			c = { bg = colors.c_bg, fg = colors.command },
+			x = { bg = colors.c_bg, fg = colors.command },
+		},
+		inactive = {
+			a = { bg = colors.inactive, fg = colors.a_fg, gui = 'bold' },
+			b = { bg = colors.inactive, fg = colors.a_fg },
+			c = { bg = colors.inactive, fg = colors.a_fg, gui = 'bold' },
+			x = { bg = colors.inactive, fg = colors.a_fg },
+		},
+	}
+end
 
 ---Lualine theme
 ---@type table
@@ -28,50 +54,13 @@ local colors = {
 ---	}
 ---}
 ---@usage ]]
-M.theme = {
-	normal = {
-		a = { bg = colors.orange, fg = colors.lightgray, gui = 'bold' },
-		b = { bg = colors.lightbrown, fg = colors.orange },
-		c = { bg = colors.brown, fg = colors.orange },
-		x = { bg = colors.brown, fg = colors.orange },
-	},
-	insert = {
-		a = { bg = colors.cyan, fg = colors.lightgray, gui = 'bold' },
-		b = { bg = colors.lightbrown, fg = colors.cyan },
-		c = { bg = colors.brown, fg = colors.cyan },
-		x = { bg = colors.brown, fg = colors.cyan },
-	},
-	visual = {
-		a = { bg = colors.magenta, fg = colors.lightgray, gui = 'bold' },
-		b = { bg = colors.lightbrown, fg = colors.magenta },
-		c = { bg = colors.brown, fg = colors.magenta },
-		x = { bg = colors.brown, fg = colors.magenta },
-	},
-	replace = {
-		a = { bg = colors.red, fg = colors.lightgray, gui = 'bold' },
-		b = { bg = colors.lightbrown, fg = colors.red },
-		c = { bg = colors.brown, fg = colors.red },
-		x = { bg = colors.brown, fg = colors.red },
-	},
-	command = {
-		a = { bg = colors.green, fg = colors.lightgray, gui = 'bold' },
-		b = { bg = colors.lightbrown, fg = colors.green },
-		c = { bg = colors.brown, fg = colors.green },
-		x = { bg = colors.brown, fg = colors.green },
-	},
-	inactive = {
-		a = { bg = colors.darkgray, fg = colors.lightgray, gui = 'bold' },
-		b = { bg = colors.darkgray, fg = colors.lightgray },
-		c = { bg = colors.darkgray, fg = colors.lightgray, gui = 'bold' },
-		x = { bg = colors.darkgray, fg = colors.lightgray },
-	},
-}
+M.theme = get_theme()
 
 ---Winbar color (for each section), see README for usage
 ---@type table
 M.winbar_color = {
-	fg = scheme.lightorange,
-	bg = scheme.winbar_bg,
+	fg = default_scheme.lightorange,
+	bg = default_scheme.winbar_bg,
 	gui = 'bold',
 }
 

@@ -12,9 +12,7 @@ local function highlight(group, color)
 	local fg = color.fg and 'guifg = ' .. color.fg or 'guifg = NONE'
 	local bg = color.bg and 'guibg = ' .. color.bg or 'guibg = NONE'
 	local sp = color.sp and 'guisp = ' .. color.sp or ''
-	vim.cmd(
-		'highlight ' .. group .. ' ' .. style .. ' ' .. fg .. ' ' .. bg .. ' ' .. sp
-	)
+	vim.cmd('highlight ' .. group .. ' ' .. style .. ' ' .. fg .. ' ' .. bg .. ' ' .. sp)
 end
 
 local function filter_hl_groups(config, hl_groups)
@@ -30,6 +28,7 @@ local function filter_hl_groups(config, hl_groups)
 end
 
 local default_config = {
+	theme = nil,
 	scheme = design.scheme,
 	custom_hlgroups = {},
 	remove_italics = false,
@@ -43,6 +42,8 @@ local default_config = {
 ---
 ----- Or setup with custom parameters
 ---require('ofirkai').setup {
+---	theme = nil -- Choose theme to use, available themes: 'dark_blue'
+---
 ---	scheme = require('ofirkai').scheme -- Option to override scheme
 ---	custom_hlgroups = {},              -- Option to add/override highlight groups
 ---	remove_italics = false,            -- Option to change all the italics style to none
@@ -57,12 +58,35 @@ M.setup = function(config)
 	vim.o.termguicolors = true
 	vim.g.colors_name = 'ofirkai'
 
+	local theme = nil
+	local def_scheme = default_config.scheme
+
+	if config.theme then
+		theme = require('ofirkai.themes.' .. config.theme)
+	end
+
+	-- Merge scheme from theme to default scheme
+	if theme then
+		default_config.scheme = vim.tbl_deep_extend('keep', theme.scheme, default_config.scheme)
+	end
+
+	-- Merge use config (includes scheme)
 	config = config or {}
 	config = vim.tbl_deep_extend('keep', config, default_config)
-	M.scheme = config.scheme
-	design.scheme = config.scheme
 
-	local hl_groups = design.hl_groups(config.scheme)
+	-- Restore default scheme after using the merged scheme
+	if theme then
+		default_config.scheme = def_scheme
+	end
+
+	-- Set vars of scheme
+	M.scheme = config.scheme
+	design.scheme = M.scheme
+
+	local hl_groups = design.hl_groups(M.scheme)
+	if theme then
+		hl_groups = vim.tbl_deep_extend('keep', theme.hl_groups(M.scheme), hl_groups)
+	end
 	hl_groups = vim.tbl_deep_extend('keep', config.custom_hlgroups, hl_groups)
 
 	hl_groups = filter_hl_groups(config, hl_groups)

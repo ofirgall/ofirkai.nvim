@@ -7,9 +7,11 @@ M.scheme = {
 	-- Main backgrounds
 	background = '#1f1f19',
 	secondary_background = '#1d2026',
-	ui_bg = '#1a1a18', -- background for ui, file tree and such.
+	ui_bg = '#1a1a18', -- background for ui (floating windows)
+	sidebar_bg = '#1a1a18', -- background for file tree and other sidebars. same as ui_bg
 	telescope_bg = '#181816', -- Slightly darker than ui_bg
 	winbar_bg = '#27271e',
+	ui_title_fg = '#e6db74', -- same as `yellow`
 	-- Base colors
 	white = '#f8f8f0',
 	grey = '#8F908A',
@@ -34,7 +36,9 @@ M.scheme = {
 	unnecessary_fg = '#a0a0a0',
 	highlighted_word_bg = '#343942',
 	tab_visible_fg = '#b3ab60',
+	line_fg = '#fd971f',
 	cursor_line_bg = '#333227',
+	cursor_linenr_fg = '#e6db74',
 	mid_orange = '#de933c',
 	lightorange = '#dea255',
 	telescope_prompt = '#1d1d1a',
@@ -44,6 +48,8 @@ M.scheme = {
 	diff_text = '#23324d',
 	visual_bg = '#46453a',
 	search_bg = '#424137',
+	inc_search_fg = '#1f1f19', -- same as background
+	inc_search_bg = '#fd971f', -- same as orange
 	pmenu_bg = '#2c2c26',
 	pmenu_sel_bg = '#40403a',
 	pmenu_thumb_bg = '#47473b',
@@ -55,6 +61,29 @@ M.scheme = {
 	nvim_cmp_fuzzy_fg = '#34d8f7',
 	git_signs_add = '#6a921a',
 	git_signs_change = '#0e72cf',
+
+	status_line = {
+		a_fg = '#434343',
+		b_bg = '#45453b',
+		c_bg = '#33332a',
+
+		normal = '#de933c',
+		insert = '#a0bfdf',
+		visual = '#feacd0',
+		replace = '#ffa0a0',
+		command = '#88cf88',
+
+		inactive = '#202020',
+	},
+
+	buffer_line = {
+		bg = '#171712',
+		fg = '#9ca0a4',
+		selected_bg = '#1f1f19',
+		selected_fg = '#f8f8f0',
+		visible_fg = '#b3ab60',
+		visible_bg = '#171712', -- same as bg
+	},
 }
 
 ---The highlight groups
@@ -65,6 +94,7 @@ M.hl_groups = function(scheme)
 			bg = scheme.background,
 		},
 		NormalFloat = {
+			fg = scheme.white,
 			bg = scheme.ui_bg,
 		},
 		FloatBorder = {
@@ -109,12 +139,12 @@ M.hl_groups = function(scheme)
 			bg = scheme.search_bg,
 		},
 		IncSearch = {
-			fg = scheme.background,
-			bg = scheme.orange,
+			fg = scheme.inc_search_fg,
+			bg = scheme.inc_search_bg,
 		},
 		CursorLineNr = {
 			bg = scheme.cursor_line_bg,
-			fg = scheme.yellow,
+			fg = scheme.cursor_linenr_fg,
 		},
 		MatchParen = {
 			fg = scheme.light_red,
@@ -143,7 +173,7 @@ M.hl_groups = function(scheme)
 		},
 		LineNr = {
 			bg = scheme.background,
-			fg = scheme.orange,
+			fg = scheme.line_fg,
 		},
 		SignColumn = {
 			fg = scheme.white,
@@ -168,7 +198,7 @@ M.hl_groups = function(scheme)
 		},
 		SpellBad = {
 			ctermfg = scheme.red,
-			style = 'undercurl'
+			style = 'undercurl',
 		},
 		SpellCap = {
 			ctermfg = scheme.purple,
@@ -190,7 +220,7 @@ M.hl_groups = function(scheme)
 			bold = true,
 		},
 		FloatTitle = {
-			fg = scheme.yellow,
+			fg = scheme.ui_title_fg,
 			bold = true,
 			bg = scheme.ui_bg,
 		},
@@ -246,7 +276,7 @@ M.hl_groups = function(scheme)
 			italic = true,
 		},
 		Structure = {
-			link = 'StorageClass'
+			link = 'StorageClass',
 		},
 		StorageClass = {
 			fg = scheme.light_red,
@@ -373,7 +403,7 @@ M.hl_groups = function(scheme)
 			fg = scheme.light_red,
 		},
 		['@string'] = {
-			link = 'String'
+			link = 'String',
 		},
 		['@string.regex'] = {
 			fg = scheme.purple,
@@ -400,7 +430,7 @@ M.hl_groups = function(scheme)
 			fg = scheme.comment_fg,
 		},
 		['@constant'] = {
-			link = 'Constant'
+			link = 'Constant',
 		},
 		['@constant.builtin'] = {
 			fg = scheme.purple,
@@ -427,7 +457,7 @@ M.hl_groups = function(scheme)
 			fg = scheme.light_red,
 		},
 		['@character'] = {
-			link = 'Character'
+			link = 'Character',
 		},
 		['@character.special'] = {
 			fg = scheme.light_red,
@@ -449,11 +479,11 @@ M.hl_groups = function(scheme)
 			fg = scheme.light_red,
 		},
 		['@attribute.python'] = {
-			fg = scheme.aqua,
+			fg = scheme.teal,
 			italic = true,
 		},
 		['@attribute.builtin.python'] = {
-			link = '@attribute.python'
+			link = '@attribute.python',
 		},
 		['@keyword'] = {
 			fg = scheme.light_red,
@@ -483,10 +513,10 @@ M.hl_groups = function(scheme)
 			fg = scheme.purple,
 		},
 		['@namespace.builtin.lua'] = { -- 'table.'
-			link = '@variable.builtin'
+			link = '@variable.builtin',
 		},
 		['@number'] = {
-			link = 'Number'
+			link = 'Number',
 		},
 		['@operator'] = {
 			fg = scheme.light_red,
@@ -526,7 +556,7 @@ M.hl_groups = function(scheme)
 			fg = scheme.light_red,
 		},
 		['@label.jsonc'] = {
-			link = '@label.json'
+			link = '@label.json',
 		},
 		['@label'] = {
 			fg = scheme.white,
@@ -544,24 +574,24 @@ M.hl_groups = function(scheme)
 			fg = scheme.light_red,
 		},
 		['@type'] = {
-			link = 'Type'
+			link = 'Type',
 		},
 		['@type.builtin'] = {
 			fg = scheme.aqua,
 			italic = true,
 		},
 		['@type.builtin.c'] = {
-			link = '@type'
+			link = '@type',
 		},
 		['@type.builtin.cpp'] = {
-			link = '@type'
+			link = '@type',
 		},
 		['@type.qualifier'] = { -- rust `mut`
 			fg = scheme.light_red,
 			italic = true,
 		},
 		['@type.definition'] = {
-			link = '@type'
+			link = '@type',
 		},
 		['@exception'] = {
 			fg = scheme.light_red,
@@ -577,7 +607,7 @@ M.hl_groups = function(scheme)
 			fg = scheme.purple,
 		},
 		['@boolean'] = {
-			link = 'Boolean'
+			link = 'Boolean',
 		},
 		['@symbol'] = {
 			fg = scheme.purple,
@@ -595,18 +625,16 @@ M.hl_groups = function(scheme)
 			fg = scheme.light_red,
 		},
 		['@preproc.cpp'] = {
-			link = '@preproc.c'
+			link = '@preproc.c',
 		},
 		['@storageclass'] = { -- rust life times/static in c/cpp
-			link = 'StorageClass'
+			link = 'StorageClass',
 		},
 		['@todo'] = {
 			fg = scheme.orange,
 		},
-		['@none'] = {
-		},
-		['@text'] = {
-		},
+		['@none'] = {},
+		['@text'] = {},
 		['@text.strong'] = {
 			bold = true,
 		},
@@ -692,7 +720,7 @@ M.hl_groups = function(scheme)
 			italic = true,
 		},
 		DiagnosticError = {
-			link = 'DiagnosticVirtualTextError'
+			link = 'DiagnosticVirtualTextError',
 		},
 		CursorWord0 = {
 			bg = scheme.white,
@@ -718,6 +746,9 @@ M.hl_groups = function(scheme)
 			fg = scheme.dark_teal,
 			bold = true,
 		},
+		LspSignatureActiveParameter = {
+			bg = scheme.visual_bg,
+		},
 		gitcommitSummary = {
 			fg = scheme.light_red,
 			italic = true,
@@ -730,7 +761,7 @@ M.hl_groups = function(scheme)
 		},
 		-- kyazdani42/nvim-tree.lua
 		NvimTreeNormal = {
-			bg = scheme.ui_bg,
+			bg = scheme.sidebar_bg,
 		},
 		NvimTreeWindowPicker = {
 			fg = scheme.light_red,
@@ -748,11 +779,11 @@ M.hl_groups = function(scheme)
 		},
 		NvimTreeCursorLineNr = {
 			bg = scheme.cursor_line_bg,
-			fg = scheme.yellow,
+			fg = scheme.cursor_linenr_fg,
 		},
 		NvimTreeLineNr = {
-			bg = scheme.ui_bg,
-			fg = scheme.orange,
+			bg = scheme.sidebar_bg,
+			fg = scheme.line_fg,
 		},
 		NvimTreeGitDirty = {
 			fg = scheme.orange,
@@ -787,7 +818,7 @@ M.hl_groups = function(scheme)
 			bg = scheme.telescope_prompt,
 		},
 		TelescopePromptTitle = {
-			fg = scheme.white,
+			fg = scheme.ui_title_fg,
 			bg = scheme.telescope_prompt,
 			bold = true,
 		},
@@ -816,17 +847,18 @@ M.hl_groups = function(scheme)
 		},
 		-- hrsh7th/nvim-cmp
 		CmpFloat = {
-			link = 'NormalFloat'
+			link = 'NormalFloat',
 		},
 		CmpFloatBorder = {
-			link = 'FloatBorder'
+			link = 'FloatBorder',
 		},
 		CmpDocumentation = {
 			fg = scheme.white,
 			bg = scheme.background,
 		},
 		CmpDocumentationBorder = {
-			fg = scheme.white, bg = scheme.background,
+			fg = scheme.white,
+			bg = scheme.background,
 		},
 		CmpItemAbbr = {
 			fg = scheme.white,
@@ -905,7 +937,7 @@ M.hl_groups = function(scheme)
 		},
 		-- sindrets/diffview.nvim
 		DiffviewNormal = {
-			bg = scheme.ui_bg,
+			bg = scheme.sidebar_bg,
 		},
 		-- lewis6991/gitsigns.nvim
 		GitSignsAdd = {
@@ -934,10 +966,10 @@ M.hl_groups = function(scheme)
 		},
 		-- dapui.nvim -- TODO: complete shorthand
 		DapUIVariable = {
-			link = '@parameter'
+			link = '@parameter',
 		},
 		DapUIType = {
-			link = '@type'
+			link = '@type',
 		},
 		DapUIValue = {
 			fg = scheme.yellow,
@@ -971,22 +1003,22 @@ M.hl_groups = function(scheme)
 			fg = scheme.dark_pink,
 		},
 		NoiceCmdlinePopup = { -- Actual search line
-			link = 'FloatNormal'
+			link = 'FloatNormal',
 		},
 		NoiceCmdlinePopupBorder = {
-			link = 'FloatBorder'
+			link = 'FloatBorder',
 		},
 		NoiceCmdlinePopupBorderCmdline = {
-			link = 'FloatBorder'
+			link = 'FloatBorder',
 		},
 		NoiceCmdlinePopupBorderFilter = {
-			link = 'FloatBorder'
+			link = 'FloatBorder',
 		},
 		NoiceCmdlinePopupBorderLua = {
-			link = 'FloatBorder'
+			link = 'FloatBorder',
 		},
 		NoiceCmdlinePopupBorderSearch = {
-			link = 'FloatBorder'
+			link = 'FloatBorder',
 		},
 		-- Progress Bar
 		NoiceFormatProgressDone = {
@@ -1013,10 +1045,10 @@ M.hl_groups = function(scheme)
 		},
 		-- ThePrimeagen/harpoon
 		HarpoonWindow = {
-			link = 'WhiteBorder'
+			link = 'WhiteBorder',
 		},
 		HarpoonBorder = {
-			link = 'WhiteBorder'
+			link = 'WhiteBorder',
 		},
 		-- folke/lazy.nvim
 		--- General
@@ -1059,10 +1091,10 @@ M.hl_groups = function(scheme)
 		},
 		-- tpope/vim-fugitive
 		fugitiveUnstagedModifier = {
-			link = 'Typedef'
+			link = 'Typedef',
 		},
 		fugitiveUntrackedModifier = {
-			link = 'Typedef'
+			link = 'Typedef',
 		},
 		-- lukas-reineke/indent-blankline.nvim
 		IndentContext = {
@@ -1079,20 +1111,20 @@ M.hl_groups = function(scheme)
 		},
 		-- nvimdev/lspsaga.nvim
 		SagaBorder = {
-			link = 'FloatBorder'
+			link = 'FloatBorder',
 		},
 		SagaNormal = {
-			link = 'NormalFloat'
+			link = 'NormalFloat',
 		},
 		DiagnosticShowBorder = {
-			link = 'FloatBorder'
+			link = 'FloatBorder',
 		},
 		TitleString = {
-			link = 'FloatTitle'
+			link = 'FloatTitle',
 		},
 		-- Diagnostic Lines
 		FinderLines = {
-			link = 'DiagnosticVirtualTextError'
+			link = 'DiagnosticVirtualTextError',
 		},
 		-- folke/flash.nvim
 		FlashLabel = {
@@ -1102,7 +1134,7 @@ M.hl_groups = function(scheme)
 		FlashCurrent = {
 			bg = 'magenta',
 			fg = 'black',
-		}
+		},
 	}
 end
 
