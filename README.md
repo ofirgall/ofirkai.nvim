@@ -55,6 +55,11 @@ require('ofirkai').setup {
 	remove_italics = false,            -- Option to change all the italics style to none
 }
 ```
+Or
+```vim
+:colorscheme ofirkai
+:colorscheme ofirkai-darkblue
+```
 
 You can find the default values for the scheme and highlights in [design.lua](https://github.com/ofirgall/ofirkai.nvim/blob/master/lua/ofirkai/design.lua).
 
