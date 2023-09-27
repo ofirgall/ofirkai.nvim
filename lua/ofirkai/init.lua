@@ -28,10 +28,10 @@ local function filter_hl_groups(config, hl_groups)
 end
 
 local default_config = {
+	theme = nil,
 	scheme = design.scheme,
 	custom_hlgroups = {},
 	remove_italics = false,
-	theme = nil,
 }
 
 ---@param config table user config
@@ -42,6 +42,8 @@ local default_config = {
 ---
 ----- Or setup with custom parameters
 ---require('ofirkai').setup {
+---	theme = nil -- Choose theme to use, available themes: 'dark_blue'
+---
 ---	scheme = require('ofirkai').scheme -- Option to override scheme
 ---	custom_hlgroups = {},              -- Option to add/override highlight groups
 ---	remove_italics = false,            -- Option to change all the italics style to none

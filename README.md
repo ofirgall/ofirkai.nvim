@@ -48,6 +48,8 @@ require('ofirkai').setup {
 
 -- Or setup with custom parameters
 require('ofirkai').setup {
+	theme = nil -- Choose theme to use, available themes: 'dark_blue'
+
 	scheme = require('ofirkai').scheme -- Option to override scheme
 	custom_hlgroups = {},              -- Option to add/override highlight groups
 	remove_italics = false,            -- Option to change all the italics style to none
@@ -56,7 +58,7 @@ require('ofirkai').setup {
 
 You can find the default values for the scheme and highlights in [design.lua](https://github.com/ofirgall/ofirkai.nvim/blob/master/lua/ofirkai/design.lua).
 
-_**Note**_: Each plugin that need a setup has an example in the collapsible section.
+_**Note**_: Each plugin that need a setup has an example in the collapsible section, if you use a theme you must `ofirkai` first.
 
 #### Additional highlight groups
 ofirkai adds additional highlight groups to help configure other plugins.
