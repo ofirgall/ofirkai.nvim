@@ -59,6 +59,7 @@ M.setup = function(config)
 	vim.g.colors_name = 'ofirkai'
 
 	local theme = nil
+	local def_scheme = default_config.scheme
 
 	if config.theme then
 		theme = require('ofirkai.themes.' .. config.theme)
@@ -72,6 +73,11 @@ M.setup = function(config)
 	-- Merge use config (includes scheme)
 	config = config or {}
 	config = vim.tbl_deep_extend('keep', config, default_config)
+
+	-- Restore default scheme after using the merged scheme
+	if theme then
+		default_config.scheme = def_scheme
+	end
 
 	-- Set vars of scheme
 	M.scheme = config.scheme
