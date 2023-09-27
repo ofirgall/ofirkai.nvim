@@ -15,7 +15,7 @@ Requires Neovim 0.8+
 * [Contributing](#contributing)
 ---
 
-<p align='center'><a><img src='./media/main.png'></a></p>
+<p align='center'><a><img src='https://github.com/ofirgall/ofirkai.nvim/assets/4954051/3edac6de-ee55-4e36-b783-7912fd4abae4'></a></p>
 
 ## Why not [monokai.nvim](https://github.com/tanvirtin/monokai.nvim)?
 Before I used Neovim I used Sublime Text for 6 years with the builtin Monokai scheme.
@@ -70,10 +70,11 @@ There is a screenshot example for each plugin.
 <details><summary><a href='https://github.com/nvim-lualine/lualine.nvim'>lualine.nvim</a> - <b>Custom setup required (Click to Expand)</b></summary>
 
 ---
-<p align='center'><a><img src='./media/lualine/lualine_normal.png'></a></p>
-<p align='center'><a><img src='./media/lualine/lualine_insert.png'></a></p>
-<p align='center'><a><img src='./media/lualine/lualine_visual.png'></a></p>
-<p align='center'><a><img src='./media/lualine/lualine_command.png'></a></p>
+
+<p align='center'><a><img src='https://github.com/ofirgall/ofirkai.nvim/assets/4954051/daea706b-6ec7-481d-b4dc-7d6ff23a714a'></a></p>
+<p align='center'><a><img src='https://github.com/ofirgall/ofirkai.nvim/assets/4954051/52fb71f1-2182-4fab-ad90-e2a41d522cc4'></a></p>
+<p align='center'><a><img src='https://github.com/ofirgall/ofirkai.nvim/assets/4954051/12050301-6db9-466f-bdb8-eac0f1f7aea7'></a></p>
+<p align='center'><a><img src='https://github.com/ofirgall/ofirkai.nvim/assets/4954051/e94ff712-e905-46d0-b059-64aebdd92461'></a></p>
 
 **Setup Example:**
 ```lua
@@ -90,7 +91,7 @@ require('lualine').setup {
 <details><summary><a href='https://github.com/akinsho/bufferline.nvim'>bufferline.nvim</a> - <b>Custom setup required (Click to expand)</b></summary>
 
 ---
-<p align='center'><a><img src='./media/bufferline.png'></a></p>
+<p align='center'><a><img src='https://github.com/ofirgall/ofirkai.nvim/assets/4954051/0090a734-aa03-4014-9a75-338f71a13dc8'></a></p>
 
 Setup Example:
 ```lua
@@ -114,7 +115,7 @@ require('bufferline').setup {
 <details><summary><a href='https://github.com/nvim-lualine/lualine.nvim'>lualine.nvim</a> - <b>Custom setup required (Click to Expand)</b></summary>
 
 ---
-<p align='center'><a><img src='./media/winbar.png'></a></p>
+<p align='center'><a><img src='https://github.com/ofirgall/ofirkai.nvim/assets/4954051/47a1ea0c-04b0-4659-bd54-7198563e06a8'></a></p>
 
 Setup Example:
 ```lua
@@ -168,7 +169,7 @@ require('lualine').setup {
 <details><summary><a href='https://github.com/hrsh7th/nvim-cmp'>nvim-cmp</a> - <b>Custom setup is Optional (Click to expand)</b></summary>
 
 ---
-<p align='center'><a><img src='./media/nvim-cmp.png'></a></p>
+<p align='center'><a><img src='https://github.com/ofirgall/ofirkai.nvim/assets/4954051/4245984c-4ed8-4976-af36-7f309da3ccbd'></a></p>
 
 ```lua
 require('cmp').setup({
@@ -191,7 +192,7 @@ require('cmp').setup({
 <details><summary><a href='https://github.com/stevearc/dressing.nvim'>dressing.nvim</a> - <b>Custom setup required (Click to expand)</b></summary>
 
 ---
-<p align='center'><a><img src='./media/dressing.png'></a></p>
+<p align='center'><a><img src='https://github.com/ofirgall/ofirkai.nvim/assets/4954051/43dd7709-1ce7-4369-9c99-3b32fca73cc8'></a></p>
 
 Setup Example:
 ```lua
@@ -227,7 +228,7 @@ require('nvim-tree').setup {
 ```
 
 ---
-<p align='center'><a><img src='./media/nvim-tree.png'></a></p>
+<p align='center'><a><img src='https://github.com/ofirgall/ofirkai.nvim/assets/4954051/cca5851b-9e5d-4f5d-93b1-6bf2a4dd4d54'></a></p>
 
 ---
 </details>
@@ -235,7 +236,7 @@ require('nvim-tree').setup {
 <details><summary><a href='https://github.com/nvim-telescope/telescope.nvim'>telescope.nvim</a> - Click to expand</summary>
 
 ---
-<p align='center'><a><img src='./media/telescope.png'></a></p>
+<p align='center'><a><img src='https://github.com/ofirgall/ofirkai.nvim/assets/4954051/b010479e-698f-4df1-b839-474b089a2161'></a></p>
 
 ---
 </details>
@@ -243,7 +244,7 @@ require('nvim-tree').setup {
 <details><summary><a href='https://github.com/folke/noice.nvim'>noice.nvim</a> - <b>Custom setup is Optional (Click to Expand)</b></summary>
 
 ---
-<p align='center'><a><img src='./media/noice.png'></a></p>
+<p align='center'><a><img src='https://github.com/ofirgall/ofirkai.nvim/assets/4954051/f443001f-c000-4209-95dd-57e8893a8104'></a></p>
 
 ```lua
 require('noice').setup {
@@ -270,7 +271,7 @@ require('noice').setup {
 <details><summary><a href='https://github.com/rcarriga/nvim-notify'>nvim-notify</a> - <b>Custom setup is Optional (Click to Expand)</b></summary>
 
 ---
-<p align='center'><a><img src='./media/notify.png'></a></p>
+<p align='center'><a><img src='https://github.com/ofirgall/ofirkai.nvim/assets/4954051/36836c75-f0da-410d-92ca-866a7aff3a90'></a></p>
 
 ```lua
 require('notify').setup {
@@ -284,7 +285,7 @@ require('notify').setup {
 <details><summary><a href='https://github.com/sindrets/diffview.nvim'>diffview.nvim</a> - Click to expand</summary>
 
 ---
-<p align='center'><a><img src='./media/diffview.png'></a></p>
+<p align='center'><a><img src='https://github.com/ofirgall/ofirkai.nvim/assets/4954051/92b2d62a-ad40-4fa4-b169-20732f5407bc'></a></p>
 
 ---
 </details>
@@ -292,7 +293,7 @@ require('notify').setup {
 <details><summary><a href='https://github.com/lewis6991/gitsigns.nvim'>gitsigns.nvim</a> - Click to expand</summary>
 
 ---
-<p align='center'><a><img src='./media/gitsigns.png'></a></p>
+<p align='center'><a><img src='https://github.com/ofirgall/ofirkai.nvim/assets/4954051/d2c500f3-bb6c-4258-96f8-f28a824a88c8'></a></p>
 
 ---
 </details>
@@ -300,7 +301,7 @@ require('notify').setup {
 <details><summary><a href='https://github.com/nvim-treesitter/nvim-treesitter-context'>nvim-treesitter-context</a> - Click to expand</summary>
 
 ---
-<p align='center'><a><img src='./media/treesitter-context.png'></a></p>
+<p align='center'><a><img src='https://github.com/ofirgall/ofirkai.nvim/assets/4954051/b9a9f9b0-e3cc-4497-af95-7e8721f7c2f9'></a></p>
 
 ---
 </details>
@@ -311,7 +312,7 @@ require('notify').setup {
 ---
 I don't change the highlight group because I use a minimalistic design for the lsp signature you can adapt it.
 
-<p align='center'><a><img src='./media/lsp_signature.png'></a></p>
+<p align='center'><a><img src='https://github.com/ofirgall/ofirkai.nvim/assets/4954051/75482623-732f-4b4f-adb8-4e8691eef0fd'></a></p>
 
 ```lua
 local lsp_signature_cfg = {
@@ -329,7 +330,7 @@ local lsp_signature_cfg = {
 <details><summary><a href='https://github.com/o0th/tmux-nova/blob/master/Gallery.md#gruvbox'>tmux status bar</a> - Click to expand</summary>
 
 ---
-<p align='center'><a><img src='./media/tmux.png'></a></p>
+<p align='center'><a><img src='https://github.com/ofirgall/ofirkai.nvim/assets/4954051/6b17dede-4902-47b8-a158-92bb7834bd05'></a></p>
 
 ---
 </details>
