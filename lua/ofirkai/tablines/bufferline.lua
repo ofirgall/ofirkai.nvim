@@ -191,7 +191,7 @@ M.highlights = {
 	},
 	tab_selected = {
 		bg = scheme.buffer_line.selected_bg,
-		fg = scheme.buffer_line.white,
+		fg = scheme.buffer_line.selected_fg,
 	},
 	tab_separator = {
 		bg = scheme.buffer_line.bg,
