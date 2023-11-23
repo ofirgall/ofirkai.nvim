@@ -38,8 +38,8 @@ M.scheme = {
 	ui_title_fg = '#e373cd',
 	tab_visible_fg = '#5c8014',
 
-	vert_split_fg = '#7b7b7b',
-	vert_split_fg_active = '#888888',
+	vert_split_fg = '#253b52',
+	vert_split_fg_active = '#004f9a',
 	git_signs_add = '#567e06',
 	git_signs_change = '#0063c0',
 

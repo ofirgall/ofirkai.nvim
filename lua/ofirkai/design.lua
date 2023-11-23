@@ -1135,6 +1135,13 @@ M.hl_groups = function(scheme)
 			bg = 'magenta',
 			fg = 'black',
 		},
+		-- b0o/incline.nvim
+		InclineNormal = {},
+		InclineNormalNC = {
+			fg = scheme.ui_title_fg,
+			bg = scheme.background,
+			bold = false,
+		},
 	}
 end
 
