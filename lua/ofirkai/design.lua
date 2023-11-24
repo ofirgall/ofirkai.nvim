@@ -1142,6 +1142,13 @@ M.hl_groups = function(scheme)
 			bg = scheme.background,
 			bold = false,
 		},
+		-- highlight for dap breakpoints
+		DapBreakpoint = {
+			fg = scheme.teal,
+		},
+		DapCondBreakpoint = {
+			fg = scheme.dark_yellow,
+		},
 	}
 end
 
