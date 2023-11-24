@@ -1149,6 +1149,46 @@ M.hl_groups = function(scheme)
 		DapCondBreakpoint = {
 			fg = scheme.dark_yellow,
 		},
+		-- folke/trouble.nvim
+		TroubleError = {
+			fg = scheme.visual_bg, -- unknown
+		},
+		TroubleNormal = {
+			bg = scheme.sidebar_bg,
+		},
+		TroubleLocation = {
+			fg = scheme.purple,
+			bg = scheme.sidebar_bg,
+		},
+		TroubleIndent = {
+			bg = scheme.sidebar_bg,
+			fg = scheme.dark_pink,
+		},
+		TroubleFile = {
+			fg = scheme.ui_title_fg,
+			bold = true,
+			underline = true,
+		},
+		TroubleCount = {
+			fg = scheme.red,
+			bold = true,
+		},
+		TroubleTextError = {
+			fg = scheme.light_red,
+		},
+		TroubleTextWarning = {
+			fg = scheme.orange,
+		},
+		TroubleTextHint = {
+			fg = scheme.aqua,
+		},
+		TroubleTextInformation = {
+			fg = scheme.grey,
+		},
+		TroubleCode = {
+			-- Description
+			fg = scheme.dimmed_aqua,
+		},
 	}
 end
 
