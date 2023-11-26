@@ -13,7 +13,7 @@ M.scheme = {
 
 	cursor_line_bg = '#1b1f21',
 	cursor_linenr_fg = '#909ef5',
-	line_fg = '#363a5e',
+	line_fg = '#383f80',
 	winbar_bg = '#171b1d',
 	white = '#edede5',
 	-- visual_bg = '#30303c',
