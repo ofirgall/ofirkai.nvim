@@ -91,6 +91,9 @@ M.hl_groups = function(scheme)
 		DiffviewCursorLine = {
 			link = 'NvimTreeCursorLine',
 		},
+		TroubleCursorLine = {
+			bg = scheme.diff_text,
+		},
 
 		-- Swapped noice
 		NoiceCmdLine = {
