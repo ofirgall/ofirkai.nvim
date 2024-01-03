@@ -171,6 +171,9 @@ M.hl_groups = function(scheme)
 		VertSplit = {
 			fg = scheme.vert_split_fg,
 		},
+		WinSeparator = {
+			link = 'VertSplit',
+		},
 		LineNr = {
 			bg = scheme.background,
 			fg = scheme.line_fg,
