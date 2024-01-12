@@ -125,6 +125,11 @@ M.hl_groups = function(scheme)
 		NoiceCmdlinePopupBorderSearch = {
 			link = 'NoiceBorder',
 		},
+
+		WarningMsg = {
+			fg = scheme.orange,
+			bold = true,
+		},
 	}
 end
 
