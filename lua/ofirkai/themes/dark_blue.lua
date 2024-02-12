@@ -13,7 +13,7 @@ M.scheme = {
 
 	cursor_line_bg = '#1b1f21',
 	cursor_linenr_fg = '#909ef5',
-	line_fg = '#383f80',
+	line_fg = '#3f478f',
 	winbar_bg = '#171b1d',
 	white = '#edede5',
 	-- visual_bg = '#30303c',
@@ -21,6 +21,8 @@ M.scheme = {
 	search_bg = '#14364e',
 	inc_search_bg = '#652d67',
 	inc_search_fg = '#edede5', -- same as white
+	whitespace_fg = '#3f2a5e',
+	dimmed_aqua = '#7d3179',
 
 	-- syntax
 	aqua = '#58cbe1',

@@ -30,7 +30,7 @@ M.scheme = {
 	dark_yellow = '#ffd121',
 	dark_teal = '#26cca0',
 	-- Specific colors
-	whitespace_fg = '#333842',
+	whitespace_fg = '#4d5154',
 	non_text_fg = '#4d5154',
 	comment_fg = '#9ca0a4',
 	unnecessary_fg = '#a0a0a0',
@@ -378,7 +378,7 @@ M.hl_groups = function(scheme)
 		CursorColumn = {
 			bg = scheme.secondary_background,
 		},
-		whitespace_fg = { -- Indent lines
+		WhiteSpace = { -- Indent lines
 			fg = scheme.whitespace_fg,
 		},
 		WildMenu = {
