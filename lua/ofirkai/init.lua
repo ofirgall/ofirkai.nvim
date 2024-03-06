@@ -66,7 +66,7 @@ M.setup = function(config)
 	end
 	
 	if config.custom_theme then
-		theme = require('themes.' .. config.custom_theme)
+		theme = require('themes.custom')
 	end
 
 	-- Merge scheme from theme to default scheme
