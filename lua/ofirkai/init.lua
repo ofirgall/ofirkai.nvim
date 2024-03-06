@@ -65,6 +65,10 @@ M.setup = function(config)
 		theme = require('ofirkai.themes.' .. config.theme)
 	end
 
+	if config.ex_theme then
+		theme = require('themes.' .. config.ex_theme)
+	end
+
 	-- Merge scheme from theme to default scheme
 	if theme then
 		default_config.scheme = vim.tbl_deep_extend('keep', theme.scheme, default_config.scheme)
