@@ -65,8 +65,8 @@ M.setup = function(config)
 		theme = require('ofirkai.themes.' .. config.theme)
 	end
 	
-	if config.ex_theme then
-		theme = require('themes.' .. config.ex_theme)
+	if config.custom_theme then
+		theme = require('themes.' .. config.custom_theme)
 	end
 
 	-- Merge scheme from theme to default scheme
