@@ -725,6 +725,22 @@ M.hl_groups = function(scheme)
 		DiagnosticError = {
 			link = 'DiagnosticVirtualTextError',
 		},
+		CursorDiagnosticFloatingError = {
+			fg = scheme.red,
+			bg = scheme.cursor_line_bg,
+		},
+		CursorDiagnosticFloatingWarn = {
+			fg = scheme.yellow,
+			bg = scheme.cursor_line_bg,
+		},
+		CursorDiagnosticFloatingInfo = {
+			fg = scheme.white,
+			bg = scheme.cursor_line_bg,
+		},
+		CursorDiagnosticFloatingHint = {
+			fg = scheme.aqua,
+			bg = scheme.cursor_line_bg,
+		},
 		CursorWord0 = {
 			bg = scheme.white,
 			fg = scheme.black,
