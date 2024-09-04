@@ -1208,6 +1208,10 @@ M.hl_groups = function(scheme)
 			-- Description
 			fg = scheme.dimmed_aqua,
 		},
+		-- aklt/plantuml-syntax
+		plantumlColonLine = {
+			link = '@constant.builtin',
+		},
 	}
 end
 
