@@ -1212,6 +1212,10 @@ M.hl_groups = function(scheme)
 		plantumlColonLine = {
 			link = '@constant.builtin',
 		},
+		-- chentoast/marks.nvim
+		MarkSignHL = {
+			fg = scheme.teal,
+		},
 	}
 end
 
