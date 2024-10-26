@@ -138,6 +138,9 @@ M.hl_groups = function(scheme)
 		Search = {
 			bg = scheme.search_bg,
 		},
+		CurSearch = {
+			link = 'Search',
+		},
 		IncSearch = {
 			fg = scheme.inc_search_fg,
 			bg = scheme.inc_search_bg,
