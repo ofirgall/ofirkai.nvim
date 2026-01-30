@@ -1121,6 +1121,7 @@ M.hl_groups = function(scheme)
 		-- lukas-reineke/indent-blankline.nvim
 		IndentContext = {
 			fg = scheme.dimmed_aqua,
+			bold = true,
 		},
 		----- Additional hl groups -----
 		InlayHints = { -- For InlayHints
