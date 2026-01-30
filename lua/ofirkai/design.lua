@@ -537,6 +537,12 @@ M.hl_groups = function(scheme)
 		['@property'] = {
 			fg = scheme.white,
 		},
+		['@property.json'] = {
+			fg = scheme.light_red,
+		},
+		['@property.yaml'] = {
+			fg = scheme.light_red,
+		},
 		['@punctuation.delimiter'] = {
 			fg = scheme.white,
 		},
