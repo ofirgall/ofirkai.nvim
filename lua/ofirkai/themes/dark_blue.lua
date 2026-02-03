@@ -48,8 +48,8 @@ M.scheme = {
 	-- darker diff colors
 	diff_add = '#293e04',
 	diff_remove = '#400519',
-	diff_change = '#182c57',
-	diff_text = '#14233e',
+	diff_change = '#14233e',
+	diff_text = '#1e356c',
 
 	status_line = {
 		a_fg = '#434343',
