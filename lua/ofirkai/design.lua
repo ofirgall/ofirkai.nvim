@@ -10,6 +10,7 @@ M.scheme = {
 	ui_bg = '#1a1a18', -- background for ui (floating windows)
 	sidebar_bg = '#1a1a18', -- background for file tree and other sidebars. same as ui_bg
 	telescope_bg = '#181816', -- Slightly darker than ui_bg
+	chat_bg = '#181816', -- LLM chats bg (same as telescope_bg)
 	winbar_bg = '#27271e',
 	ui_title_fg = '#e6db74', -- same as `yellow`
 	-- Base colors
@@ -96,6 +97,10 @@ M.hl_groups = function(scheme)
 		NormalFloat = {
 			fg = scheme.white,
 			bg = scheme.ui_bg,
+		},
+		SidekickChat = {
+			fg = scheme.white,
+			bg = scheme.chat_bg,
 		},
 		FloatBorder = {
 			fg = scheme.ui_bg,
@@ -285,7 +290,8 @@ M.hl_groups = function(scheme)
 			link = 'StorageClass',
 		},
 		StorageClass = {
-			fg = scheme.light_red,
+			-- For packages in python/rust
+			fg = scheme.purple,
 			italic = true,
 		},
 		Typedef = {

@@ -10,6 +10,7 @@ M.scheme = {
 	background = '#080c10',
 	telescope_prompt = float_color,
 	telescope_bg = '#0f1018',
+	chat_bg = '#0f1018', -- LLM chats bg (same as telescope_bg)
 
 	cursor_line_bg = '#1b1f21',
 	cursor_linenr_fg = '#909ef5',
