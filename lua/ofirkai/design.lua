@@ -55,7 +55,7 @@ M.scheme = {
 	pmenu_sel_bg = '#40403a',
 	pmenu_thumb_bg = '#47473b',
 	vert_split_fg = '#75724b',
-	vert_split_fg_active = '#948f5a', -- TODO: add nvim-zh/colorful-winsep.nvim support
+	vert_split_fg_active = '#948f5a',
 	tabline_fg = '#f20aee',
 	tabline_sel_fg = '#78b6e8',
 	-- Plugins colors
@@ -1231,6 +1231,11 @@ M.hl_groups = function(scheme)
 		-- chentoast/marks.nvim
 		MarkSignHL = {
 			fg = scheme.teal,
+		},
+		-- nvim-zh/colorful-winsep.nvim
+		ColorfulWinSep = {
+			bg = scheme.background,
+			fg = scheme.vert_split_fg_active,
 		},
 	}
 end
