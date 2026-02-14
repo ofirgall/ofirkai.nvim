@@ -106,6 +106,10 @@ M.hl_groups = function(scheme)
 			fg = scheme.ui_bg,
 			bg = scheme.ui_bg,
 		},
+		FloatBorderNotHidden = {
+			fg = scheme.white,
+			bg = scheme.ui_bg,
+		},
 		Pmenu = {
 			fg = scheme.white,
 			bg = scheme.pmenu_bg,
@@ -1128,6 +1132,18 @@ M.hl_groups = function(scheme)
 			link = 'Typedef',
 		},
 		fugitiveUntrackedModifier = {
+			link = 'Typedef',
+		},
+		-- NeogitOrg/neogit
+		NeogitFloat = {
+			fg = scheme.white,
+			bg = scheme.chat_bg,
+		},
+		NeogitNormal = {
+			fg = scheme.white,
+			bg = scheme.chat_bg,
+		},
+		NeogitSectionHeader = {
 			link = 'Typedef',
 		},
 		-- lukas-reineke/indent-blankline.nvim
