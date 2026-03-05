@@ -1253,6 +1253,10 @@ M.hl_groups = function(scheme)
 			bg = scheme.background,
 			fg = scheme.vert_split_fg_active,
 		},
+		-- folke/snacks.nvim
+		SnacksDim = {
+			link = 'Comment',
+		},
 	}
 end
 
