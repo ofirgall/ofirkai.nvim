@@ -59,6 +59,9 @@ require('ofirkai').setup {
 	scheme = require('ofirkai').scheme -- Option to override scheme
 	custom_hlgroups = {},              -- Option to add/override highlight groups
 	remove_italics = false,            -- Option to change all the italics style to none
+	dim = {                            -- Dim colors (0.0 = none, 1.0 = fully dimmed)
+		global = 0,                    -- Default dim for all unset categories
+	},
 }
 ```
 Or
@@ -68,6 +71,30 @@ Or
 ```
 
 You can find the default values for the scheme and highlights in [design.lua](https://github.com/ofirgall/ofirkai.nvim/blob/master/lua/ofirkai/design.lua).
+
+#### Dim
+
+You can dim colors by category using the `dim` option. Values range from `0.0` (no dimming) to `1.0` (fully dimmed to black). `global` sets the default for any category not explicitly specified.
+
+| Category      | What it dims                                                          |
+|---------------|-----------------------------------------------------------------------|
+| `global`      | Default dim for all unset categories                                  |
+| `syntax`      | Syntax highlight foregrounds (`String`, `Function`, `Keyword`, `@treesitter` groups, etc.) |
+| `comments`    | Comment foregrounds (`Comment`, `SpecialComment`, `@comment`)         |
+| `diagnostics` | Diagnostic foregrounds and undercurl colors (`DiagnosticSign*`, `DiagnosticVirtualText*`, etc.) |
+| `ui`          | UI element foregrounds (line numbers, git signs, telescope, nvim-tree, statusline, etc.) |
+| `background`  | All background colors                                                 |
+
+```lua
+require('ofirkai').setup {
+	dim = {
+		global = 0.1,      -- Dim everything by 10%
+		syntax = 0.3,       -- But dim syntax more aggressively
+		comments = 0.4,     -- And comments even more
+		-- diagnostics, ui, background are unset → they inherit global (0.1)
+	},
+}
+```
 
 _**Note**_: Each plugin that need a setup has an example in the collapsible section, if you use a theme you must `ofirkai` first.
 
