@@ -23,6 +23,14 @@ M.setup({config})                                                *ofirkai.setup*
         	scheme = require('ofirkai').scheme -- Option to override scheme
         	custom_hlgroups = {},              -- Option to add/override highlight groups
         	remove_italics = false,            -- Option to change all the italics style to none
+        	dim = {
+        		global = 0,       -- Default dim for all unset categories (0.0 = none, 1.0 = fully dimmed)
+        		syntax = nil,     -- Dim syntax highlight foregrounds (defaults to global)
+        		comments = nil,   -- Dim comment foregrounds (defaults to global)
+        		diagnostics = nil,-- Dim diagnostic foregrounds and undercurl colors (defaults to global)
+        		ui = nil,         -- Dim UI element foregrounds (defaults to global)
+        		background = nil, -- Dim all background colors (defaults to global)
+        	},
         }
 <
 
