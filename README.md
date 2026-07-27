@@ -254,6 +254,33 @@ require('nvim-tree').setup {
 ---
 </details>
 
+<details><summary><a href='https://github.com/dmtrKovalenko/fff.nvim'>fff.nvim</a> - <b>Custom setup required (Click to expand)</b></summary>
+
+---
+
+Setup Example:
+```lua
+require('fff').setup({
+	hl = {
+		normal = 'FffNormal',
+		border = 'FffBorder',
+		title = 'FffTitle',
+		prompt = 'FffPrompt',
+		cursorline = 'FffCursorLine',
+		matched = 'FffMatched',
+		selected = 'FffSelected',
+		selected_active = 'FffSelectedActive',
+		frecency = 'FffFrecency',
+		directory_path = 'FffDirectory',
+		winhl = {
+			preview = 'Normal:FffPreviewNormal,FloatBorder:FffPreviewBorder,FloatTitle:FffPreviewTitle',
+		},
+	},
+})
+```
+---
+</details>
+
 <details><summary><a href='https://github.com/folke/noice.nvim'>noice.nvim</a> - <b>Custom setup is Optional (Click to Expand)</b></summary>
 
 ---

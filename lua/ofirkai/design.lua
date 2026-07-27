@@ -9,8 +9,9 @@ M.scheme = {
 	secondary_background = '#1d2026',
 	ui_bg = '#1a1a18', -- background for ui (floating windows)
 	sidebar_bg = '#1a1a18', -- background for file tree and other sidebars. same as ui_bg
-	telescope_bg = '#181816', -- Slightly darker than ui_bg
-	chat_bg = '#181816', -- LLM chats bg (same as telescope_bg)
+	picker_bg = '#181816', -- Slightly darker than ui_bg
+	telescope_bg = '#181816', -- alias for picker_bg (backward compat)
+	chat_bg = '#181816', -- LLM chats bg (same as picker_bg)
 	winbar_bg = '#27271e',
 	ui_title_fg = '#e6db74', -- same as `yellow`
 	-- Base colors
@@ -42,7 +43,8 @@ M.scheme = {
 	cursor_linenr_fg = '#e6db74',
 	mid_orange = '#de933c',
 	lightorange = '#dea255',
-	telescope_prompt = '#1d1d1a',
+	picker_prompt = '#1d1d1a',
+	telescope_prompt = '#1d1d1a', -- alias for picker_prompt (backward compat)
 	diff_add = '#3d5213',
 	diff_remove = '#4a0f23',
 	diff_change = '#27406b',
@@ -837,32 +839,32 @@ M.hl_groups = function(scheme)
 		},
 		-- nvim-telescope/telescope.nvim
 		TelescopeBorder = {
-			fg = scheme.telescope_bg,
-			bg = scheme.telescope_bg,
+			fg = scheme.picker_bg,
+			bg = scheme.picker_bg,
 		},
 		TelescopeNormal = {
-			bg = scheme.telescope_bg,
+			bg = scheme.picker_bg,
 		},
 		TelescopePromptNormal = {
 			fg = scheme.white,
-			bg = scheme.telescope_prompt,
+			bg = scheme.picker_prompt,
 		},
 		TelescopePromptBorder = {
-			fg = scheme.telescope_prompt,
-			bg = scheme.telescope_prompt,
+			fg = scheme.picker_prompt,
+			bg = scheme.picker_prompt,
 		},
 		TelescopePromptPrefix = {
 			fg = scheme.local_orange,
-			bg = scheme.telescope_prompt,
+			bg = scheme.picker_prompt,
 		},
 		TelescopePromptTitle = {
 			fg = scheme.ui_title_fg,
-			bg = scheme.telescope_prompt,
+			bg = scheme.picker_prompt,
 			bold = true,
 		},
 		TelescopeResultsTitle = {
-			fg = scheme.telescope_bg,
-			bg = scheme.telescope_bg,
+			fg = scheme.picker_bg,
+			bg = scheme.picker_bg,
 		},
 		TelescopeSelection = {
 			bg = scheme.cursor_line_bg,
@@ -881,6 +883,99 @@ M.hl_groups = function(scheme)
 			bg = scheme.background,
 		},
 		TelescopePreviewTitle = {
+			fg = scheme.white,
+		},
+		-- dmtrKovalenko/fff.nvim
+		FffNormal = {
+			bg = scheme.picker_bg,
+		},
+		FffBorder = {
+			fg = scheme.picker_bg,
+			bg = scheme.picker_bg,
+		},
+		FffTitle = {
+			fg = scheme.ui_title_fg,
+			bg = scheme.picker_prompt,
+			bold = true,
+		},
+		FffPrompt = {
+			fg = scheme.local_orange,
+			bg = scheme.picker_prompt,
+		},
+		FffCursorLine = {
+			bg = scheme.cursor_line_bg,
+			fg = scheme.white,
+		},
+		FffMatched = {
+			fg = scheme.aqua,
+			bold = true,
+		},
+		FffSelected = {
+			fg = scheme.light_red,
+		},
+		FffSelectedActive = {
+			fg = scheme.light_red,
+			bg = scheme.cursor_line_bg,
+		},
+		FffPreviewNormal = {
+			bg = scheme.background,
+		},
+		FffPreviewBorder = {
+			fg = scheme.picker_bg,
+			bg = scheme.picker_bg,
+		},
+		FffPreviewTitle = {
+			fg = scheme.white,
+		},
+		FffFrecency = {
+			fg = scheme.mid_orange,
+		},
+		FffDirectory = {
+			fg = scheme.grey,
+		},
+		-- folke/snacks.nvim picker
+		SnacksPickerList = {
+			bg = scheme.picker_bg,
+		},
+		SnacksPickerListBorder = {
+			fg = scheme.picker_bg,
+			bg = scheme.picker_bg,
+		},
+		SnacksPickerInput = {
+			fg = scheme.white,
+			bg = scheme.picker_prompt,
+		},
+		SnacksPickerInputBorder = {
+			fg = scheme.picker_prompt,
+			bg = scheme.picker_prompt,
+		},
+		SnacksPickerInputTitle = {
+			fg = scheme.ui_title_fg,
+			bg = scheme.picker_prompt,
+			bold = true,
+		},
+		SnacksPickerPreview = {
+			bg = scheme.background,
+		},
+		SnacksPickerPreviewBorder = {
+			fg = scheme.picker_bg,
+			bg = scheme.picker_bg,
+		},
+		SnacksPickerPreviewTitle = {
+			fg = scheme.white,
+		},
+		SnacksPickerListTitle = {
+			fg = scheme.picker_bg,
+			bg = scheme.picker_bg,
+		},
+		SnacksPickerMatch = {
+			fg = scheme.aqua,
+		},
+		SnacksPickerSelected = {
+			fg = scheme.light_red,
+		},
+		SnacksPickerListCursorLine = {
+			bg = scheme.cursor_line_bg,
 			fg = scheme.white,
 		},
 		-- hrsh7th/nvim-cmp
@@ -1063,7 +1158,7 @@ M.hl_groups = function(scheme)
 			bg = scheme.secondary_background,
 		},
 		NoiceFormatProgressTodo = {
-			bg = scheme.telescope_bg,
+			bg = scheme.picker_bg,
 		},
 		NoiceFormatTitle = {
 			bg = scheme.background,

@@ -2,15 +2,17 @@ local M = {}
 
 -- brown
 local float_color = '#131426'
-local telescope_preview_border = '#12131b'
+local picker_preview_border = '#12131b'
 local sidebar_cursorline_bg = '#24292b'
 
 M.scheme = {
 	-- midnight.nvim
 	background = '#080c10',
-	telescope_prompt = float_color,
-	telescope_bg = '#0f1018',
-	chat_bg = '#0f1018', -- LLM chats bg (same as telescope_bg)
+	picker_prompt = float_color,
+	telescope_prompt = float_color, -- alias for picker_prompt (backward compat)
+	picker_bg = '#0f1018',
+	telescope_bg = '#0f1018', -- alias for picker_bg (backward compat)
+	chat_bg = '#0f1018', -- LLM chats bg (same as picker_bg)
 
 	cursor_line_bg = '#1b1f21',
 	cursor_linenr_fg = '#909ef5',
@@ -78,10 +80,17 @@ M.scheme = {
 
 M.hl_groups = function(scheme)
 	return {
-		-- TODO: ????
 		TelescopePreviewBorder = {
-			fg = telescope_preview_border,
-			bg = telescope_preview_border,
+			fg = picker_preview_border,
+			bg = picker_preview_border,
+		},
+		FffPreviewBorder = {
+			fg = picker_preview_border,
+			bg = picker_preview_border,
+		},
+		SnacksPickerPreviewBorder = {
+			fg = picker_preview_border,
+			bg = picker_preview_border,
 		},
 
 		NvimTreeCursorLine = {
