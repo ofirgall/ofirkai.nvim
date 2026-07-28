@@ -1,0 +1,42 @@
+# ofirkai dark_blue for Ghostty — https://github.com/ofirgall/ofirkai.nvim
+#
+# Install: copy this file to ~/.config/ghostty/themes/ofirkai-darkblue (the theme
+# name is the file name, so keep it extensionless), then set
+# `theme = ofirkai-darkblue` in ~/.config/ghostty/config.
+#
+# Colours come from lua/ofirkai/themes/dark_blue.lua, falling back to
+# lua/ofirkai/design.lua for anything that variant does not override. Slots that
+# are not a straight copy:
+#
+#   * The bright row (8-15) has no counterpart in the scheme, so each entry is
+#     its normal-row colour lifted 20% toward white. `grey` covers bright black.
+#   * Blue is `cursor_linenr_fg` (#909ef5). Unlike the default scheme, this
+#     variant does have a genuine blue, so `aqua` is free to be cyan.
+#   * Bright yellow is `orange` and bright cyan is `teal` — both carry too much
+#     of the scheme's character to leave unreachable, and neither has an ANSI
+#     slot of its own.
+#
+# ANSI palette
+palette = 0=#131a24
+palette = 1=#e5125e
+palette = 2=#9eda26
+palette = 3=#e1d66f
+palette = 4=#909ef5
+palette = 5=#a97cfa
+palette = 6=#58cbe1
+palette = 7=#d7d7d7
+palette = 8=#8f908a
+palette = 9=#ea417e
+palette = 10=#b1e151
+palette = 11=#f8921a
+palette = 12=#a6b1f7
+palette = 13=#ba96fb
+palette = 14=#3ae0b4
+palette = 15=#edede5
+
+background = #080c10
+foreground = #d7d7d7
+cursor-color = #909ef5
+cursor-text = #080c10
+selection-background = #14364e
+selection-foreground = #edede5

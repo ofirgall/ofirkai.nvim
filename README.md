@@ -12,6 +12,8 @@ Requires Neovim 0.8+
 	* [Winbars](#winbars)
 	* [Tab Lines](#tab-lines)
 	* [Others](#others)
+* [Terminals](#terminals)
+	* [Ghostty](#ghostty)
 * [Contributing](#contributing)
 ---
 
@@ -374,6 +376,27 @@ local lsp_signature_cfg = {
 
 ---
 </details>
+
+## Terminals
+Ports of the scheme to terminal emulators, so the shell around Neovim matches it.
+They live in [extras/](https://github.com/ofirgall/ofirkai.nvim/tree/master/extras).
+
+### Ghostty
+Copy the theme you use into Ghostty's theme directory and select it:
+```sh
+mkdir -p ~/.config/ghostty/themes
+cp extras/ghostty/ofirkai ~/.config/ghostty/themes/           # default scheme
+cp extras/ghostty/ofirkai-darkblue ~/.config/ghostty/themes/  # dark_blue theme
+```
+```ini
+# ~/.config/ghostty/config
+theme = ofirkai
+```
+The file name is the theme name, so keep the files extensionless. Reload with
+`Cmd/Ctrl+Shift+,`.
+
+Each file lists the handful of slots that are not a straight copy of the scheme
+(the ANSI bright row, and the accents that have no ANSI slot of their own).
 
 ## Full setup example
 [ui.lua](https://github.com/ofirgall/dotfiles/blob/master/editors/nvim/lua/plugins/ui.lua) from my dotfiles.
