@@ -1352,6 +1352,11 @@ M.hl_groups = function(scheme)
 		SnacksDim = {
 			link = 'Comment',
 		},
+		-- MeanderingProgrammer/render-markdown.nvim
+		RenderMarkdownCodeInline = {
+			fg = scheme.orange,
+			bg = scheme.secondary_background,
+		}
 	}
 end
 
