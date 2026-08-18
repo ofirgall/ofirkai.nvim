@@ -31,6 +31,7 @@ M.scheme = {
 	aqua = '#58cbe1',
 	orange = '#f8921a',
 	green = '#9eda26',
+	light_green = '#ade440', -- ~14% brighter than green, for LSP interface types
 	yellow = '#e1d66f',
 	light_red = '#e5125e',
 	purple = '#a97cfa',

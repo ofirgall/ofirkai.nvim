@@ -20,6 +20,7 @@ M.scheme = {
 	dark_grey = '#8a8b85',
 	black = '#000000',
 	green = '#a6e22e',
+	light_green = '#b8eb4a', -- ~14% brighter than green, for LSP interface types
 	aqua = '#66d9ef',
 	dimmed_aqua = '#4a7d87',
 	yellow = '#e6db74',
@@ -1356,7 +1357,74 @@ M.hl_groups = function(scheme)
 		RenderMarkdownCodeInline = {
 			fg = scheme.orange,
 			bg = scheme.secondary_background,
-		}
+		},
+		----- LSP Semantic Tokens -----
+		['@lsp.type.variable'] = {},
+		['@lsp.type.parameter'] = { link = '@parameter' },
+		['@lsp.type.property'] = { link = '@property' },
+		['@lsp.type.method'] = { link = '@method' },
+		['@lsp.type.macro'] = { link = 'Macro' },
+		['@lsp.type.keyword'] = { link = '@keyword' },
+		['@lsp.type.comment'] = { link = '@comment' },
+		['@lsp.type.string'] = { link = '@string' },
+		['@lsp.type.number'] = { link = '@number' },
+		['@lsp.type.boolean'] = { link = '@boolean' },
+		['@lsp.type.operator'] = { link = '@operator' },
+		['@lsp.type.enum'] = { link = '@type' },
+		['@lsp.type.enumMember'] = { link = 'Constant' },
+		['@lsp.type.interface'] = { fg = scheme.light_green, italic = true },
+		['@lsp.type.typeAlias'] = { link = '@type.definition' },
+		['@lsp.type.builtinType'] = { link = '@type.builtin' },
+		['@lsp.type.generic'] = { link = '@variable' },
+		['@lsp.type.namespace'] = { link = '@namespace' },
+		['@lsp.type.escapeSequence'] = { link = '@string.escape' },
+		['@lsp.type.formatSpecifier'] = { link = '@punctuation.special' },
+		['@lsp.type.decorator'] = { link = '@attribute' },
+		['@lsp.type.deriveHelper'] = { link = '@attribute' },
+		['@lsp.type.unresolvedReference'] = { undercurl = true, sp = scheme.red },
+		-- Kanagawa extras
+		['@lsp.type.const'] = { link = 'Constant' },
+		['@lsp.type.comparison'] = { link = 'Operator' },
+		['@lsp.type.bitwise'] = { link = 'Operator' },
+		['@lsp.type.punctuation'] = { link = 'Delimiter' },
+		-- Rust-specific
+		['@lsp.type.lifetime'] = { link = 'StorageClass' },
+		['@lsp.type.decorator.rust'] = { link = '@attribute' },
+		-- Python-specific
+		['@lsp.type.selfParameter'] = { link = '@variable.builtin' },
+		['@lsp.type.selfKeyword'] = { link = '@variable.builtin' },
+		['@lsp.type.selfTypeKeyword'] = { link = '@variable.builtin' },
+		['@lsp.type.builtinConstant'] = { link = '@constant.builtin' },
+		['@lsp.type.magicFunction'] = { link = '@function.builtin' },
+		['@lsp.type.namespace.python'] = { link = '@variable' },
+		-- Modifiers
+		['@lsp.mod.readonly'] = { link = 'Constant' },
+		-- defaultLibrary/builtin typemods
+		['@lsp.typemod.function.defaultLibrary'] = { link = '@function.builtin' },
+		['@lsp.typemod.function.builtin'] = { link = '@function.builtin' },
+		['@lsp.typemod.method.defaultLibrary'] = { link = '@function.builtin' },
+		['@lsp.typemod.macro.defaultLibrary'] = { link = '@function.builtin' },
+		['@lsp.typemod.class.defaultLibrary'] = { link = '@type.builtin' },
+		['@lsp.typemod.enum.defaultLibrary'] = { link = '@type.builtin' },
+		['@lsp.typemod.struct.defaultLibrary'] = { link = '@type.builtin' },
+		['@lsp.typemod.type.defaultLibrary'] = { link = '@type.builtin' },
+		['@lsp.typemod.enumMember.defaultLibrary'] = { link = '@constant.builtin' },
+		['@lsp.typemod.variable.defaultLibrary'] = { link = '@variable.builtin' },
+		-- Variable modifiers
+		['@lsp.typemod.variable.callable'] = { link = '@function' },
+		['@lsp.typemod.variable.static'] = { link = 'Constant' },
+		['@lsp.typemod.variable.global'] = { link = 'Constant' },
+		['@lsp.typemod.variable.injected'] = { link = '@variable' },
+		-- Keyword modifiers
+		['@lsp.typemod.keyword.async'] = { link = '@keyword' },
+		['@lsp.typemod.keyword.injected'] = { link = '@keyword' },
+		['@lsp.typemod.keyword.documentation'] = { link = 'Special' },
+		-- Injected
+		['@lsp.typemod.operator.injected'] = { link = '@operator' },
+		['@lsp.typemod.string.injected'] = { link = '@string' },
+		-- Rust-specific typemods
+		['@lsp.typemod.operator.controlFlow'] = { link = '@exception' },
+		['@lsp.typemod.function.readonly'] = { fg = scheme.aqua, bold = true },
 	}
 end
 
