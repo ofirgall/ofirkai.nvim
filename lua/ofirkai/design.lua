@@ -192,6 +192,10 @@ M.hl_groups = function(scheme)
 			bg = scheme.background,
 			fg = scheme.line_fg,
 		},
+		SidekickLineNr = {
+			bg = scheme.chat_bg,
+			fg = scheme.line_fg,
+		},
 		SignColumn = {
 			fg = scheme.white,
 			bg = scheme.background,
