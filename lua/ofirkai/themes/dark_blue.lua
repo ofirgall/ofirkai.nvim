@@ -15,6 +15,7 @@ M.scheme = {
 	chat_bg = '#0f1018', -- LLM chats bg (same as picker_bg)
 
 	cursor_line_bg = '#1b1f21',
+	picker_cursor_line_bg = '#1a1e30', -- Selected row in pickers, a lift of picker_bg
 	cursor_linenr_fg = '#909ef5',
 	line_fg = '#3f478f',
 	winbar_bg = '#171b1d',
@@ -86,6 +87,10 @@ M.hl_groups = function(scheme)
 		},
 		FffPreviewBorder = {
 			fg = picker_preview_border,
+			bg = picker_preview_border,
+		},
+		FffPreviewTitle = {
+			fg = scheme.white,
 			bg = picker_preview_border,
 		},
 		SnacksPickerPreviewBorder = {

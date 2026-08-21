@@ -40,6 +40,7 @@ M.scheme = {
 	tab_visible_fg = '#b3ab60',
 	line_fg = '#fd971f',
 	cursor_line_bg = '#333227',
+	picker_cursor_line_bg = '#282823', -- Selected row in pickers, a lift of picker_bg
 	cursor_linenr_fg = '#e6db74',
 	mid_orange = '#de933c',
 	lightorange = '#dea255',
@@ -858,7 +859,7 @@ M.hl_groups = function(scheme)
 			bg = scheme.picker_prompt,
 		},
 		TelescopePromptPrefix = {
-			fg = scheme.local_orange,
+			fg = scheme.mid_orange,
 			bg = scheme.picker_prompt,
 		},
 		TelescopePromptTitle = {
@@ -890,36 +891,46 @@ M.hl_groups = function(scheme)
 			fg = scheme.white,
 		},
 		-- dmtrKovalenko/fff.nvim
+		-- Groups named `Fff*` are ofirkai's, wire them with
+		-- `hl = require('ofirkai.plugins.fff').hl`.
+		-- Groups named `FFF*` are read by fff.nvim directly.
 		FffNormal = {
+			fg = scheme.white,
 			bg = scheme.picker_bg,
 		},
 		FffBorder = {
 			fg = scheme.picker_bg,
 			bg = scheme.picker_bg,
 		},
-		FffTitle = {
+		FffTitle = { -- Drawn on the border row of the list, must match FffBorder's bg
+			fg = scheme.ui_title_fg,
+			bg = scheme.picker_bg,
+			bold = true,
+		},
+		FffPrompt = {
+			fg = scheme.white,
+			bg = scheme.picker_prompt,
+		},
+		FffPromptBorder = {
+			fg = scheme.picker_prompt,
+			bg = scheme.picker_prompt,
+		},
+		FffPromptTitle = { -- Drawn on the border row of the prompt
 			fg = scheme.ui_title_fg,
 			bg = scheme.picker_prompt,
 			bold = true,
 		},
-		FffPrompt = {
-			fg = scheme.local_orange,
+		FffCount = { -- Matches count, fff.nvim hardcodes `LineNr`, remapped by `winhl`
+			fg = scheme.comment_fg,
 			bg = scheme.picker_prompt,
 		},
 		FffCursorLine = {
-			bg = scheme.cursor_line_bg,
+			bg = scheme.picker_cursor_line_bg,
 			fg = scheme.white,
 		},
 		FffMatched = {
 			fg = scheme.aqua,
 			bold = true,
-		},
-		FffSelected = {
-			fg = scheme.light_red,
-		},
-		FffSelectedActive = {
-			fg = scheme.light_red,
-			bg = scheme.cursor_line_bg,
 		},
 		FffPreviewNormal = {
 			bg = scheme.background,
@@ -928,14 +939,153 @@ M.hl_groups = function(scheme)
 			fg = scheme.picker_bg,
 			bg = scheme.picker_bg,
 		},
-		FffPreviewTitle = {
+		FffPreviewTitle = { -- Drawn on the border row of the preview
 			fg = scheme.white,
+			bg = scheme.picker_bg,
 		},
 		FffFrecency = {
 			fg = scheme.mid_orange,
 		},
 		FffDirectory = {
 			fg = scheme.grey,
+		},
+		FffScrollbar = {
+			fg = scheme.vert_split_fg,
+			bg = scheme.vert_split_fg,
+		},
+		FffComboHeader = {
+			fg = scheme.purple,
+		},
+		FffSuggestionHeader = {
+			fg = scheme.orange,
+		},
+		FffDebug = {
+			fg = scheme.comment_fg,
+		},
+		FffGrepLineNr = {
+			fg = scheme.comment_fg,
+		},
+		FffGrepMatch = { -- Grep results are treesitter highlighted, needs a bg to be visible
+			fg = scheme.white,
+			bg = scheme.search_bg,
+			bold = true,
+		},
+		-- Multi select
+		FFFSelected = {
+			fg = scheme.light_red,
+		},
+		FFFSelectedActive = {
+			fg = scheme.light_red,
+			bg = scheme.picker_cursor_line_bg,
+		},
+		-- Git status of the file name
+		FFFGitStaged = {
+			fg = scheme.green,
+		},
+		FFFGitModified = {
+			fg = scheme.orange,
+		},
+		FFFGitDeleted = {
+			fg = scheme.red,
+		},
+		FFFGitRenamed = {
+			fg = scheme.purple,
+		},
+		FFFGitUntracked = {
+			fg = scheme.teal,
+		},
+		FFFGitIgnored = {
+			fg = scheme.non_text_fg,
+		},
+		-- Git status sign, drawn on the list
+		FFFGitSignStaged = {
+			fg = scheme.green,
+			bg = scheme.picker_bg,
+		},
+		FFFGitSignModified = {
+			fg = scheme.orange,
+			bg = scheme.picker_bg,
+		},
+		FFFGitSignDeleted = {
+			fg = scheme.red,
+			bg = scheme.picker_bg,
+		},
+		FFFGitSignRenamed = {
+			fg = scheme.purple,
+			bg = scheme.picker_bg,
+		},
+		FFFGitSignUntracked = {
+			fg = scheme.teal,
+			bg = scheme.picker_bg,
+		},
+		FFFGitSignIgnored = {
+			fg = scheme.non_text_fg,
+			bg = scheme.picker_bg,
+		},
+		-- Git status sign of the selected line
+		FFFGitSignStagedSelected = {
+			fg = scheme.green,
+			bg = scheme.picker_cursor_line_bg,
+		},
+		FFFGitSignModifiedSelected = {
+			fg = scheme.orange,
+			bg = scheme.picker_cursor_line_bg,
+		},
+		FFFGitSignDeletedSelected = {
+			fg = scheme.red,
+			bg = scheme.picker_cursor_line_bg,
+		},
+		FFFGitSignRenamedSelected = {
+			fg = scheme.purple,
+			bg = scheme.picker_cursor_line_bg,
+		},
+		FFFGitSignUntrackedSelected = {
+			fg = scheme.teal,
+			bg = scheme.picker_cursor_line_bg,
+		},
+		FFFGitSignIgnoredSelected = {
+			fg = scheme.non_text_fg,
+			bg = scheme.picker_cursor_line_bg,
+		},
+		-- File info panel (shown when `debug.show_scores` is on)
+		FFFFileInfoSection = {
+			fg = scheme.ui_title_fg,
+			bold = true,
+		},
+		FFFFileInfoSeparator = {
+			fg = scheme.vert_split_fg,
+		},
+		FFFFileInfoLabel = {
+			fg = scheme.comment_fg,
+		},
+		FFFFileInfoValue = {
+			fg = scheme.white,
+		},
+		FFFFileInfoValueDim = {
+			fg = scheme.non_text_fg,
+		},
+		FFFFileInfoSize = {
+			fg = scheme.purple,
+		},
+		FFFFileInfoType = {
+			fg = scheme.aqua,
+		},
+		FFFFileInfoPath = {
+			fg = scheme.grey,
+		},
+		FFFFileInfoTotalScore = {
+			fg = scheme.purple,
+			bold = true,
+		},
+		FFFFileInfoMatchType = {
+			fg = scheme.light_red,
+			bold = true,
+		},
+		FFFFileInfoScorePos = {
+			fg = scheme.green,
+		},
+		FFFFileInfoScoreNeg = {
+			fg = scheme.red,
 		},
 		-- folke/snacks.nvim picker
 		SnacksPickerList = {

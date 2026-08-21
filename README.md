@@ -202,6 +202,32 @@ require('cmp').setup({
 ---
 </details>
 
+<details><summary><a href='https://github.com/dmtrKovalenko/fff.nvim'>fff.nvim</a> - <b>Custom setup required (Click to expand)</b></summary>
+
+---
+fff.nvim reads most of its colors from generic groups (`NormalFloat`, `FloatBorder`, `LineNr`, ...), so the
+picker needs to be pointed at ofirkai's groups to get the picker background and prompt of the theme.
+
+```lua
+require('fff').setup {
+	hl = require('ofirkai.plugins.fff').hl,
+}
+```
+
+`hl` is a plain table, override single keys by extending it:
+```lua
+require('fff').setup {
+	hl = vim.tbl_extend('force', require('ofirkai.plugins.fff').hl, {
+		cursor = 'Visual',
+	}),
+}
+```
+
+The git status, multi select and file info groups (`FFF*`) are set by ofirkai directly and need no setup.
+
+---
+</details>
+
 <details><summary><a href='https://github.com/stevearc/dressing.nvim'>dressing.nvim</a> - <b>Custom setup required (Click to expand)</b></summary>
 
 ---
