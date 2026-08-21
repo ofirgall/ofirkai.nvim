@@ -190,7 +190,10 @@ M.hl_groups = function(scheme)
 			link = 'VertSplit',
 		},
 		LineNr = {
-			bg = scheme.background,
+			-- No bg on purpose: it would equal `Normal`'s bg anyway, and an opaque bg
+			-- leaks the editor background into every float that shows a statuscolumn
+			-- or signcolumn (pickers, chats, sidebars), which then need their own
+			-- LineNr variant to paper over it.
 			fg = scheme.line_fg,
 		},
 		SidekickLineNr = {
@@ -198,8 +201,8 @@ M.hl_groups = function(scheme)
 			fg = scheme.line_fg,
 		},
 		SignColumn = {
+			-- No bg, same reasoning as `LineNr` above.
 			fg = scheme.white,
-			bg = scheme.background,
 		},
 		StatusLine = {
 			fg = scheme.comment_fg,
