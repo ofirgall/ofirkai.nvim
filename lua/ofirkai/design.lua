@@ -1132,7 +1132,7 @@ M.hl_groups = function(scheme)
 			fg = scheme.light_red,
 		},
 		SnacksPickerListCursorLine = {
-			bg = scheme.cursor_line_bg,
+			bg = scheme.picker_cursor_line_bg,
 			fg = scheme.white,
 		},
 		-- hrsh7th/nvim-cmp
