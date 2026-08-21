@@ -111,6 +111,23 @@ M.winhighlight                           *ofirkai.plugins.dressing.winhighlight*
 
 
 ==============================================================================
+                                                           *ofirkai.plugins.fff*
+
+M.hl                                                    *ofirkai.plugins.fff.hl*
+    `hl` configuration for `dmtrKovalenko/fff.nvim`
+
+    Type: ~
+        (table)
+
+    Usage: ~
+>lua
+        require('fff').setup {
+        	hl = require('ofirkai.plugins.fff').hl,
+        }
+<
+
+
+==============================================================================
                                                       *ofirkai.plugins.nvim-cmp*
 
 M.design                                       *ofirkai.plugins.nvim-cmp.design*
