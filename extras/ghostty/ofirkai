@@ -1,0 +1,39 @@
+# ofirkai for Ghostty — https://github.com/ofirgall/ofirkai.nvim
+#
+# Install: copy this file to ~/.config/ghostty/themes/ofirkai (the theme name is
+# the file name, so keep it extensionless), then set `theme = ofirkai` in
+# ~/.config/ghostty/config.
+#
+# Every colour is a value from lua/ofirkai/design.lua. Two slots cannot be taken
+# verbatim, because ANSI has no room for them:
+#
+#   * The bright row (8-15) has no counterpart in the scheme, so each entry is
+#     its normal-row colour lifted 20% toward white. `grey` covers bright black.
+#   * Bright yellow is `orange` rather than a lighter `yellow`: orange carries
+#     too much of the scheme's character to leave unreachable, and it is the one
+#     accent with no ANSI slot of its own.
+#
+# ANSI palette
+palette = 0=#272720
+palette = 1=#f92672
+palette = 2=#a6e22e
+palette = 3=#e6db74
+palette = 4=#66d9ef
+palette = 5=#ae81ff
+palette = 6=#3ae0b4
+palette = 7=#f8f8f0
+palette = 8=#8f908a
+palette = 9=#fa518e
+palette = 10=#b8e858
+palette = 11=#fd971f
+palette = 12=#85e1f2
+palette = 13=#be9aff
+palette = 14=#61e6c3
+palette = 15=#f9f9f3
+
+background = #1f1f19
+foreground = #f8f8f0
+cursor-color = #fd971f
+cursor-text = #1f1f19
+selection-background = #46453a
+selection-foreground = #f8f8f0
