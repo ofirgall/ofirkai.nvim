@@ -14,6 +14,7 @@ Requires Neovim 0.8+
 	* [Others](#others)
 * [Terminals](#terminals)
 	* [Ghostty](#ghostty)
+	* [herdr](#herdr)
 * [Contributing](#contributing)
 ---
 
@@ -423,6 +424,13 @@ The file name is the theme name, so keep the files extensionless. Reload with
 
 Each file lists the handful of slots that are not a straight copy of the scheme
 (the ANSI bright row, and the accents that have no ANSI slot of their own).
+
+### herdr
+herdr has no theme files — colours are set inline under `[theme.custom]` in its
+own config, so there is nothing to copy into a directory. Paste
+[`extras/herdr/ofirkai-darkblue`](extras/herdr/ofirkai-darkblue) into
+`~/.config/herdr/config.toml` under `[theme.custom]` to match the `dark_blue`
+theme.
 
 ## Full setup example
 [ui.lua](https://github.com/ofirgall/dotfiles/blob/master/editors/nvim/lua/plugins/ui.lua) from my dotfiles.

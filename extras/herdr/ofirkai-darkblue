@@ -1,0 +1,32 @@
+# ofirkai dark_blue for herdr — https://github.com/ofirgall/ofirkai.nvim
+#
+# herdr has no theme *files* — no directory it scans, no theme name to
+# select — so a custom palette has to live inline in your config, overriding
+# whichever base `name` you pick.
+#
+# Install: paste this block into ~/.config/herdr/config.toml, under
+# `[theme.custom]` (replacing any existing `[theme]`/`[theme.custom]` tables).
+
+[theme]
+name = "terminal" # any dark base works, this only overrides the tokens below
+
+[theme.custom]
+panel_bg      = "reset"     # transparent chrome, inherits the terminal background
+surface_dim   = "#131426"   # ui_bg              (lua/ofirkai/themes/dark_blue.lua)
+surface0      = "#1c1e38"   # buffer_line.selected_bg (dark_blue.lua)
+surface1      = "#14364e"   # visual_bg / search_bg   (dark_blue.lua)
+active_row_bg = "#1c1e38"   # same as surface0
+selection_bg  = "#14364e"   # same as surface1
+overlay0      = "#253b52"   # vert_split_fg      (dark_blue.lua)
+overlay1      = "#4d5154"   # non_text_fg        (lua/ofirkai/design.lua)
+text          = "#d7d7d7"   # white              (dark_blue.lua)
+subtext0      = "#9ca0a4"   # comment_fg / buffer_line.fg (design.lua / dark_blue.lua)
+accent        = "#58cbe1"   # aqua               (dark_blue.lua)
+teal          = "#3ae0b4"   # teal               (design.lua)
+blue          = "#909ef5"   # cursor_linenr_fg   (dark_blue.lua)
+mauve         = "#a97cfa"   # purple             (dark_blue.lua)
+green         = "#9eda26"   # green              (dark_blue.lua)
+yellow        = "#e1d66f"   # yellow             (dark_blue.lua)
+peach         = "#f8921a"   # orange             (dark_blue.lua)
+red           = "#ea417e"   # light_red lifted 20% toward white, for contrast
+                             # against herdr's inverted-text pills/badges
