@@ -40,6 +40,7 @@ M.scheme = {
 
 	-- ui
 	sidebar_bg = '#131A24',
+	diff_sidebar_bg = '#10161e', -- background for diff sidebar
 	ui_bg = '#131426',
 	ui_title_fg = '#e373cd',
 	tab_visible_fg = '#5c8014',

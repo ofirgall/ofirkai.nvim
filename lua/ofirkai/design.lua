@@ -9,6 +9,7 @@ M.scheme = {
 	secondary_background = '#1d2026',
 	ui_bg = '#1a1a18', -- background for ui (floating windows)
 	sidebar_bg = '#1a1a18', -- background for file tree and other sidebars. same as ui_bg
+	diff_sidebar_bg = '#1a1a18', -- background for diff sidebar
 	picker_bg = '#181816', -- Slightly darker than ui_bg
 	telescope_bg = '#181816', -- alias for picker_bg (backward compat)
 	chat_bg = '#181816', -- LLM chats bg (same as picker_bg)
@@ -1513,6 +1514,10 @@ M.hl_groups = function(scheme)
 		RenderMarkdownCodeInline = {
 			fg = scheme.orange,
 			bg = scheme.secondary_background,
+		},
+		-- KoalaVim/codediff.nvim (fork)
+		CodeDiffExplorerNormal = {
+			bg = scheme.diff_sidebar_bg
 		}
 	}
 end
