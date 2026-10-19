@@ -1,0 +1,38 @@
+# ofirkai for herdr — https://github.com/ofirgall/ofirkai.nvim
+#
+# herdr has no theme *files* — no directory it scans, no theme name to
+# select — so a custom palette has to live inline in your config, overriding
+# whichever base `name` you pick.
+#
+# Every token is set explicitly, so this works with any terminal palette —
+# it does not rely on the terminal itself running the ofirkai colours.
+#
+# Install: paste this block into ~/.config/herdr/config.toml (replacing any
+# existing `[theme]`/`[theme.custom]` tables).
+
+# herdr draws overlay0/overlay1 as muted *text* (hints, tab numbers, tree
+# lines) and surface_dim as separators (pane borders, dividers).
+
+[theme]
+name = "catppuccin" # every token is overridden below, the base does not matter
+
+[theme.custom]
+panel_bg      = "#1f1f19"   # background         (lua/ofirkai/design.lua)
+sidebar_bg    = "#1a1a18"   # sidebar_bg         (design.lua)
+surface_dim   = "#75724b"   # vert_split_fg — WinSeparator (design.lua)
+surface0      = "#171712"   # buffer_line.bg — inactive buffers (design.lua)
+surface1      = "#46453a"   # visual_bg          (design.lua)
+active_row_bg = "#333227"   # cursor_line_bg     (design.lua)
+selection_bg  = "#46453a"   # visual_bg          (design.lua)
+overlay0      = "#7e7f79"   # muted text: grey dimmed to ~4:1 on background
+overlay1      = "#8f908a"   # grey               (design.lua)
+text          = "#f8f8f0"   # white              (design.lua)
+subtext0      = "#9ca0a4"   # comment_fg         (design.lua)
+accent        = "#fd971f"   # orange — line_fg / cursor (design.lua)
+teal          = "#3ae0b4"   # teal               (design.lua)
+blue          = "#66d9ef"   # aqua — the scheme has no true blue (design.lua)
+mauve         = "#ae81ff"   # purple             (design.lua)
+green         = "#a6e22e"   # green              (design.lua)
+yellow        = "#e6db74"   # yellow             (design.lua)
+peach         = "#fd971f"   # orange             (design.lua)
+red           = "#f92672"   # light_red          (design.lua)

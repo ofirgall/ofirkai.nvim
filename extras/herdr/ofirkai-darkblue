@@ -4,24 +4,31 @@
 # select — so a custom palette has to live inline in your config, overriding
 # whichever base `name` you pick.
 #
-# Install: paste this block into ~/.config/herdr/config.toml, under
-# `[theme.custom]` (replacing any existing `[theme]`/`[theme.custom]` tables).
+# Every token is set explicitly, so this works with any terminal palette —
+# it does not rely on the terminal itself running the ofirkai colours.
+#
+# Install: paste this block into ~/.config/herdr/config.toml (replacing any
+# existing `[theme]`/`[theme.custom]` tables).
+
+# herdr draws overlay0/overlay1 as muted *text* (hints, tab numbers, tree
+# lines) and surface_dim as separators (pane borders, dividers).
 
 [theme]
-name = "terminal" # any dark base works, this only overrides the tokens below
+name = "catppuccin" # every token is overridden below, the base does not matter
 
 [theme.custom]
-panel_bg      = "reset"     # transparent chrome, inherits the terminal background
-surface_dim   = "#131426"   # ui_bg              (lua/ofirkai/themes/dark_blue.lua)
-surface0      = "#1c1e38"   # buffer_line.selected_bg (dark_blue.lua)
+panel_bg      = "#080c10"   # background         (lua/ofirkai/themes/dark_blue.lua)
+sidebar_bg    = "#0e141b"   # sidebar_bg #131a24 at 75% (dark_blue.lua)
+surface_dim   = "#253b52"   # vert_split_fg — WinSeparator (dark_blue.lua)
+surface0      = "#15162a"   # buffer_line.bg — inactive buffers (dark_blue.lua)
 surface1      = "#14364e"   # visual_bg / search_bg   (dark_blue.lua)
-active_row_bg = "#1c1e38"   # same as surface0
+active_row_bg = "#272942"   # buffer_line.selected_bg #1c1e38 at 105% toward white (dark_blue.lua)
 selection_bg  = "#14364e"   # same as surface1
-overlay0      = "#253b52"   # vert_split_fg      (dark_blue.lua)
-overlay1      = "#4d5154"   # non_text_fg        (lua/ofirkai/design.lua)
-text          = "#d7d7d7"   # white              (dark_blue.lua)
-subtext0      = "#9ca0a4"   # comment_fg / buffer_line.fg (design.lua / dark_blue.lua)
-accent        = "#58cbe1"   # aqua               (dark_blue.lua)
+overlay0      = "#5c6fae"   # line_fg #3f478f (LineNr) at 120%, shifted slightly bluer
+overlay1      = "#8f908a"   # grey               (lua/ofirkai/design.lua)
+text          = "#e9e9e9"   # white #d7d7d7 at 145% toward white (dark_blue.lua)
+subtext0      = "#b5b8bb"   # comment_fg #9ca0a4 at 125% toward white (design.lua)
+accent        = "#58a8e1"   # aqua shifted to hue 205 (dark_blue.lua #58cbe1)
 teal          = "#3ae0b4"   # teal               (design.lua)
 blue          = "#909ef5"   # cursor_linenr_fg   (dark_blue.lua)
 mauve         = "#a97cfa"   # purple             (dark_blue.lua)
