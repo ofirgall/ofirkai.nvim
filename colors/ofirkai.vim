@@ -1,1 +1,1 @@
-lua require('ofirkai').setup({})
+lua require('ofirkai').setup(require('ofirkai').last_config or {})

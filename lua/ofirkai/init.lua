@@ -50,6 +50,10 @@ local default_config = {
 ---}
 ---@usage ]]
 M.setup = function(config)
+	-- Remember the user config, `:colorscheme ofirkai` (e.g. LazyVim's colorscheme loader)
+	-- reapplies it instead of resetting to the default theme.
+	M.last_config = config
+
 	vim.cmd('hi clear')
 	if vim.fn.exists('syntax_on') then
 		vim.cmd('syntax reset')
@@ -99,6 +103,10 @@ M.setup = function(config)
 		end
 	end
 end
+
+---The config passed to the last `setup()` call
+---@type table?
+M.last_config = nil
 
 ---Alias for require('ofirkai.design').scheme
 ---@type table
