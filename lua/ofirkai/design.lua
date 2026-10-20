@@ -91,9 +91,37 @@ M.scheme = {
 	},
 }
 
+---Highlight groups of folke/snacks.nvim notifier, one set per level
+---@param scheme table
+local function snacks_notifier_hl_groups(scheme)
+	local levels = {
+		Trace = scheme.comment_fg,
+		Debug = scheme.comment_fg,
+		Info = scheme.aqua,
+		Warn = scheme.orange,
+		Error = scheme.light_red,
+	}
+
+	local groups = {
+		SnacksNotifierMinimal = { link = 'NormalFloat' },
+		SnacksNotifierHistory = { link = 'NormalFloat' },
+		SnacksNotifierHistoryTitle = { link = 'FloatTitle' },
+		SnacksNotifierHistoryDateTime = { fg = scheme.dimmed_aqua },
+	}
+	for level, color in pairs(levels) do
+		groups['SnacksNotifier' .. level] = { fg = scheme.white, bg = scheme.ui_bg }
+		groups['SnacksNotifierIcon' .. level] = { fg = color, bg = scheme.ui_bg }
+		groups['SnacksNotifierBorder' .. level] = { fg = color, bg = scheme.ui_bg }
+		groups['SnacksNotifierTitle' .. level] = { fg = color, bg = scheme.ui_bg, bold = true }
+		groups['SnacksNotifierFooter' .. level] = { fg = color, bg = scheme.ui_bg }
+	end
+
+	return groups
+end
+
 ---The highlight groups
 M.hl_groups = function(scheme)
-	return {
+	local groups = {
 		Normal = {
 			fg = scheme.white,
 			bg = scheme.background,
@@ -1518,8 +1546,150 @@ M.hl_groups = function(scheme)
 		-- KoalaVim/codediff.nvim (fork)
 		CodeDiffExplorerNormal = {
 			bg = scheme.diff_sidebar_bg
-		}
+		},
+		-- folke/which-key.nvim
+		WhichKey = { -- the key
+			fg = scheme.aqua,
+		},
+		WhichKeyGroup = {
+			fg = scheme.purple,
+		},
+		WhichKeyDesc = {
+			fg = scheme.white,
+		},
+		WhichKeySeparator = {
+			fg = scheme.comment_fg,
+		},
+		WhichKeyNormal = {
+			link = 'NormalFloat',
+		},
+		WhichKeyBorder = {
+			link = 'FloatBorder',
+		},
+		WhichKeyTitle = {
+			link = 'FloatTitle',
+		},
+		WhichKeyValue = {
+			fg = scheme.comment_fg,
+		},
+		WhichKeyIcon = {
+			fg = scheme.aqua,
+		},
+		WhichKeyIconAzure = { link = 'MiniIconsAzure' },
+		WhichKeyIconBlue = { link = 'MiniIconsBlue' },
+		WhichKeyIconCyan = { link = 'MiniIconsCyan' },
+		WhichKeyIconGreen = { link = 'MiniIconsGreen' },
+		WhichKeyIconGrey = { link = 'MiniIconsGrey' },
+		WhichKeyIconOrange = { link = 'MiniIconsOrange' },
+		WhichKeyIconPurple = { link = 'MiniIconsPurple' },
+		WhichKeyIconRed = { link = 'MiniIconsRed' },
+		WhichKeyIconYellow = { link = 'MiniIconsYellow' },
+		-- echasnovski/mini.icons
+		MiniIconsAzure = {
+			fg = scheme.aqua,
+		},
+		MiniIconsBlue = {
+			fg = scheme.tabline_sel_fg,
+		},
+		MiniIconsCyan = {
+			fg = scheme.teal,
+		},
+		MiniIconsGreen = {
+			fg = scheme.green,
+		},
+		MiniIconsGrey = {
+			fg = scheme.grey,
+		},
+		MiniIconsOrange = {
+			fg = scheme.orange,
+		},
+		MiniIconsPurple = {
+			fg = scheme.purple,
+		},
+		MiniIconsRed = {
+			fg = scheme.red,
+		},
+		MiniIconsYellow = {
+			fg = scheme.yellow,
+		},
+		-- folke/snacks.nvim dashboard
+		SnacksDashboardNormal = {
+			link = 'Normal',
+		},
+		SnacksDashboardHeader = {
+			fg = scheme.ui_title_fg,
+			bold = true,
+		},
+		SnacksDashboardFooter = {
+			fg = scheme.comment_fg,
+		},
+		SnacksDashboardTitle = {
+			fg = scheme.ui_title_fg,
+			bold = true,
+		},
+		SnacksDashboardIcon = {
+			fg = scheme.aqua,
+		},
+		SnacksDashboardKey = {
+			fg = scheme.orange,
+			bold = true,
+		},
+		SnacksDashboardDesc = {
+			fg = scheme.white,
+		},
+		SnacksDashboardFile = {
+			fg = scheme.white,
+		},
+		SnacksDashboardDir = {
+			fg = scheme.comment_fg,
+		},
+		SnacksDashboardSpecial = {
+			fg = scheme.purple,
+		},
+		SnacksDashboardTerminal = {
+			link = 'SnacksDashboardNormal',
+		},
+		-- folke/trouble.nvim (v3 names, v2 names are kept above)
+		TroubleNormalNC = {
+			bg = scheme.sidebar_bg,
+		},
+		TroubleText = {
+			fg = scheme.white,
+		},
+		TroublePos = {
+			fg = scheme.purple,
+			bg = scheme.sidebar_bg,
+		},
+		TroubleSource = {
+			fg = scheme.comment_fg,
+		},
+		TroubleFilename = {
+			fg = scheme.ui_title_fg,
+			bold = true,
+		},
+		TroubleBasename = {
+			fg = scheme.ui_title_fg,
+			bold = true,
+		},
+		TroubleDirectory = {
+			fg = scheme.aqua,
+		},
+		TroubleIndentFoldClosed = {
+			fg = scheme.cursor_linenr_fg,
+		},
+		TroubleFoldIcon = {
+			fg = scheme.cursor_linenr_fg,
+		},
+		TroublePreview = {
+			bg = scheme.visual_bg,
+		},
+		-- KoalaVim/trouble.nvim (fork)
+		TroubleCursorLine = {
+			bg = scheme.diff_text,
+		},
 	}
+
+	return vim.tbl_extend('error', groups, snacks_notifier_hl_groups(scheme))
 end
 
 return M
